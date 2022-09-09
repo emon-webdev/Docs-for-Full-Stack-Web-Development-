@@ -2582,17 +2582,22 @@ Ans: JavaScript is a single- threaded and synchronus language. (কিন্ত�
 57. Tell me 2 differences between DOM vs BOM?
 58. Can you discuss the types of broweserAPI?
 59. what is javaScript Heap? (javaScript memory location কোথাই করে?)
-Ans: কোন object/ array এর refarence টাকে কিছু সময়ের জন্য stored করে রাখে। সেটাই হল Heeap| javaScript এ memory location Heap এ করে।
+Ans: কোন object/ array এর refarence টাকে কিছু সময়ের জন্য stored করে রাখে। সেটাই হল Heeap.
+javaScript এ memory location Heap এ করে।
 60. what is javaScript stack?
 Ans: 
 	
 //module:  39	(interview important)
 61. what are the differences between double equal (==) vs triple equal (===)?
 Ans:i. == check the value, and === check the value and type.  এটাকে type coercion বলে বা type conversion বলে।
-ii.  === check the value and type . == দুইটা যদি same type এর হই তাহলে সরাসরি value টাকে check করবে. আর diffrent type এর হলে type টাকে convert করে check করে। এটাকে type coercion বলে বা type conversion বলে।
+ii.  === check the value and type . == দুইটা যদি same type এর হই তাহলে সরাসরি value টাকে check করবে.
+আর diffrent type এর হলে type টাকে convert করে check করে। এটাকে type coercion বলে বা type conversion বলে।
 62. What is Hoisting in javaScript?
-Ans:i. variable declear var দিয়ে করলে উপরে নিয়া যায়। function এর expresion লিখলে শুধু ওইটা নেই body টাকে নেই না। সেই জন্য var use না করে let, const use করতে হবে।
-ii. Hoisting is javaScript default behavior of moving all declarations to the top of the current scope. only function delclarations are hoisted in javascript, function expressions are not hoisted. javascript only hoist declarations, not initializations.
+Ans:i. variable declear var দিয়ে করলে উপরে নিয়া যায়। function এর expresion লিখলে শুধু ওইটা নেই body টাকে নেই না।
+সেই জন্য var use না করে let, const use করতে হবে।
+ii. Hoisting is javaScript default behavior of moving all declarations to the top of the current scope.
+only function delclarations are hoisted in javascript, function expressions are not hoisted. 
+javascript only hoist declarations, not initializations.
 63. Tell the difference Between Primitive and Non-Primitive Data types in javaScript?
 64. What are the Truthy and Falsy Values? give me some examples.
 65. What is the difference between null and undefined? (important)
