@@ -23,7 +23,7 @@
 
 - Everything will be upgraded over time. if you feel there is a problem then share it with me and I will implement it.
 
-  ## All Subjects Documentation
+  ## All Documentations
 
   ### Docs of DotEnv
 - [DotEnv Using Method And Example](/DotEnv)
@@ -54,7 +54,7 @@
   ## Docs of TypeScript
 - [TypeScript Using Method And Example](/TypeScript)
 
-  ## All Subjects Documentation
+  ## Documentations End
 
 
 ## 🌐 Socials: Connect with Emon Hossain!
