@@ -51,7 +51,7 @@
 - [ReactRouter Using Method And Example](/ReactRouter)
   ### Docs of Redux
 - [Redux Using Method And Example](/Redux)
-  ## Docs of TypeScript
+  ### Docs of TypeScript
 - [TypeScript Using Method And Example](/TypeScript)
 
   ## All Subjects Documentation
