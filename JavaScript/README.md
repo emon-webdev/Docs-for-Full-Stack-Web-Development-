@@ -2602,7 +2602,18 @@ ii. Hoisting is javaScript default behavior of moving all declarations to the to
 69. Explain closure in JavaScript?
 70. Explain passed by value and passed by reference?
 	
-	
+//module:  40
+71. What is a call stack?
+72. Tell us about Try-catch?
+73. Name some console APIs?
+74. What is syntax error?
+75. When do we get reference error?
+76. i. What is wrong with the code below : 
+	var foo;
+	console.log(foo.bar);
+   ii. What type of error will the code generate?
+   iii. What is the correct way to write the code?
+ 
 	
 	
 	
