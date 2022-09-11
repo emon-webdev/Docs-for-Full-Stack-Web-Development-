@@ -2692,14 +2692,26 @@ javascript only hoist declarations, not initializations.
       <!-- row 1.20 -->
       <tr>
         <th>1.20</th>
-        <td>integer</td>
-        <td>পূর্ণ সংখ্যা 1, 2, 40, 43 [parseint()]</td>
+        <td>parseint()</td>
+        <td>পূর্ণ সংখ্যা 1, 2, 40, 43 [parseint()], দশমিক সংখ্যা ফেলে দায়।</td>
+      </tr>
+      <!-- row 2 --> 
+      <tr>
+        <th>2</th>
+        <td>parseFloat</td>
+        <td> ভগ্নাংশ সংখ্যা decimal: 2.3, 43.23, 54.4 [parsefloat()]</td>
       </tr>
       <!-- row 2 -->
       <tr>
         <th>2</th>
-        <td>float</td>
-        <td> ভগ্নাংশ সংখ্যা decimal: 2.3, 43.23, 54.4 [parsefloat()]</td>
+        <td>Number(number)</td>
+        <td>Number() integer , floating টা কে string convert করে দায়। </td>
+      </tr>
+       <!-- row 2 -->
+      <tr>
+        <th>2</th>
+        <td>Number.isInteger(number)</td>
+        <td>Number.isInteger() check করে number টা integer কি না। </td>
       </tr>
        <!-- row 3 -->
       <tr>
