@@ -12,6 +12,7 @@ List of JavaScript:
 - [whileLoop](#whileLoop)
 - [forLoop](#forLoop)
 - [function](#function)
+- [switch](#switch)
 - [es6](#es6)
 - [Destructuring](#Destructuring)
 - [JSONStringify](#JSONStringify)
@@ -28,11 +29,12 @@ List of JavaScript:
 - [forEach](#forEach)
 - [filter](#filter)
 - [find](#find)
-- [reduce](#reduce)
-- [JSON](#JSON)
-- [fetch_Keys_Values](#fetch_Keys_Values)
 - [Object](#Object)
 - [numberStringConversion](#numberStringConversion)
+- [reduce](#reduce)
+- [JSON](#JSON)
+- [fetch](#fetch)
+- [localStorage](#localStorage)
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
 - [jsProblemSolved](#jsProblemSolved)
@@ -1169,108 +1171,6 @@ console.log(total2)
 ```
 </details>
 
-### JSON  
-<details>
-<summary>
-  <h3>What is JSON? (Click Me)</h3>
-</summary>
-<br >
-- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
-
-```js
-const student = {
-    name: 'sakib Khan',
-    age: 32,
-    movies: ['king khan', 'dhakar masta,', 'aynabaji']
-};
-// normal Object to JSON file
-const studentJson = JSON.stringify(student);
-console.log(student)
-console.log(studentJson)
-
-// JSON to Object file
-const studentObject = JSON.parse(studentJson);
-console.log(studentObject)
-```
-</details>
-	
-### fetch
-<details>
-<summary>
-  <h3>What is fetch? (Click Me)</h3>
-</summary>
-<br >
-- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
-
-```js
-// fetch
-fetch('url')
-.then(res => res.json())                                    
-.then(data => console.log(data)
-)
-
-const student = {
-    name: 'sakib Khan',
-    age: 32,
-    movies: ['king khan', 'dhakar masta,', 'aynabaji']
-};
-//keys
-const keys = Object.keys(student);
-console.log(keys )
-// keys = ['name', 'age', 'movies']
-
-// values
-const values = Object.values(student);
-console.log(values )
-// values ['sakib Khan', 32, Array(3)]
-
-//Example: all
-
-//get api
-const loadCountries = () => {
-    fetch('https://restcountries.com/v2/all')
-        .then(res => res.json())
-        .then(data => displayCountries(data))
-};
-// 
-const displayCountries = (countries) => {
-    const countriesContainer = document.getElementById('countries-container');
-    countries.forEach(country => {
-        const { name, capital, flags, cioc } = country;
-        const countryDiv = document.createElement('div');
-        countryDiv.classList.add('country')
-        countryDiv.innerHTML = `
-            <h3>Name: ${name}</h3>
-            <h4>Capital: ${capital}</h4>
-            <img src=${flags.png}>
-            <button onclick="loadCOuntryDetail('${cioc}')">Details</button>
-        `
-        countriesContainer.appendChild(countryDiv)
-    })
-};
-const loadCOuntryDetail = (code) => {
-    // dynamic api code
-    const url = `https://restcountries.com/v2/alpha/${code}`;
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displayCountryDetail(data))
-
-};
-//
-const displayCountryDetail = country => {
-    console.log(country)
-    const { name, capital, flags } = country;
-    const countryDetail = document.getElementById('country-detail');
-    countryDetail.innerHTML = `
-        <h3>Name: ${name}</h3>
-        <h4>Capital: ${capital}</h4>
-        <img src=${flags.png}>
-    `
-
-};
-loadCountries()
-```
-</details>
 	
 ### Array  
 <details>
@@ -1548,9 +1448,116 @@ const numStr = input2 + '';
 console.log(typeof numStr)
 ```
 </details>
-	
+
+
+### JSON  
+<details>
+<summary>
+  <h3>What is JSON? (Click Me)</h3>
+</summary>
+<br >
+- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
+
 ```js
-	### switch
+const student = {
+    name: 'sakib Khan',
+    age: 32,
+    movies: ['king khan', 'dhakar masta,', 'aynabaji']
+};
+// normal Object to JSON file
+const studentJson = JSON.stringify(student);
+console.log(student)
+console.log(studentJson)
+
+// JSON to Object file
+const studentObject = JSON.parse(studentJson);
+console.log(studentObject)
+```
+</details>
+	
+### fetch
+<details>
+<summary>
+  <h3>What is fetch? (Click Me)</h3>
+</summary>
+<br >
+- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
+
+```js
+// fetch
+fetch('url')
+.then(res => res.json())                                    
+.then(data => console.log(data)
+)
+
+const student = {
+    name: 'sakib Khan',
+    age: 32,
+    movies: ['king khan', 'dhakar masta,', 'aynabaji']
+};
+//keys
+const keys = Object.keys(student);
+console.log(keys )
+// keys = ['name', 'age', 'movies']
+
+// values
+const values = Object.values(student);
+console.log(values )
+// values ['sakib Khan', 32, Array(3)]
+
+//Example: all
+
+//get api
+const loadCountries = () => {
+    fetch('https://restcountries.com/v2/all')
+        .then(res => res.json())
+        .then(data => displayCountries(data))
+};
+// 
+const displayCountries = (countries) => {
+    const countriesContainer = document.getElementById('countries-container');
+    countries.forEach(country => {
+        const { name, capital, flags, cioc } = country;
+        const countryDiv = document.createElement('div');
+        countryDiv.classList.add('country')
+        countryDiv.innerHTML = `
+            <h3>Name: ${name}</h3>
+            <h4>Capital: ${capital}</h4>
+            <img src=${flags.png}>
+            <button onclick="loadCOuntryDetail('${cioc}')">Details</button>
+        `
+        countriesContainer.appendChild(countryDiv)
+    })
+};
+const loadCOuntryDetail = (code) => {
+    // dynamic api code
+    const url = `https://restcountries.com/v2/alpha/${code}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayCountryDetail(data))
+
+};
+//
+const displayCountryDetail = country => {
+    console.log(country)
+    const { name, capital, flags } = country;
+    const countryDetail = document.getElementById('country-detail');
+    countryDetail.innerHTML = `
+        <h3>Name: ${name}</h3>
+        <h4>Capital: ${capital}</h4>
+        <img src=${flags.png}>
+    `
+
+};
+loadCountries()
+```
+</details>
+
+
+### switch
+
+```js
+	
    <h3>What is switch? (Click Me)</h3>
 //switch
 let color = 'green';
@@ -1576,8 +1583,10 @@ switch (color) {
 }
 ```
 
+### localStorage
+
 ```js
-local storage
+
 - Three working in Local storage and Session Storage 
 - setItem
 - getItem
