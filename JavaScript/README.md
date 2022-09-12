@@ -2585,7 +2585,7 @@ javascript only hoist declarations, not initializations.
       <tr>
         <th>1.17</th>
         <td>JSON.parse() </td>
-        <td>javaScript এর কোন একটি object/array/value কে Object a convert করার জন্য JSON.stringify() দিতে হবে (return Object;)</td>
+        <td>javaScript এর কোন একটি object/array/value কে Object a convert করার জন্য JSON.parse() দিতে হবে (return Object;)</td>
       </tr>
       <!-- row 1.18 -->
       <tr>
