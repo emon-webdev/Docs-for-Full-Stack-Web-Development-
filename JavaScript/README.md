@@ -42,6 +42,45 @@ List of JavaScript:
 - [Table](#Table)
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
+### Destructuring
+<details>
+<summary>
+  <h3>What is Destructuring? (Click Me)</h3>
+</summary>
+<br >
+	
+```js
+// Object Destructuring
+const fish = {
+    name: 'james Bond',
+    address: 'Noyakhali',
+    color: 'silver',
+    phone: '0191111111',
+    price: 400
+};
+//destructuring
+// use same name in the object
+const {name, phone, price} = fish;
+console.log(name, phone, age)
+
+//Array Destructuring
+// use any name (meter is places)
+// use any name (meter is places)
+//Ex:  1
+const [first, another] = [22, 44, 56, 67, 60, 90];
+console.log(first, another)
+//Ex: 2
+const nayoks = ['sakib', 'bappi', 'riyaj'];
+const [king, lost, New] = nayoks;
+console.log(New)
+//Ex: 3
+const getNames = () => {
+    return ['alim', 'halim']
+};
+const [mama, mama2] = getNames();
+console.log(mama2, mama)
+```
+</details>
 
 
 ### JSONStringify
@@ -50,7 +89,6 @@ List of JavaScript:
   <h3>What is JSONStringify ? (Click Me)</h3>
 </summary>
 <br >
-
 	
 ```js
 1. JSON.parse() ?
