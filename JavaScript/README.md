@@ -1622,6 +1622,8 @@ switch (color) {
     };
     
    //Example 2
+	
+	
 
 }
 
