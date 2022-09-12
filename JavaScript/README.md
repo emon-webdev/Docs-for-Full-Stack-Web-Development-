@@ -2858,10 +2858,22 @@ javascript only hoist declarations, not initializations.
 	 <!-- row 24-->
       <tr>
         <th>24</th>
-        <td> </td>
-        <td>  </td>
+        <td>window.location.reload() </td>
+        <td> page reload করে  </td>
       </tr>
 	<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+		<!-- row 24-->
       <tr>
         <th>24</th>
         <td> </td>
