@@ -1578,16 +1578,16 @@ switch (color) {
 ### localStorage
 <details>
 <summary>
-  <h3>What is LocalStorage And Session Storage? (Click Me)</h3>
+   <h3>What is LocalStorage And Session Storage? (Click Me)</h3>
 </summary>
 <br >
+```js
 - Three working in Local storage and Session Storage 
 - setItem
 - getItem
 - removeItem
 
 
-```js
    //Data add local storage
     const handleAddData = () => {
         localStorage.setItem('cart', '123')
@@ -1602,7 +1602,7 @@ switch (color) {
         localStorage.removeItem('cart')
     };
     
-    //Example
+    //Example 1
   <button onClick={handleAddData}>Add</button>
   <button onClick={handleShowData}>Read / Shows</button>
   <button onClick={handleRemoveData}>Remove</button>
@@ -1621,24 +1621,14 @@ switch (color) {
         localStorage.removeItem('cart')
     };
     
-   //Example 1
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   //Example 2
 
+}
 
 ```
 </details>
+
+
 
 ### jsProblemSolved
 
