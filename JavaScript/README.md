@@ -1380,6 +1380,17 @@ console.log('tallest person is', tallest)
 - Map return array
 
 ```js
+//access property by name
+const student = {
+    name: 'sakib khan',
+    age: 32,
+    movies:['king khan', 'mastan', 'hero']
+};
+const myVariable = 'age';
+console.log(student.age) // direct by property
+console.log(student['age']) // access via property name string
+console.log(student[myVariable]) // access via property name in variable
+	
 //1. object write => create object using object literals
 //importan 1
 const player = {};
