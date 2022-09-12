@@ -2913,9 +2913,38 @@ ES6 রিলেটেড সাতটা জিনিস তোমাকে জ
 </details>
 	
 	
+
+
+
 ```js
-	
-	local storage
+	### switch
+   <h3>What is switch? (Click Me)</h3>
+//switch
+let color = 'green';
+
+switch (color) {
+    case 'green':
+        console.log('You are a green friend')
+        break;
+    case 'Blue':
+        console.log('You are a Blue friend')
+        break;
+    case 'red':
+        console.log('You are a red friend')
+        break;
+    case 'white':
+        console.log('You are a white friend')
+        break;
+    case 'Black':
+        console.log('You are a Black friend')
+        break;
+    default:
+        console.log('You are a pink friend')
+}
+```
+
+```js
+local storage
 - Three working in Local storage and Session Storage 
 - setItem
 - getItem
@@ -2957,40 +2986,8 @@ ES6 রিলেটেড সাতটা জিনিস তোমাকে জ
     
    //Example 2
 
-
-### switch
-<details>
-<summary>
-   <h3>What is switch? (Click Me)</h3>
-</summary>
-<br >
-```js
-//switch
-let color = 'green';
-
-switch (color) {
-    case 'green':
-        console.log('You are a green friend')
-        break;
-    case 'Blue':
-        console.log('You are a Blue friend')
-        break;
-    case 'red':
-        console.log('You are a red friend')
-        break;
-    case 'white':
-        console.log('You are a white friend')
-        break;
-    case 'Black':
-        console.log('You are a Black friend')
-        break;
-    default:
-        console.log('You are a pink friend')
-}
 ```
-</details>
 	
-```
   
   ### snippetsForJavascript
 <details>
