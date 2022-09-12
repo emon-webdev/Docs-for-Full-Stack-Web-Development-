@@ -50,9 +50,6 @@ List of JavaScript:
   <h3>What is JSONStringify ? (Click Me)</h3>
 </summary>
 <br >
-
-	
-```js
 - JSONStringify
 - javaScript এর কোন একটি object/array/value কে Object a convert করার জন্য JSON.parse() দিতে হবে
 JSON.parse() 
@@ -61,6 +58,7 @@ JSON.parse()
 JSON.stringify() 
 - return String;
 	
+```js
 // without stringify
 //Ex: 1
 let a = { x: 5, y: 6 }
