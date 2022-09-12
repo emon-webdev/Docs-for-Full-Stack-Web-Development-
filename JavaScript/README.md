@@ -27,7 +27,7 @@ List of JavaScript:
 - [Map](#Map)
 - [forEach](#forEach)
 - [filter](#filter)
-- [Map](#Map)
+- [find](#find)
 - [reduce](#reduce)
 - [JSON](#JSON)
 - [fetch_Keys_Values](#fetch_Keys_Values)
