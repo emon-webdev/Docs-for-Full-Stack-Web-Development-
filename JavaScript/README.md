@@ -42,28 +42,13 @@ List of JavaScript:
 - [Table](#Table)
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
-### demo
-<details>
-<summary>
-  <h3> demo? (Click Me)</h3>
-</summary>
-<br >
-```js
-//switch
-demo
-
-```
-</details>
-
 ### es6
 <details>
 <summary>
-  <h3>What is es6? (Click Me)</h3>
+  <h3> es6? (Click Me)</h3>
 </summary>
 <br >
-	
 ```js
-
 // 1. let and const
 let salary = 345;
 salary = 4000;
@@ -105,6 +90,8 @@ const [a, b, c] = [12, 45, 32 ,56 ,7, 5];
 
 ```
 </details>
+
+
 
 ### Destructuring
 <details>
