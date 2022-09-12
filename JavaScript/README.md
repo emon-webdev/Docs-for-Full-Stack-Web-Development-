@@ -50,20 +50,10 @@ List of JavaScript:
 </summary>
 <br >
 ```js
-
+Demo__________
 ```
 </details>
 
-### localStorage
-<details>
-<summary>
-  <h3>localStorage ? (Click Me)</h3>
-</summary>
-<br >
-```js
-
-```
-</details>
 
 ### es6
 <details>
