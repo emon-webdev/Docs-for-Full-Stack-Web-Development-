@@ -49,9 +49,17 @@ List of JavaScript:
   <h3>What is ? (Click Me)</h3>
 </summary>
 <br >
- reduce
+```js
 
+```
+</details>
 
+### localStorage
+<details>
+<summary>
+  <h3>localStorage ? (Click Me)</h3>
+</summary>
+<br >
 ```js
 
 ```
@@ -63,8 +71,6 @@ List of JavaScript:
   <h3>What is es6? (Click Me)</h3>
 </summary>
 <br >
- demo
-
 ```js
 
 // 1. let and const
