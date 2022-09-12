@@ -53,13 +53,13 @@ List of JavaScript:
 
 	
 ```js
-JSONStringify
-//javaScript এর কোন একটি object/array/value কে Object a convert করার জন্য JSON.parse() দিতে হবে
+- JSONStringify
+- javaScript এর কোন একটি object/array/value কে Object a convert করার জন্য JSON.parse() দিতে হবে
 JSON.parse() 
-return Object;
-//javaScript এর কোন একটি  object/array/value কে string a convert করার জন্য JSON.stringify() দিতে হবে
+- return Object;
+- javaScript এর কোন একটি  object/array/value কে string a convert করার জন্য JSON.stringify() দিতে হবে
 JSON.stringify() 
-return String;
+- return String;
 	
 // without stringify
 //Ex: 1
