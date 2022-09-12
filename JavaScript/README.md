@@ -43,17 +43,6 @@ List of JavaScript:
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
 
-### demo
-<details>
-<summary>
-  <h3>What is ? (Click Me)</h3>
-</summary>
-<br >
-```js
-
-```
-</details>
-
 
 ### es6
 <details>
