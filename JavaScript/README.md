@@ -33,7 +33,7 @@ List of JavaScript:
 - [Array](#Array)
 - [Object](#Object)
 - [switch](#switch)
-- [localStorage](#localStorage)
+- [local_storage](#local_storage)
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
 - [jsProblemSolved](#jsProblemSolved)
@@ -1569,19 +1569,20 @@ switch (color) {
 
 ```
 </details>
-
-### localStorage
+	
+### local_storage
 <details>
 <summary>
-   <h3>What is LocalStorage And Session Storage? (Click Me)</h3>
+  <h3>What is LocalStoragee? (Click Me)? (Click Me)</h3>
 </summary>
 <br >
+	
 ```js
 - Three working in Local storage and Session Storage 
 - setItem
 - getItem
 - removeItem
-
+	
 
    //Data add local storage
     const handleAddData = () => {
@@ -1617,13 +1618,9 @@ switch (color) {
     };
     
    //Example 2
-	
-	
-
-}
 
 ```
-</details>
+</details>	
 
 
 
