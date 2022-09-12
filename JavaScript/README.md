@@ -42,7 +42,18 @@ List of JavaScript:
 - [Table](#Table)
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
+### demo
+<details>
+<summary>
+  <h3> demo? (Click Me)</h3>
+</summary>
+<br >
+```js
+//switch
+demo
 
+```
+</details>
 
 ### es6
 <details>
@@ -50,6 +61,7 @@ List of JavaScript:
   <h3>What is es6? (Click Me)</h3>
 </summary>
 <br >
+	
 ```js
 
 // 1. let and const
