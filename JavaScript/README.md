@@ -1582,7 +1582,7 @@ switch (color) {
 </summary>
 <br >
 - Three working in Local storage and Session Storage 
--  setItem
+- setItem
 - getItem
 - removeItem
 
@@ -1621,95 +1621,21 @@ switch (color) {
         localStorage.removeItem('cart')
     };
     
+   //Example 1
     
-        // localStorage connect to ui
-    useEffect(() => {
-        if (products.length) {
-            const storedProductIds = getFromLocalStorage();
-            const previousCart = [];
-
-            for (const id in storedProductIds) {
-                const foundProduct = products.find(product => product.id === id);
-                if(foundProduct){
-                    const quantity = storedProductIds[id];
-                    foundProduct.quantity = quantity
-                    previousCart.push(foundProduct)
-                }
-            }
-            setCart(previousCart)
-        }
-
-    }, [products])
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
 
- // <h3>Local Storage Fake Db</h3>
-
-// use local storage to manage cart data
-const addToDb = id =>{
-// set localStorage
-    let shoppingCart = {};
-
-    //get the shopping cart
-        // যেই নামে setItem করা হইছে সেই নামে পেতে হবে/
-        const storedCart = localStorage.getItem('shopping-cart');
-        if(storedCart){
-            console.log(storedCart)
-            // local store data save হই string হিসাবে  সেইটা getItem করার সময় normal javascript a conver korta hoi
-            // সেই জন্য JSON.parse(storedCart) করা লাগে।
-            shoppingCart = JSON.parse(storedCart)
-
-        }
-
-    // add quantity
-   const quantity = shoppingCart[product.id];
-        if (quantity) {
-            // const newQuantity = quantity + 1;
-            shoppingCart[product.id] = quantity + 1;
-
-        } else {
-            shoppingCart[product.id] = 1;
-        }
-        
-    // local storage name set
-        // step 1 key and value দুইটাই object হওয়া লাগবে;
-        // step 2 object কে string convert korar jonno JSON.stringify(shoppingCart) করা লাগবে।
-        localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart))
-}
-
-const getStoredCart = () =>{
-    let shoppingCart = {};
-
-    //get the shopping cart from local storage
-    const storedCart = localStorage.getItem('shopping-cart');
-    if(storedCart){
-        shoppingCart = JSON.parse(storedCart);
-    }
-    return shoppingCart;
-}
-
-const removeFromDb = id =>{
-    const storedCart = localStorage.getItem('shopping-cart');
-    if(storedCart){
-        const shoppingCart = JSON.parse(storedCart);
-        if(id in shoppingCart){
-            delete shoppingCart[id];
-            localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
-        }
-    }
-}
-
-const deleteShoppingCart = () =>{
-    localStorage.removeItem('shopping-cart');
-}
-
-export {
-    addToDb,
-    getStoredCart,
-    removeFromDb,
-    deleteShoppingCart
-};- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
 
 ```
 </details>
