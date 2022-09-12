@@ -33,7 +33,6 @@ List of JavaScript:
 - [Array](#Array)
 - [Object](#Object)
 - [switch](#switch)
-- [local_storage](#local_storage)
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
 - [jsProblemSolved](#jsProblemSolved)
@@ -1571,20 +1570,7 @@ switch (color) {
 
 ```
 </details>
-	
-### local_storage
-<details>
-<summary>
-  <h3>What is Local Storagee ? (Click Me)</h3>
-</summary>
-<br >
-	
-```js
 
-local_storage code
-
-```
-</details>
 
 ### jsProblemSolved
 
