@@ -56,6 +56,8 @@ demo code
 ```
 </details>
 
+
+
 ### es6
 <details>
 <summary>
@@ -1573,11 +1575,18 @@ switch (color) {
 ### local_storage
 <details>
 <summary>
-  <h3>What is LocalStoragee? (Click Me)? (Click Me)</h3>
+  <h3>What is Local Storagee ? (Click Me)</h3>
 </summary>
 <br >
 	
 ```js
+
+local_storage code
+
+```
+</details>
+	
+
 - Three working in Local storage and Session Storage 
 - setItem
 - getItem
@@ -1618,11 +1627,7 @@ switch (color) {
     };
     
    //Example 2
-
-```
-</details>	
-
-
+	
 
 ### jsProblemSolved
 
