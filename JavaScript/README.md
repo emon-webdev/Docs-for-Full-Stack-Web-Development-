@@ -42,6 +42,69 @@ List of JavaScript:
 - [Table](#Table)
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
+### demo
+<details>
+<summary>
+  <h3>What is ? (Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+demo code
+
+```
+</details>
+
+### es6
+<details>
+<summary>
+  <h3>What is es6? (Click Me)</h3>
+</summary>
+<br >
+	
+```js
+// 1. let and const
+let salary = 345;
+salary = 4000;
+const numbers = [12, 45, 654, 67, 53];
+
+// 2. default parameters
+function calculateSalary(salary, tax = 0.25, bonus = 0){
+    const remaining = salary - salary * tax;
+    const total = remaining + bonus;
+    return total;
+}
+
+// 3. template String
+const elementHtml = `
+    <div>
+        <h3>Name: ${name}</h3>
+        <p>Address: ${numbers[2]}</p>
+        <p>Salary: $(calculateSalary(1000, 0, 0))</p>
+    </div>
+`;
+
+// 4. arrow function
+const doubleIt = x => x * 2;
+const calculateSalary2 = (salary, tax, bonus) => salary * tax + bonus;
+
+//5. Spread Operator
+const ages = [11, 13, 15 ,14, 10, 16];
+//wrong way (catch reference)
+const newAges = ages;
+//right way to new array
+const newAges2 = [...ages, 22 , 34, 43];
+
+
+//6. destructuring
+// object in important name
+const {x, y, ...z} = {x: 45, y:12, z: 33, name: 'sakib', salary: 4000};
+// array in important position
+const [a, b, c] = [12, 45, 32 ,56 ,7, 5];
+```
+</details>
+
 ### Destructuring
 <details>
 <summary>
