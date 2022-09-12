@@ -1585,49 +1585,6 @@ local_storage code
 
 ```
 </details>
-	
-
-- Three working in Local storage and Session Storage 
-- setItem
-- getItem
-- removeItem
-	
-
-   //Data add local storage
-    const handleAddData = () => {
-        localStorage.setItem('cart', '123')
-    };
-    //Data Read / Shows local storage
-    const handleShowData = () => {
-       const item = localStorage.getItem('cart')
-       console.log(item)
-    };
-     //Data Remove local storage
-    const handleRemoveData = () => {
-        localStorage.removeItem('cart')
-    };
-    
-    //Example 1
-  <button onClick={handleAddData}>Add</button>
-  <button onClick={handleShowData}>Read / Shows</button>
-  <button onClick={handleRemoveData}>Remove</button>
-  
-  //Object Data add local storage
-    const handleAddData = () => {
-        localStorage.setItem('cart', JSON.stringify({abc: 1, bcd: 2}))
-    };
-    //Object Data Read / Shows local storage
-    const handleShowData = () => {
-       const item = JSON.parse(localStorage.getItem('cart'))
-       console.log(item)
-    };
-     //Data Remove local storage (Remove same)
-    const handleRemoveData = () => {
-        localStorage.removeItem('cart')
-    };
-    
-   //Example 2
-	
 
 ### jsProblemSolved
 
