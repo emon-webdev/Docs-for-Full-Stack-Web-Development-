@@ -492,6 +492,8 @@ function
 //slice
 const friends = [12, 45, 32, 22, 44, 62, 29, 69, 87];
 const friendsSlice = friends.slice(2, 6);
+//you can use substring / substring works in string like lorem 
+const friendsSlice = friends.substring(0, 50);
 console.log(friendsSlice)
 // Splice
 // Removes elements from an array and,
