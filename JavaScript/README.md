@@ -38,12 +38,13 @@ List of JavaScript:
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
 - [jsProblemSolved](#jsProblemSolved)
-- [javascriptInterviewQuestions](#javascriptInterviewQuestions)
+- [JsErrorAndDebug](#JsErrorAndDebug)
 - [Notes](#Notes)
+- [javascriptInterviewQuestions](#javascriptInterviewQuestions)
 - [Table](#Table)
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
-### demo
+### JsErrorAndDebug
 <details>
 <summary>
   <h3>What is ? (Click Me)</h3>
@@ -2297,6 +2298,56 @@ console log করে দে খাতে সে টা কি তুমি প�
 
 ```
 </details>
+
+### JsErrorAndDebug
+<details>
+<summary>
+  <h3>What is Js Common Error types And Debug? (Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+************Common types of errors************
+1. Syntax Error ?
+Ans : Syntax Error is triggered when you write code that is not syntactically correct
+i. missing inverted commas
+ii. Missing closing parentheses
+iii. improper alignment of curly braces or other characters
+
+2. Type Error ?
+Ans: Type Error is created when some value doesn't turn out tot be of a particular expected type.
+i.i.Uncaught TypeError: Cannot read Property
+i.ii.Uncaught TypeError: Cannot set Property
+i. Invoking objects that are not methods.
+ii. Attempting to access properties of null or undefined objects
+iii. Treating a string as a number or vice versa.
+
+3. Reference Error?
+Ans: Reference Errors occur we might have forgotten to define a value for the variable before using it,
+or we might be trying to use an inaccessible variable in our code.
+1. variable name is not define
+2. funtion name is not define
+#solved way
+i. Making a type in a variable name.
+ii. Trying to access block-scoped variables outside of their scopes.
+
+4. Logical Error
+# যখন সব ঠিক আছে তবে আমরা logic এ ভুল করেছি
+
+************Module 41 ************
+#Debug Steps: 
+1. Error check (error reproduce)
+2. Check others stuffs on the website
+3. Check Console for error
+4. click on the link of the error (it will take you to the code)
+5. If needed add a breakpoint and try to stop the code over there and see the values
+6. if needed console log output
+7. search full code base (Ctrl + Shift + F) > don't forget about partial match
+8. look around for typo
+
+```
+</details>
 	
 ### Notes
 <details>
@@ -2392,18 +2443,26 @@ iii. improper alignment of curly braces or other characters
 
 2. Type Error ?
 Ans: Type Error is created when some value doesn't turn out tot be of a particular expected type.
+i.i.Uncaught TypeError: Cannot read Property
+i.ii.Uncaught TypeError: Cannot set Property
 i. Invoking objects that are not methods.
 ii. Attempting to access properties of null or undefined objects
 iii. Treating a string as a number or vice versa.
 
 3. Reference Error?
 Ans: Reference Errors occur we might have forgotten to define a value for the variable before using it,
-	or we might be trying to use an inaccessible variable in our code. 
+or we might be trying to use an inaccessible variable in our code.
+1. variable name is not define
+2. funtion name is not define
+#solved way
 i. Making a type in a variable name.
 ii. Trying to access block-scoped variables outside of their scopes.
 
+4. Logical Error
+# যখন সব ঠিক আছে তবে আমরা logic এ ভুল করেছি
+
 ************Module 41 ************
-Debug Steps: 
+#Debug Steps: 
 1. Error check (error reproduce)
 2. Check others stuffs on the website
 3. Check Console for error
@@ -2414,7 +2473,7 @@ Debug Steps:
 8. look around for typo
 
 ************Module 42 ************
-
+#
 
 
 
