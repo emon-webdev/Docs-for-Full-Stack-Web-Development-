@@ -2964,8 +2964,8 @@ javascript only hoist declarations, not initializations.
 <!-- row 24-->
       <tr>
         <th>24</th>
-        <td> </td>
-        <td> </td>
+        <td>shorthand-javascript-techniques </td>
+        <td>https://www.sitepoint.com/shorthand-javascript-techniques/?fbclid=IwAR3ELG6nojp4FdQVgXt1sEtZDgIU7ImGEZKxuRBCQblWx1VG1rxGOdCrjE8 </td>
       </tr>
     </tbody>
   </table>
