@@ -1438,13 +1438,13 @@ shoppingCart[propertyName] = 89;
 - Map return array
 
 ```js
-//number To String Conversion
+//String To Number Conversion
 //Example 1
 const input = '400';
 const inputNum = +input;
 console.log(typeof inputNum)
 
-//String To Number Conversion
+//number To String Conversion
 //Example 2
 const input2 = 53;
 const numStr = input2 + '';
