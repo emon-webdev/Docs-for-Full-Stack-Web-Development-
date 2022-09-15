@@ -2495,6 +2495,11 @@ ii. Trying to access block-scoped variables outside of their scopes.
 
 //ES6 Interview Questions?
 
+// Milestone 4: Hello JavaScript
+//module:  19
+1. What is function?
+Ans: function কয়েক লাইন কোড এর একটা সমষ্টি  (block of code) যেটা নিদিষ্ট একটা কাজ সম্পাদন করে।
+
 // Milestone 6: Intermediate JavaScript, Api
 //module:  30
 2. what is DOM?
