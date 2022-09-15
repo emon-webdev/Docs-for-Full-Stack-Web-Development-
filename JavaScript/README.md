@@ -2621,6 +2621,7 @@ javascript only hoist declarations, not initializations.
 	console.log(foo.bar);
    ii. What type of error will the code generate?
    iii. What is the correct way to write the code?
+77. How can I get undefined?
  
 	
 	
