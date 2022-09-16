@@ -2578,9 +2578,19 @@ Ans: JavaScript is a single- threaded and synchronus language. (কিন্ত�
 47. Tell me something about JS engine v8 internal mechanism?
 48. What is rerender in Browser?
 49. What is event loop in JavaScript?
+Ans:  Event loop হচ্ছে Synchronous and asynchronous manage করে চালায়।
+আমরা জানি javascript single threaded কিন্তু asynchronous . তাই asynchronous handle করে Event loop দিয়ে।
+# Event loop এর ভিতর থাকে ৩টা পার্ট
+i. Heep ii. Stack ii. Queue
+49.1 What is event queue?
+Ans i. Sends new functions to the stack for processing.
+ii. Follows the queue data structure.
+iii. Maintains the correct sequence in which all operations should be sent for execution.
 50. if javascript is single threaded, how does it handle asynchronous call?
 51. What is SSL?
 52. What is Regular Expression?
+53. JavaScript is a single threaded. কিন্তু Synchronous and asynchronous কেমনে চলে?
+Ans: Ofcourse JavaScript is a single threaded. কিন্তু Event loop এর মাধমে এক সাথে Stack and Queue manage করে।
 
 //module:  38
 53. What is the defference between an alert box and a confirmation box?
@@ -2592,8 +2602,9 @@ Ans: JavaScript is a single- threaded and synchronus language. (কিন্ত�
 59. what is javaScript Heap? (javaScript memory location কোথাই করে?)
 Ans: কোন object/ array এর refarence টাকে কিছু সময়ের জন্য stored করে রাখে। সেটাই হল Heeap.
 javaScript এ memory location Heap এ করে।
-60. what is javaScript stack?
-Ans: 
+60. what is javaScript call stack?
+Ans: i. Keeps track of all the operations in line to be executed.
+ii. Whenever a function is finished, it is popped from the stack.
 	
 //module:  39	(interview important)
 61. what are the differences between double equal (==) vs triple equal (===)?
