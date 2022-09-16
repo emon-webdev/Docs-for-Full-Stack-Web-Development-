@@ -1,7 +1,7 @@
 # JavaScript Using Method And Example
 
 ### what is javaScript?
-- JavaScript is high level, interpreted programming language used to make web pages more interactive. JavaScript is a dynamic programming language that's used for web development, web applications, game development, and lots more. JavaScript language is used both on the client-side and server-side allowing you to make web pages interactive.
+-JavaScript is a single threaded, non-blocking asynchronous concurrent Langguage. JavaScript is high level, interpreted programming language used to make web pages more interactive. JavaScript is a dynamic programming language that's used for web development, web applications, game development, and lots more. JavaScript language is used both on the client-side and server-side allowing you to make web pages interactive.
 ### Why use JavaScript?
 - Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user.
 
@@ -2492,6 +2492,9 @@ ii. Trying to access block-scoped variables outside of their scopes.
  ```css
 //Basic knowledge
 1. how does internet work?
+2. what is javaScript?
+Ans: JavaScript is a single threaded, non-blocking asynchronous concurrent Langguage. JavaScript have call  stack,
+ an event loop, a callback queue some other apis and stuff.
 
 //ES6 Interview Questions?
 
