@@ -2503,6 +2503,7 @@ Ans: function কয়েক লাইন কোড এর একটা সমষ�
 // Milestone 6: Intermediate JavaScript, Api
 //module:  30
 2. what is DOM?
+Ans: Document object Model. Website এ যত HTML আছে সবগুলাকে Object বানায়ে কাজ করে।
 3. What are the different ways to get an element from DOM ?
 4. What's the different between an Event Handler and an Event Listener ?
 5. what does "event bubbling" mean in JavaScript?
