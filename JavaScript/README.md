@@ -2037,19 +2037,7 @@ ii. Trying to access block-scoped variables outside of their scopes.
 ```js
 
 ### Number 1 
-//Number 1 => Example 1
-// charecter forword way of String (string  টা কে  সোজা দিক থেকে console.log করা)
-// text = myString কারণ  parametar যেইটাই পাঠাই না কেন অন্য নামে recive kore 
-// যেমন myString হিসাবে পাঠাইছে  text হিসাবে recived করছে
-function reverseString(text){
-    for(let i = 0; i < text.length; i++){
-        const element = text[i];
-        console.log(element)
-        
-        
-    }
-}
-				   
+	
 //Number 1 => Example 1.1
 // Find the max number in an array
 const numbers = [123, 53, 125, 567, 90, 321];
@@ -2066,6 +2054,17 @@ function maxInArray(numbers){
 }
 const tallest = maxInArray(numbers);
 console.log( 'tallest person is', tallest)
+	
+//Number 1 => Example 1
+// charecter forword way of String (string  টা কে  সোজা দিক থেকে console.log করা)
+// text = myString কারণ  parametar যেইটাই পাঠাই না কেন অন্য নামে recive kore 
+// যেমন myString হিসাবে পাঠাইছে  text হিসাবে recived করছে
+function reverseString(text){
+    for(let i = 0; i < text.length; i++){
+        const element = text[i];
+        console.log(element)
+    }
+}			   
 				   
 //Number 1 => Example 2
 // charecter reverse way of String (string টা কে উল্টা দিক থেকে console.log করা)
