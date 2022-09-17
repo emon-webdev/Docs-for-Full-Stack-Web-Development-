@@ -1634,331 +1634,6 @@ switch (color) {
 ```
 
 
-
-### jsProblemSolved
-
-<details>
-<summary>
-  <h3>js Problem Solved (Click Me)</h3>
-</summary>
-<br >
-
-```js
-
-### Number 1 
-//Number 1 => Example 1
-// charecter forword way of String (string  টা কে  সোজা দিক থেকে console.log করা)
-// text = myString কারণ  parametar যেইটাই পাঠাই না কেন অন্য নামে recive kore 
-// যেমন myString হিসাবে পাঠাইছে  text হিসাবে recived করছে
-function reverseString(text){
-    for(let i = 0; i < text.length; i++){
-        const element = text[i];
-        console.log(element)
-        
-        
-    }
-}
-//Number 1 => Example 2
-// charecter reverse way of String (string টা কে উল্টা দিক থেকে console.log করা)
-function reverseString(text){
-    for(let i = text.length; i >= 0; i--){
-        const element = text[i];
-        console.log(element)
-    }
-}
-
-const myString = 'i am a good boy';
-const reversed = reverseString(myString);
-console.log(reversed)
-
-//Number 1 => Example 3
-// Word reverse way of String (string টা কে উল্টা দিক থেকে console.log করা)
-function reverseWord(str){
-    //split kore potita word ke alada alada kor hoisa
-    const words = str.split(' ');
-    const result = [];
-    //-1 last element er index 1 kom (undifiend jate na dekhai) 
-    for(let i =  words.length - 1; i >= 0; i--){
-        const element = words[i];
-        
-        result.push(element)
-    }
-    // word gulo ek sentens anar jonno join kora hoisa
-    const reversed = result.join(' ');
-    return reversed;
-}
-const myString = 'i am a good boy';
-const reversed = reverseWord(myString);
-console.log(reversed)
-
-//Number 1 => Example 4
-// আগের দুটা মান যোগ করে পরের মান সেট করা
-//const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
-/* 
-    fibo[3] = fibo[2] + fibo[1]
-    fibo[4] = fibo[3] + fibo[2]
-    fibo[n] = fibo[n-1] + fibo[n-2]
-    fibo[3] = fibo[i-1] + fibo[i-2]
-*/
-const fibo  = [0, 1];
-// 0, 1 already define(0 ,1  value diyai dici tai 2 theke start korta hobe)
-for(let i = 2; i <= 25; i++){
-    fibo[i] = fibo[i - 1] + fibo[i - 2]
-}
-console.log(fibo)
-
-//Number 1 => Example 5
-//Remobe name duplicate From An Array
-const  names = ['abul', 'babul', 'kable', 'dabul', 'ebul', 'babul', 'abul', 'kabul', 'gabul', 'cabul', 'babul', 'abul', 'abul', 'cabul'];
-function removeDuplicate(names){
-    const unique = [];
-    for(let i = 0; i < names.length; i++){
-        if(unique.includes(name) === false){
-            unique.push(name)
-        }
-    }
-    return unique;
-}
-const uniqueName = removeDuplicate(names);
-console.log(uniqueName)
-//Remobe Number duplicate From An Array
-const friends = [12, 45, 32, 22, 44, 62, 29, 23, 22, 12, 45, 44, 69, 87];
-function removeDuplicateNumber(friends) {
-    const uniqueNumber = [];
-    for (const friend of friends) {
-        if (uniqueNumber.includes(friend) === false) {
-            uniqueNumber.push(friend)
-        }
-    }
-    return uniqueNumber
-}
-console.log(removeDuplicateNumber(friends))
-
-
-<--Number 2-->
-//Number 2 => Example 1
-/* 
-// Show output from 1-100
-1. if the number is divisible by 3 then insted of the show 'foo', is number 5 then show 'bar'
-2. if the number divisible by both 3and 5 then instead of the number show 'footbar'
-*/
-for (let i = 1; i <= 50; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log('foobar')
-    }else if (i % 3 === 0) {
-        console.log('foo')
-
-    } else if (i % 5 === 0) {
-        console.log('bar')
-
-    } else {
-        console.log(i)
-    }
-}
-
-//Number 2 => Example 2
-/* 
-Fixed: per item wood requirments
-Vary: quantity
-1. chair --> 3 cft
-2. table --> 10 cft
-3. bed --> 50 cft
-*/
-function woodCalculator(chairQuantity, tableQuantity, bedQuantity){
-    const perChariWood =  3;
-    const perTableWood = 10;
-    const perBedWood = 50;
-
-    const chairWood = chairQuantity * perChariWood;
-    const tableWood = tableQuantity * perTableWood;
-    const bedWood = bedQuantity * perBedWood;
-
-    const total = chairWood + tableWood + bedWood;
-    return total;
-}
-const totalWood = woodCalculator(2, 1, 1);
-console.log('total wood required', totalWood)
-
-//Number 2 => Example 3
-// find cheapest price in array of object
-const phones = [
-    { name: 'Samsung', camera: 12, storage: '32gb', price: 36000, color: 'silver' },
-    { name: 'Waltor', camera: 10, storage: '32gb', price: 22000, color: 'silver' },
-    { name: 'Iphone', camera: 10, storage: '32gb', price: 82000, color: 'silver' },
-    { name: 'Xiomi', camera: 10, storage: '32gb', price: 52000, color: 'silver' },
-    { name: 'Oppo', camera: 10, storage: '32gb', price: 20000, color: 'silver' },
-    { name: 'Nokia', camera: 10, storage: '32gb', price: 44000, color: 'silver' },
-    { name: 'HTC', camera: 10, storage: '32gb', price: 62000, color: 'silver' },
-    { name: 'Techno', camera: 10, storage: '32gb', price: 12000, color: 'silver' }
-];
-function cheapestPhone(phones) {
-    let cheapest = phones[0]
-    for (const phone of phones) {
-        if (phone.price < cheapest.price) {
-            cheapest = phone;
-        }
-    }
-    return cheapest;
-}
-
-const mySelection = cheapestPhone(phones);
-console.log(mySelection)
-
-//Number 2 => Example 4
-
-/* 
-1.if ticket numbers is less then 100, per ticket price: 100
-2.if tikcket numbers is more than 100, but less than 200. first 100  ticket price will be 100. rest tickets will be 900 taka per ticket.
-    first 100 --> 100 tk
-    rest ---> 90 tk
-3. if you perchase more than tickets
-first 100 ---> 100 tk
-101-200 ---> 90 tk
-200 + ---> 70 tk
-*/
-function ticketPrice(ticketQuantity){
-    const first100Ticket = 100;
-    const second100Ticket = 90;
-    const restTicket = 70;
-    if(ticketQuantity <= 100){
-        const price = ticketQuantity * first100Ticket;
-        return price;
-    }
-    else if(ticketQuantity <= 200){
-        const first100Price = 100 * first100Ticket;
-        const restTicketQuantity  = ticketQuantity - 100;
-        const restTicketPrice  = restTicketQuantity * second100Ticket;
-        const totalPrice = first100Price + restTicketPrice;
-        return totalPrice;
-    }
-    else{
-        const first100Price = 100 * first100Ticket;
-        const second100Price = 100 * second100Ticket;
-        const restTicketPrict = ticketQuantity - 200;
-        const restTicketPrice = restTicketPrict * restTicket;
-        const totalPrice = first100Price + second100Price + restTicketPrice;
-        return totalPrice;
-    }
-}
-const price = ticketPrice(101);
-console.log(price)
-
-//Number 2 => Example 5
-
-// array এর ভিতর কোন কোন কিছু খুঁজে বের করা
-const products = [
-    {id: 1, name: 'walton Phone', price: 1900, color: 'silver'},
-    {id: 2, name: 'mac book air', price: 1900, color: 'green'},
-    {id: 3, name: 'Samsung Phone', price: 1900, color: 'yellow'},
-    {id: 4, name: 'lenovo yoga lapTOP 2025', price: 1900, color: 'black'},
-    {id: 5, name: 'I phone Phone', price: 1900, color: 'red'},
-    {id: 6, name: 'dell inspiron laptop', price: 1900, color: 'blue'},
-    {id: 7, name: 'nokia old age phone gone', price: 1900, color: 'pink'},
-    {id: 8, name: 'htc phone', price: 1900, color: 'white'},
-];
-//search parameter diya products এর ভিতর যে কোন কিছু খুঁজবো
-function matchedProducts(products, search){
-    //খুজে যেইটা পাবো তার জন্য array declare (matched) করতে হবে।
-    const matched = [];
-    
-    for(const product of products){
-        if(product.name.toLowerCase().includes(search.toLowerCase())){
-            matched.push(product)
-        }
-    }
-    return matched;
-}
-//যেই object a phone  আছে সেই object খুজে দাউ
-const result = matchedProducts(products, 'laptop');
-console.log(result)
-
-
-
-<--Number 3-->
-//Number 1 => Example 1
-
-//find largest number
-let arr = [3,5, 6, 7, 8, 34, 6,5, 76, 126]
-let largest = arr[0]
-for(let i = 0; i < arr.length; i++){
-    const element = arr[i];
-    if(element > largest){
-        largest = element;
-    }
-}
-console.log(largest)
-
-//Number 3 => Example 2
-
-// calculate Electricity bill
-//for first 100 unit - 5 tk
-//for more than 100 unit 6 tk for every unit more than 100
-//for more than 200 unit 7 tk for every unit more than 200
-// 250 unit
-//100 * 5 = 500
-//(200 - 100) * 6
-//(250 - 200) * 7
-
-function electricity(unit) {
-    let bill;
-    if (unit <= 100) {
-        bill = unit * 5
-    } else if (unit <= 200) {
-        const first100 = 100 * 5;
-        const remaining = unit - 100;
-        const remainingCost = remaining * 6;
-        bill = first100 + remainingCost;
-    } else if(unit > 200){
-        const first100 = 100 * 5;
-        const second100 = 100 * 6;
-        const remaining = unit - 200;
-        const remainingBill = remaining * 7;
-        bill = first100 + second100 + remainingBill
-    }
-    return bill;
-}
-
-const result = electricity(150);
-console.log(result)
-
-//Number 3 => Example 3
-// find if anybody got A+ from your friends
-// marks = [78, 82, 69]
-function checkGPA(arr){
-    for(const mark of arr){
-        if(mark >= 80){
-            return true
-        }
-    }
-    return false;
-}
-const result = checkGPA([78, 62, 69]);
-console.log(result)
-
-//Number 3 => Example 4
-//check if a number is Prime
-//1 number 11
-//2 => number-1
-function isPrime(number){
-    for(let i = 2; i < number; i ++){
-        if(number % i == 0){
-            return false
-        }
-    }
-    return true;
-}
-const result = isPrime(19);
-console.log(result)
-
-//Number 3 => Example 5
-
-	
-	
-
-```
-</details>
-
-
 ### jsProblemQuestions
 
 <details>
@@ -2350,6 +2025,330 @@ ii. Trying to access block-scoped variables outside of their scopes.
 
 ```
 </details>
+	
+### jsProblemSolved
+
+<details>
+<summary>
+  <h3>js Problem Solved (Click Me)</h3>
+</summary>
+<br >
+
+```js
+
+### Number 1 
+//Number 1 => Example 1
+// charecter forword way of String (string  টা কে  সোজা দিক থেকে console.log করা)
+// text = myString কারণ  parametar যেইটাই পাঠাই না কেন অন্য নামে recive kore 
+// যেমন myString হিসাবে পাঠাইছে  text হিসাবে recived করছে
+function reverseString(text){
+    for(let i = 0; i < text.length; i++){
+        const element = text[i];
+        console.log(element)
+        
+        
+    }
+}
+//Number 1 => Example 2
+// charecter reverse way of String (string টা কে উল্টা দিক থেকে console.log করা)
+function reverseString(text){
+    for(let i = text.length; i >= 0; i--){
+        const element = text[i];
+        console.log(element)
+    }
+}
+
+const myString = 'i am a good boy';
+const reversed = reverseString(myString);
+console.log(reversed)
+
+//Number 1 => Example 3
+// Word reverse way of String (string টা কে উল্টা দিক থেকে console.log করা)
+function reverseWord(str){
+    //split kore potita word ke alada alada kor hoisa
+    const words = str.split(' ');
+    const result = [];
+    //-1 last element er index 1 kom (undifiend jate na dekhai) 
+    for(let i =  words.length - 1; i >= 0; i--){
+        const element = words[i];
+        
+        result.push(element)
+    }
+    // word gulo ek sentens anar jonno join kora hoisa
+    const reversed = result.join(' ');
+    return reversed;
+}
+const myString = 'i am a good boy';
+const reversed = reverseWord(myString);
+console.log(reversed)
+
+//Number 1 => Example 4
+// আগের দুটা মান যোগ করে পরের মান সেট করা
+//const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+/* 
+    fibo[3] = fibo[2] + fibo[1]
+    fibo[4] = fibo[3] + fibo[2]
+    fibo[n] = fibo[n-1] + fibo[n-2]
+    fibo[3] = fibo[i-1] + fibo[i-2]
+*/
+const fibo  = [0, 1];
+// 0, 1 already define(0 ,1  value diyai dici tai 2 theke start korta hobe)
+for(let i = 2; i <= 25; i++){
+    fibo[i] = fibo[i - 1] + fibo[i - 2]
+}
+console.log(fibo)
+
+//Number 1 => Example 5
+//Remobe name duplicate From An Array
+const  names = ['abul', 'babul', 'kable', 'dabul', 'ebul', 'babul', 'abul', 'kabul', 'gabul', 'cabul', 'babul', 'abul', 'abul', 'cabul'];
+function removeDuplicate(names){
+    const unique = [];
+    for(let i = 0; i < names.length; i++){
+        if(unique.includes(name) === false){
+            unique.push(name)
+        }
+    }
+    return unique;
+}
+const uniqueName = removeDuplicate(names);
+console.log(uniqueName)
+//Remobe Number duplicate From An Array
+const friends = [12, 45, 32, 22, 44, 62, 29, 23, 22, 12, 45, 44, 69, 87];
+function removeDuplicateNumber(friends) {
+    const uniqueNumber = [];
+    for (const friend of friends) {
+        if (uniqueNumber.includes(friend) === false) {
+            uniqueNumber.push(friend)
+        }
+    }
+    return uniqueNumber
+}
+console.log(removeDuplicateNumber(friends))
+
+
+<--Number 2-->
+//Number 2 => Example 1
+/* 
+// Show output from 1-100
+1. if the number is divisible by 3 then insted of the show 'foo', is number 5 then show 'bar'
+2. if the number divisible by both 3and 5 then instead of the number show 'footbar'
+*/
+for (let i = 1; i <= 50; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('foobar')
+    }else if (i % 3 === 0) {
+        console.log('foo')
+
+    } else if (i % 5 === 0) {
+        console.log('bar')
+
+    } else {
+        console.log(i)
+    }
+}
+
+//Number 2 => Example 2
+/* 
+Fixed: per item wood requirments
+Vary: quantity
+1. chair --> 3 cft
+2. table --> 10 cft
+3. bed --> 50 cft
+*/
+function woodCalculator(chairQuantity, tableQuantity, bedQuantity){
+    const perChariWood =  3;
+    const perTableWood = 10;
+    const perBedWood = 50;
+
+    const chairWood = chairQuantity * perChariWood;
+    const tableWood = tableQuantity * perTableWood;
+    const bedWood = bedQuantity * perBedWood;
+
+    const total = chairWood + tableWood + bedWood;
+    return total;
+}
+const totalWood = woodCalculator(2, 1, 1);
+console.log('total wood required', totalWood)
+
+//Number 2 => Example 3
+// find cheapest price in array of object
+const phones = [
+    { name: 'Samsung', camera: 12, storage: '32gb', price: 36000, color: 'silver' },
+    { name: 'Waltor', camera: 10, storage: '32gb', price: 22000, color: 'silver' },
+    { name: 'Iphone', camera: 10, storage: '32gb', price: 82000, color: 'silver' },
+    { name: 'Xiomi', camera: 10, storage: '32gb', price: 52000, color: 'silver' },
+    { name: 'Oppo', camera: 10, storage: '32gb', price: 20000, color: 'silver' },
+    { name: 'Nokia', camera: 10, storage: '32gb', price: 44000, color: 'silver' },
+    { name: 'HTC', camera: 10, storage: '32gb', price: 62000, color: 'silver' },
+    { name: 'Techno', camera: 10, storage: '32gb', price: 12000, color: 'silver' }
+];
+function cheapestPhone(phones) {
+    let cheapest = phones[0]
+    for (const phone of phones) {
+        if (phone.price < cheapest.price) {
+            cheapest = phone;
+        }
+    }
+    return cheapest;
+}
+
+const mySelection = cheapestPhone(phones);
+console.log(mySelection)
+
+//Number 2 => Example 4
+
+/* 
+1.if ticket numbers is less then 100, per ticket price: 100
+2.if tikcket numbers is more than 100, but less than 200. first 100  ticket price will be 100. rest tickets will be 900 taka per ticket.
+    first 100 --> 100 tk
+    rest ---> 90 tk
+3. if you perchase more than tickets
+first 100 ---> 100 tk
+101-200 ---> 90 tk
+200 + ---> 70 tk
+*/
+function ticketPrice(ticketQuantity){
+    const first100Ticket = 100;
+    const second100Ticket = 90;
+    const restTicket = 70;
+    if(ticketQuantity <= 100){
+        const price = ticketQuantity * first100Ticket;
+        return price;
+    }
+    else if(ticketQuantity <= 200){
+        const first100Price = 100 * first100Ticket;
+        const restTicketQuantity  = ticketQuantity - 100;
+        const restTicketPrice  = restTicketQuantity * second100Ticket;
+        const totalPrice = first100Price + restTicketPrice;
+        return totalPrice;
+    }
+    else{
+        const first100Price = 100 * first100Ticket;
+        const second100Price = 100 * second100Ticket;
+        const restTicketPrict = ticketQuantity - 200;
+        const restTicketPrice = restTicketPrict * restTicket;
+        const totalPrice = first100Price + second100Price + restTicketPrice;
+        return totalPrice;
+    }
+}
+const price = ticketPrice(101);
+console.log(price)
+
+//Number 2 => Example 5
+
+// array এর ভিতর কোন কোন কিছু খুঁজে বের করা
+const products = [
+    {id: 1, name: 'walton Phone', price: 1900, color: 'silver'},
+    {id: 2, name: 'mac book air', price: 1900, color: 'green'},
+    {id: 3, name: 'Samsung Phone', price: 1900, color: 'yellow'},
+    {id: 4, name: 'lenovo yoga lapTOP 2025', price: 1900, color: 'black'},
+    {id: 5, name: 'I phone Phone', price: 1900, color: 'red'},
+    {id: 6, name: 'dell inspiron laptop', price: 1900, color: 'blue'},
+    {id: 7, name: 'nokia old age phone gone', price: 1900, color: 'pink'},
+    {id: 8, name: 'htc phone', price: 1900, color: 'white'},
+];
+//search parameter diya products এর ভিতর যে কোন কিছু খুঁজবো
+function matchedProducts(products, search){
+    //খুজে যেইটা পাবো তার জন্য array declare (matched) করতে হবে।
+    const matched = [];
+    
+    for(const product of products){
+        if(product.name.toLowerCase().includes(search.toLowerCase())){
+            matched.push(product)
+        }
+    }
+    return matched;
+}
+//যেই object a phone  আছে সেই object খুজে দাউ
+const result = matchedProducts(products, 'laptop');
+console.log(result)
+
+
+
+<--Number 3-->
+//Number 1 => Example 1
+
+//find largest number
+let arr = [3,5, 6, 7, 8, 34, 6,5, 76, 126]
+let largest = arr[0]
+for(let i = 0; i < arr.length; i++){
+    const element = arr[i];
+    if(element > largest){
+        largest = element;
+    }
+}
+console.log(largest)
+
+//Number 3 => Example 2
+
+// calculate Electricity bill
+//for first 100 unit - 5 tk
+//for more than 100 unit 6 tk for every unit more than 100
+//for more than 200 unit 7 tk for every unit more than 200
+// 250 unit
+//100 * 5 = 500
+//(200 - 100) * 6
+//(250 - 200) * 7
+
+function electricity(unit) {
+    let bill;
+    if (unit <= 100) {
+        bill = unit * 5
+    } else if (unit <= 200) {
+        const first100 = 100 * 5;
+        const remaining = unit - 100;
+        const remainingCost = remaining * 6;
+        bill = first100 + remainingCost;
+    } else if(unit > 200){
+        const first100 = 100 * 5;
+        const second100 = 100 * 6;
+        const remaining = unit - 200;
+        const remainingBill = remaining * 7;
+        bill = first100 + second100 + remainingBill
+    }
+    return bill;
+}
+
+const result = electricity(150);
+console.log(result)
+
+//Number 3 => Example 3
+// find if anybody got A+ from your friends
+// marks = [78, 82, 69]
+function checkGPA(arr){
+    for(const mark of arr){
+        if(mark >= 80){
+            return true
+        }
+    }
+    return false;
+}
+const result = checkGPA([78, 62, 69]);
+console.log(result)
+
+//Number 3 => Example 4
+//check if a number is Prime
+//1 number 11
+//2 => number-1
+function isPrime(number){
+    for(let i = 2; i < number; i ++){
+        if(number % i == 0){
+            return false
+        }
+    }
+    return true;
+}
+const result = isPrime(19);
+console.log(result)
+
+//Number 3 => Example 5
+
+	
+	
+
+```
+</details>
+	
 	
 ### Notes
 <details>
