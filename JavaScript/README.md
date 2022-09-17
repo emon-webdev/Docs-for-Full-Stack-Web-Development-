@@ -986,6 +986,106 @@ const allFriends = newFriendsAge.concat(friends);
 console.log(allFriends)
 ```
 </details>
+	
+### Array  
+<details>
+<summary>
+  <h3>What is Array? (Click Me)</h3>
+</summary>
+<br >
+- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
+
+```js
+array এর মধ্যে length, index, push, pop, indexOf, includes অবশ্যই জানা লাগবে।
+	
+//simple array you know?
+let numbers = [45, 68, 78, 56, 89, 98]
+//1. get element value by index
+let element = numbers[1]
+console.log(element)
+//2. set element value by index
+numbers[1] = 77;
+numbers[3] = 44;
+console.log(numbers)
+//3. find index of an element
+let positionIndex = numbers.indexof(89)
+console.log(positionIndex)
+
+//=== Push and Pop===
+//push (Add new elements to the first/last of an array)
+numbers.push(55);
+numbers.unshift(33);
+//push (remove the the first/last element of an array)
+numbers.pop();
+numbers.shift();
+
+//===Advance===
+// add or remove from an array
+const products = [
+    { name: 'laptop', price: '3200', brand: 'Lenovo', color: 'Silver' },
+    { name: 'phone', price: '3499', brand: 'iphone', color: 'golden' },
+    { name: 'watch', price: '420', brand: 'casio', color: 'yellow' },
+    { name: 'sunglass', price: '250', brand: 'reborn', color: 'black' },
+    { name: 'camera', price: '39000', brand: 'canon', color: 'black' },
+    { name: 'laptop', price: '3200', brand: 'Lenovo', color: 'Silver' }
+];
+
+const newProduct = {name: 'webcam', price: '670', brand: 'light blue'};
+
+//copy products array and then add newProduct
+const newProducts = [...products, newProduct];
+//create a new array without one specific item
+//remove item means create a new array without the 
+const remaining = products.filter(product => product.name !== 'phone');
+
+//array value (array এর মান যোগ)
+function getSumOfAnArray(numbers){
+    console.log(numbers)
+    let sum = 0;
+    for(let i = 0; i < numbers.length; i++){
+        const index = i;
+        const element = numbers[index];
+        sum = sum + element;
+        console.log(index, element, sum)
+    }
+    return sum;
+}
+const myNumbers = [12, 43, 54, 65, 78, 91];
+getSumOfAnArray(myNumbers)
+
+// find array in odd numbers
+function getOddNumbersOfAnArray(numbers){
+    for(let i = 0; i < numbers.length; i++){
+        const index = i;
+        const element = numbers[index];
+        if(element % 2 !== 0){
+            console.log(index, element)
+        }
+    }
+}
+
+//সব থেকে বড় number ta বের করা।
+function maxInArray(numbers) {
+    //সব থেকে বড় number 0 ধরলাম।
+    let largest = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[index];
+        if (element > largest) {
+            largest = element;
+        }
+
+    }
+    return largest;
+}
+
+const heights = [167, 190, 120, 165, 139, 534];
+const tallest = maxInArray(heights);
+console.log('tallest person is', tallest)
+
+
+```
+</details>
 
 ### Map
 <details>
@@ -1175,103 +1275,7 @@ console.log(total2)
 </details>
 
 	
-### Array  
-<details>
-<summary>
-  <h3>What is Array? (Click Me)</h3>
-</summary>
-<br >
-- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
 
-```js
-//simple array you know?
-let numbers = [45, 68, 78, 56, 89, 98]
-//1. get element value by index
-let element = numbers[1]
-console.log(element)
-//2. set element value by index
-numbers[1] = 77;
-numbers[3] = 44;
-console.log(numbers)
-//3. find index of an element
-let positionIndex = numbers.indexof(89)
-console.log(positionIndex)
-
-//=== Push and Pop===
-//push (Add new elements to the first/last of an array)
-numbers.push(55);
-numbers.unshift(33);
-//push (remove the the first/last element of an array)
-numbers.pop();
-numbers.shift();
-
-//===Advance===
-// add or remove from an array
-const products = [
-    { name: 'laptop', price: '3200', brand: 'Lenovo', color: 'Silver' },
-    { name: 'phone', price: '3499', brand: 'iphone', color: 'golden' },
-    { name: 'watch', price: '420', brand: 'casio', color: 'yellow' },
-    { name: 'sunglass', price: '250', brand: 'reborn', color: 'black' },
-    { name: 'camera', price: '39000', brand: 'canon', color: 'black' },
-    { name: 'laptop', price: '3200', brand: 'Lenovo', color: 'Silver' }
-];
-
-const newProduct = {name: 'webcam', price: '670', brand: 'light blue'};
-
-//copy products array and then add newProduct
-const newProducts = [...products, newProduct];
-//create a new array without one specific item
-//remove item means create a new array without the 
-const remaining = products.filter(product => product.name !== 'phone');
-
-//array value (array এর মান যোগ)
-function getSumOfAnArray(numbers){
-    console.log(numbers)
-    let sum = 0;
-    for(let i = 0; i < numbers.length; i++){
-        const index = i;
-        const element = numbers[index];
-        sum = sum + element;
-        console.log(index, element, sum)
-    }
-    return sum;
-}
-const myNumbers = [12, 43, 54, 65, 78, 91];
-getSumOfAnArray(myNumbers)
-
-// find array in odd numbers
-function getOddNumbersOfAnArray(numbers){
-    for(let i = 0; i < numbers.length; i++){
-        const index = i;
-        const element = numbers[index];
-        if(element % 2 !== 0){
-            console.log(index, element)
-        }
-    }
-}
-
-//সব থেকে বড় number ta বের করা।
-function maxInArray(numbers) {
-    //সব থেকে বড় number 0 ধরলাম।
-    let largest = numbers[0];
-    for (let i = 0; i < numbers.length; i++) {
-        const index = i;
-        const element = numbers[index];
-        if (element > largest) {
-            largest = element;
-        }
-
-    }
-    return largest;
-}
-
-const heights = [167, 190, 120, 165, 139, 534];
-const tallest = maxInArray(heights);
-console.log('tallest person is', tallest)
-
-
-```
-</details>
 
 ### Object
 <details>
