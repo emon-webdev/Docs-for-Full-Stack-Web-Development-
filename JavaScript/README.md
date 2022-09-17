@@ -2363,6 +2363,44 @@ ii. Trying to access block-scoped variables outside of their scopes.
 ************Milestone 4:************
 //module 21
 1. string: স্ট্রিং বস্তু অপরিবর্তনীয়। অপরিবর্তনীয় মানে অপরিবর্তনীয় বা অপরিবর্তনীয়। একবার স্ট্রিং অবজেক্ট তৈরি হয়ে গেলে এর ডেটা বা স্টেট পরিবর্তন করা যায় না তবে একটি নতুন স্ট্রিং অবজেক্ট তৈরি করা হয়।
+//
+2. 21-3 How to split, slice, substr, substring, concat, join?
+Ans: const lyrics = 'tumi bondhu kala pakhi ami jeno ki. bosonto kale tomai bolte pari nai.';
+//i. splite()
+const parts = lyrics.split(' ');
+const sentences = lyrics.split('.');
+const chars = lyrics.split('');
+console.log(parts)
+console.log(chars)
+console.log(sentences)
+//ii. slice()
+const partial = lyrics.slice(5, 8);
+console.log(partial)
+//iii. substr() {almost same slice}
+const lyricsSubStr = lyrics.substring(5, 10);
+console.log(lyricsSubStr)
+//iv. split, slice, substr, substring, concat, join, trim,  etc.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+//21-4 class
+3. Math, abs, pow, round, ceil, floor, and random number ?
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 ************8 ways to get undefine************
 // 1. variable that is not initialized will give undefined
