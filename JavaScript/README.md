@@ -1560,15 +1560,18 @@ loadCountries()
 ```
 </details>
 
-
-### switch
-
-```js
 	
-   <h3>What is switch? (Click Me)</h3>
+### switch
+<details>
+<summary>
+  <h3>What is switch? (Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
 //switch
 let color = 'green';
-
 switch (color) {
     case 'green':
         console.log('You are a green friend')
@@ -1588,12 +1591,18 @@ switch (color) {
     default:
         console.log('You are a pink friend')
 }
+
 ```
-
+</details>
+	
 ### localStorage
-
+<details>
+<summary>
+  <h3>What is localStorage ? (Click Me)</h3>
+</summary>
+<br >
+	
 ```js
-
 - Three working in Local storage and Session Storage 
 - setItem
 - getItem
@@ -1636,6 +1645,8 @@ switch (color) {
    //Example 2
 
 ```
+</details>
+
 
 
 ### jsProblemQuestions
