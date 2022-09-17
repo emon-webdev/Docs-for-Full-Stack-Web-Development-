@@ -2381,9 +2381,9 @@ const lyricsSubStr = lyrics.substring(5, 10);
 console.log(lyricsSubStr)
 //iv. split, slice, substr, substring, concat, join, trim,  etc.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-//21-4 class
+//21-4 class 
 3. Math, abs, pow, round, ceil, floor, and random number ?
-
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 	
 	
 	
