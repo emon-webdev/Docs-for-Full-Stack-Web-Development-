@@ -2360,6 +2360,15 @@ ii. Trying to access block-scoped variables outside of their scopes.
  Notes
 
 ```js
+************Imporatant start************
+// array sort
+Example: 
+array = [3, -2, -1, 0]
+Ans: Ex 1: const sorted = array.sort((a,b) => a-b)
+Ex 2 : const result=array.sort(function(a, b){return a - b});	
+	
+************Imporatant End************
+	
 ************Milestone 4:************
 //module 21
 1. string: স্ট্রিং বস্তু অপরিবর্তনীয়। অপরিবর্তনীয় মানে অপরিবর্তনীয় বা অপরিবর্তনীয়। একবার স্ট্রিং অবজেক্ট তৈরি হয়ে গেলে এর ডেটা বা স্টেট পরিবর্তন করা যায় না তবে একটি নতুন স্ট্রিং অবজেক্ট তৈরি করা হয়।
