@@ -37,8 +37,8 @@ List of JavaScript:
 - [localStorage](#localStorage)
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
-- [jsProblemSolved](#jsProblemSolved)
 - [JsErrorAndDebug](#JsErrorAndDebug)
+- [jsProblemSolved](#jsProblemSolved)
 - [Notes](#Notes)
 - [javascriptInterviewQuestions](#javascriptInterviewQuestions)
 - [Table](#Table)
@@ -2049,6 +2049,24 @@ function reverseString(text){
         
     }
 }
+				   
+//Number 1 => Example 1.1
+// Find the max number in an array
+const numbers = [123, 53, 125, 567, 90, 321];
+function maxInArray(numbers){
+    let largest = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        const index = i;
+        const element = numbers[index];
+        if(element > largest){
+            largest = element;
+        }
+    }
+    return largest;
+}
+const tallest = maxInArray(numbers);
+console.log( 'tallest person is', tallest)
+				   
 //Number 1 => Example 2
 // charecter reverse way of String (string টা কে উল্টা দিক থেকে console.log করা)
 function reverseString(text){
@@ -2343,7 +2361,8 @@ console.log(result)
 
 //Number 3 => Example 5
 
-	
+
+//Number 4 => Example 1
 	
 
 ```
