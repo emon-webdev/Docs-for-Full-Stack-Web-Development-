@@ -2612,7 +2612,7 @@ iii. API is the part of the server that receives requests and sends responses
 16. Can you use GET request instead of PUT to create a resource?
 17. what is JSON?
 18. What are CRUD operations?
-
+18.1. Fatch থাকার পর ও কেন async await আসলো ?
 //module:  33
 মাইলস্টোন ৬ টেকএওয়ে
 এই মাইলস্টোন থেকে তুমি যদি আটটা জিনিস শিখতে চাও তাহলে নিচের এই আটটি জিনিস আরেকবার ভালো করে দেখে নাও-
