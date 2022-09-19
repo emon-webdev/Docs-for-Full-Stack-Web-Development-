@@ -749,8 +749,8 @@ if(!value){
 </details>
 
 
-
-  ### Table
+### Table
+	
 <div class="overflow-x-auto">
   <table class="table w-full">
     <!-- head -->
@@ -762,7 +762,6 @@ if(!value){
       </tr>
     </thead>
     <tbody>
-       <!-- row 17 -->
       <tr>
         <th>17</th>
         <td> String</td>
@@ -781,7 +780,6 @@ if(!value){
         <td> destructing two way (valriable value swap)</td>
         <td> Array to Array /* [first, second] = [second, first] */, Object to Object </td>
       </tr>
-
     </tbody>
   </table>
 </div>
