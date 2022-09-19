@@ -20,8 +20,24 @@ List of React:
 - [Immutable](#Immutable)
 - [searchItem](#searchItem)
 - [localStorageSessionStorage](#localStorageSessionStorage)
-
+- [Notes](#Notes)
+- [ReactJsInterviewQuestions](#ReactJsInterviewQuestions)
 - [Table](#Table)
+
+
+### demo
+<details>
+<summary>
+  <h3>Demo (Click Me)</h3>
+</summary>
+<br >
+  
+ ```js
+Demo
+	
+  
+ ```
+</details>
 
 ### PrerequisitesOfReact
 <details>
@@ -676,43 +692,428 @@ export {
 ```
 </details>
 
-### Table
+### Notes
+<details>
+<summary>
+  <h3>Notes for javaScript (Click Me)</h3>
+</summary>
+<br >
+ Notes
+
+```js
+************Imporatant start************
+// array sort
+Example: 
+array = [3, -2, -1, 0]
+Ans: Ex 1: const sorted = array.sort((a,b) => a-b)
+Ex 2 : const result=array.sort(function(a, b){return a - b});	
+	
+************Imporatant End************
+	
+************Milestone 4:************
+//module 21
+1. string: স্ট্রিং বস্তু অপরিবর্তনীয়। অপরিবর্তনীয় মানে অপরিবর্তনীয় বা অপরিবর্তনীয়। একবার স্ট্রিং অবজেক্ট তৈরি হয়ে গেলে এর ডেটা বা স্টেট পরিবর্তন করা যায় না তবে একটি নতুন স্ট্রিং অবজেক্ট তৈরি করা হয়।
+//
+2. 21-3 How to split, slice, substr, substring, concat, join?
+Ans: const lyrics = 'tumi bondhu kala pakhi ami jeno ki. bosonto kale tomai bolte pari nai.';
+//i. splite()
+const parts = lyrics.split(' ');
+const sentences = lyrics.split('.');
+const chars = lyrics.split('');
+console.log(parts)
+console.log(chars)
+console.log(sentences)
+//ii. slice()
+const partial = lyrics.slice(5, 8);
+console.log(partial)
+//iii. substr() {almost same slice}
+const lyricsSubStr = lyrics.substring(5, 10);
+console.log(lyricsSubStr)
+//iv. split, slice, substr, substring, concat, join, trim,  etc.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+//21-4 class 
+3. Math, abs, pow, round, ceil, floor, and random number ?
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+************8 ways to get undefine************
+// 1. variable that is not initialized will give undefined
+
+// 2. function with no return
+function second(a, b) {
+    const total = a + b;
+}
+const result = second(2, 4);
+console.log(result)
+
+//3. parameter that is not passed will be undefined
+function third(a, b, c, d) {
+    const total = a + b + c + d;
+    // console.log(a, b, c, d)
+}
+const result2 = third(2, 4);
+console.log(result2)
+
+//4. if return has nothing on the right side will return undefined
+function noNegative(a, b){
+    if(a < 0 || b < 0){
+        return;
+    }
+    return a + b;
+}
+const result3 = noNegative(2, -4);
+console.log(result3)
+
+// 5. property that doesn't exists on an object will give you undefined
+const fifth = {id: 2, name: 'ponchom', age: 40};
+console.log(fifth.age, fifth.salary)
+
+//6. accessing array elements outside of the index range will give you undefined
+const sixth = [4, 56, 43, 78, 23];
+console.log(sixth[1], sixth[6], sixth[200])
+
+//7. deleting an element inside an array
+const sixth1 = [4, 56, 43, 78, 23];
+delete sixth1[1]
+console.log(sixth1[1], sixth1[6], sixth1[200])
+console.log(sixth1)
+
+// 8 . set a value directly
+const eighth = undefined;
+const night = null;
+const data = {results: [], updated: null};
+console.log(typeof undefined) ans: undefined
+console.log(typeof null) ans: object
+	
+************39-3 Different Truthy and Falsy values in JavaScript************
+// truthy
+1. true
+2. any number (+positive, -negative) will be  truthy other than 0
+3. any string other than empty string
+4. '0'
+5. {} (empty object) truthy
+6. [] (empty array) truthy
+7. check truthy
+const value = ' ' 
+if(!!value){
+    console.log('truthy value')
+}
+
+// Falsy
+1. false 
+2. 0 
+3. '' (empty string)
+4. undefined
+5. null
+6. chek falsey
+const value = null 
+if(!value){
+  console.log('falsy value')
+}
+
+************Common types of errors************
+1. Syntax Error ?
+Ans : Syntax Error is triggered when you write code that is not syntactically correct
+i. missing inverted commas
+ii. Missing closing parentheses
+iii. improper alignment of curly braces or other characters
+
+2. Type Error ?
+Ans: Type Error is created when some value doesn't turn out tot be of a particular expected type.
+i.i.Uncaught TypeError: Cannot read Property
+i.ii.Uncaught TypeError: Cannot set Property
+i. Invoking objects that are not methods.
+ii. Attempting to access properties of null or undefined objects
+iii. Treating a string as a number or vice versa.
+
+3. Reference Error?
+Ans: Reference Errors occur we might have forgotten to define a value for the variable before using it,
+or we might be trying to use an inaccessible variable in our code.
+1. variable name is not define
+2. funtion name is not define
+#solved way
+i. Making a type in a variable name.
+ii. Trying to access block-scoped variables outside of their scopes.
+
+4. Logical Error
+# যখন সব ঠিক আছে তবে আমরা logic এ ভুল করেছি
+
+************Module 41 ************
+#Debug Steps: 
+1. Error check (error reproduce)
+2. Check others stuffs on the website
+3. Check Console for error
+4. click on the link of the error (it will take you to the code)
+5. If needed add a breakpoint and try to stop the code over there and see the values
+6. if needed console log output
+7. search full code base (Ctrl + Shift + F) > don't forget about partial match
+8. look around for typo
+
+************Module 42 ************
+#
+
+
+
+```
+</details>
+  
+### ReactJsInterviewQuestions
+<details>
+<summary>
+  <h3>React Js Interview Questions (Click Me)</h3>
+</summary>
+<br >
+  
+ ```js
+
+	
+  
+ ```
+</details>
+
+
+
+  ### Table
 <div class="overflow-x-auto">
   <table class="table w-full">
     <!-- head -->
     <thead>
       <tr>
         <th></th>
-        <th>Questions</th>
+        <th>Name</th>
         <th>Answer</th>
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+       <!-- row 12 -->
       <tr>
-        <th>1</th>
-        <td>setCount(count + 1)</td>
-        <td>asynchronous</td>
+        <th>10</th>
+        <td>Conditionals </td>
+        <td> comparison: >, <, >=, <=, ===, !==, if-else  </td>
       </tr>
-      <!-- row 2 -->
+       <!-- row 13 -->
       <tr>
-        <th>2</th>
-        <td>props</td>
-        <td>React a uopr theke eventhandler k  props akare data pathano jai, down theke up pathano jai na. r jodi pathate hoi tahole jai jaiga jabe seijaiga evnthandler dita hobe</td>
+        <th>14</th>
+        <td> Array</td>
+        <td> Declare, index, get values, set values, indexOf, push, pop </td>
       </tr>
-      <!-- row 3 -->
+       <!-- row 14 -->
       <tr>
-        <th>3</th>
-        <td>Uncaught TypeError: cart is not iterable</td>
-        <td>looping problem</td>
+        <th>14</th>
+        <td> Loop</td>
+        <td> for loop, while loop, break, continue </td>
       </tr>
-       <!-- row 3 -->
+       <!-- row 15 -->
       <tr>
-        <th>3</th>
-        <td>Use Short Title</td>
-        <td><p className='product-name' title={name}>
-            {name.length > 20 ? name.slice(0, 20) + '...' : name}
-        </p></td>
+        <th>15</th>
+        <td> Function</td>
+        <td> declare, parameters, return, call, use the returned value from a function </td>
+      </tr>
+       <!-- row 16 -->
+      <tr>
+        <th>16</th>
+        <td> Objeect</td>
+        <td> declare, properties, keys , values, get prop value, set value, loop object. </td>
+      </tr>
+       <!-- row 17 -->
+      <tr>
+        <th>17</th>
+        <td> String</td>
+        <td>String হচ্ছে imutable. এর মান বা value change করা যাই না.  </td>
+      </tr>
+       <!-- row 18 -->
+      <tr>
+        <th>18</th>
+        <td> String</td>
+        <td>  Apply Search includes, indexOf, startswith, endswith </td>
+      </tr>
+       <!-- row 19 -->
+        <!-- row 18 -->
+      <tr>
+        <th>18</th>
+        <td> destructing two way (valriable value swap)</td>
+        <td> Array to Array /* [first, second] = [second, first] */, Object to Object </td>
+      </tr>
+             <!-- row 18 -->
+      <tr>
+        <th>18</th>
+               <td> Array Check</td>
+        <td> //check array using Array.isArray | console.log(Array.isArray(friends)) </td>
+      </tr>
+             <!-- row 18 -->
+      <tr>
+        <th>18</th>
+        <td> Array Name Check (ase ki na) </td>
+        <td> const friends = [13, 14, 11, 17, 21, 16, 15, 20]; | console.log(friends.includes(19))</td>
+      </tr>
+             <!-- row 18 -->
+      <tr>
+        <th>18</th>
+        <td> preventDefault</td>
+        <td> e.preventDefault();</td>
+      </tr>
+      <tr>
+        <th>17</th>
+        <td> Math </td>
+        <td> Math, abs, pow, round, ceil, floor, and random number </td>
+      </tr>
+         <!-- row 19 -->
+      <tr>
+        <th>19</th>
+        <td>Math.random() </td>
+        <td>Math.random((Math.random()*1000)) // output 0.7895253939768327</td>
+      </tr>
+        <!-- row 20 -->
+      <tr>
+        <th>20</th>
+        <td>Math.round() </td>
+        <td> Math.round((Math.random()*10000)) // output 4492</td>
+      </tr>
+        <!-- row 21 -->
+      <tr>
+        <th>19</th>
+        <td><a href="#" onclick="selectedItem(this)" class="btn btn-primary">SELECT</a> </td>
+        <td> function er vitor this diya mane oi tai select kora </td>
+      </tr>
+        <!-- row 22 -->
+      <tr>
+        <th>22</th>
+        <td>Date</td>
+        <td>const today = new Date()  </td>
+      </tr>
+       <!-- row 23 -->
+      <tr>
+        <th>23</th>
+        <td>multiline</td>
+        <td>const multiline = 'line 1 \n' + ' line 2 \n'</td>
+      </tr>
+           <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Api GET</td>
+        <td> Receive Information about an API resource ()</td>
+      </tr>
+           <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Api POST</td>
+        <td> Create an API resource (নতুন একটা কিছু add করা) </td>
+      </tr>
+           <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Api PUT/PATCH</td>
+        <td> Update an Api resource (put almost patch but put => যদি কোন কিছু আগে থেকেই থাকে সেইটা পরিবর্তন করে নিজে বসে পরে।  আর না থাকলে নিজে create করে ) (patch => কোন কিছু আগে থেকেই আছে সেই টা update করে) patch করতে হলে কিছু থাকতে হবে।</td>
+      </tr>
+          <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Api DELETE </td>
+        <td> Delete an API resource (Api থেকে কিছু delete করতে DELETE method করতে হবে)</td>
+      </tr> <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Api CRUD</td>
+        <td>'</td>
+      </tr>
+          <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>HTTP STATUS CODE</td>
+        <td>(200 - ok), (301 - Moved Permanently), (302- Moved Temporarily), (404 - Not Found), (500 - Intenal Server Error), (503 - Service Unabailable)</td>
+      </tr> 
+          <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>setTimeout()</td>
+        <td>For clearing the timeout funtion, clearTimeout() is used</td>
+      </tr>
+           <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>setTimeout()</td>
+        <td>For clearing the timeout funtion, clearInterval() is used</td>
+      </tr>
+		     <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>event loop</td>
+        <td> JavaScript এর asynchronous items গুলা থাকে Queue-তে এবং synchronous items গুলা থাকে Stack-এ। Stack এর কাজগুলা সম্পাদন হয়ে গেলে তখন Queue-তে থাকা কাজগুলো Stack-এ এসে সম্পাদন হতে থাকে। আর এই পুরো কাজটা Event Loop-এর মাধ্যমে হয়ে থাকে। এটাই event loop এর কন্সেপ্ট</td>
+      </tr>
+			     <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Call Stack </td>
+        <td> Call Stack হচ্ছে Stack এর মধ্যে synchronous ভাবে যেই function এর কাজগুলো একটার পর একটা থাকে এবং সেই অনুসারে execute হয়, সেটাকেই call stack বলে</td>
+      </tr>	     <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>Edit any ui page</td>
+        <td> document.body.contentEditable = true</td>
+      </tr>
+	 <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td> get cookie value from browser</td>
+        <td>document.cookie </td>
+      </tr>
+	  <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>get cookie value as array </td>
+        <td> document.cookie.split('; ')</td>
+      </tr>
+	<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>get cookie value in key-value pair </td>
+        <td>  document.cookie.split('; ').map(c => console.log(c))</td>
+      </tr>
+	 <!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>window.location.reload() </td>
+        <td> page reload করে  </td>
+      </tr>
+	<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+		<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+<!-- row 24-->
+      <tr>
+        <th>24</th>
+        <td>shorthand-javascript-techniques </td>
+        <td>https://www.sitepoint.com/shorthand-javascript-techniques/?fbclid=IwAR3ELG6nojp4FdQVgXt1sEtZDgIU7ImGEZKxuRBCQblWx1VG1rxGOdCrjE8 </td>
       </tr>
     </tbody>
   </table>
