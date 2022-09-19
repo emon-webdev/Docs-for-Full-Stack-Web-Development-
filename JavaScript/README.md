@@ -1491,6 +1491,7 @@ console.log(studentObject)
 - Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
 
 ```js
+
 // fetch
 fetch('url')
 .then(res => res.json())                                    
@@ -1557,6 +1558,22 @@ const displayCountryDetail = country => {
 
 };
 loadCountries()
+
+
+// async await
+const loadPhones = async (searchText, dataLimit) => {
+    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        displayPhone(data.data, dataLimit)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+
+
 ```
 </details>
 
