@@ -68,16 +68,15 @@ const Example = () => {
 </details>
 
 
-
-
-
 ### useEffect
 <details>
 <summary>
-  <h4>What is useEffect?</h4>
+  <h3>What is useEffect? (Click Me)</h3>
 </summary>
 <br >
-```js
+  
+ ```js
+
 - useEffect is
 
 // import
@@ -104,8 +103,10 @@ const [count, setCount] = useState(0);
     </div>
   );
 }
-```
+  
+ ```
 </details>
+
 
 ### searchItems
 <details>
