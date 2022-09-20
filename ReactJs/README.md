@@ -611,31 +611,16 @@ export {
 
 ```js
 
-************39-3 Different Truthy and Falsy values in JavaScript************
-// truthy
-1. true
-2. any number (+positive, -negative) will be  truthy other than 0
-3. any string other than empty string
-4. '0'
-5. {} (empty object) truthy
-6. [] (empty array) truthy
-7. check truthy
-const value = ' ' 
-if(!!value){
-    console.log('truthy value')
-}
-
-// Falsy
-1. false 
-2. 0 
-3. '' (empty string)
-4. undefined
-5. null
-6. chek falsey
-const value = null 
-if(!value){
-  console.log('falsy value')
-}
+************Reat Notes************
+//Milestone: 8 Simple React
+//Module : 44
+1. Rypes of Component.
+Ans: i. similar in look, differnt in data
+ii. container component
+iii. no common pattern but breakdown for working purpose
+v. stand alone component
+2. advantages of components.
+i. code re-usability ii. Fast development iii. Design consistency iv. Maintainablility 
 
 
 
@@ -651,7 +636,40 @@ if(!value){
 <br >
   
  ```js
-
+************React Js Interview Questions************
+	
+//Milestone: 8 Simple React
+//Module : 44
+1. What are components in react?
+Ans: i. Building blocks of the user interface.
+ii. Each component exists in the same space but works independntly
+iii. All of the components are being merged in a parcent component (the final UI)
+iv. Splits UI into independt and reusable pieces.
+v. Re-usable having their own structure and methods.
+2. What are single page applications (SPA)?
+Ans i. Only one webpage, and each time something happens, only part of the page in reloaded while the rest of HTml remains unchanged.
+ii. All use interaction with this service is carried out, using one screen (page)
+iii. Load all the necessary HTML, CSS and JavaScript in the initial page load.
+and then dynamically update thir DOM and retrieve extra data based on user interactions.
+iv. Give the user the illusion that they are accessing different pages of paths.
+v. Enables to combine a complex functionality of an MPA with a convenient navigation (a hybrid approach)
+3. Advantage of single page applications?
+i. linear navigation ii. instant loading iii. offline mode iv. native UX v. Feature rich UI vi.cross platform adaptability
+vii. Flexibility ix. Quicker & cheaper developement
+4. Disavantage of single page applications?	
+i. seo issues ii. longer initial iii. no work under high loads iv. security issues v. low sealability vi. no history of visits.
+5. What is Props?
+Ans: Props হল data send করে একটা component থেকে অন্য comomponent এ। Props সব সময় Parent Component থেকে child Component এ data 
+send করে। child থেকে send করা যায় কিন্তু system করে।
+6. What is differens between Props and State ?
+Ans: i. State => টা manage হই component এর ভিতর।
+ii. Props => বাইরে comomponent থেকে current comomponent a data আসে আবার current comomponent থেকে অন্য comomponent data send করে।
+7. What is the best between SPA and MPS?
+8. Examples of SPA and MPA?
+Ans: SPA => i. Facebook nes feed ii. Twitter iii. Trello iv.Pinterest v. Gmail vi. google Maps vii. Airbnb
+MPS => i. Amazon ii. eBay iii. ALiexpress iv. Forbes v. Thumbtack vi. Angi
+	
+	
 	
   
  ```
