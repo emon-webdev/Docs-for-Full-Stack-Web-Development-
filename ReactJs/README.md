@@ -622,12 +622,11 @@ v. stand alone component
 2. advantages of components.
 i. code re-usability ii. Fast development iii. Design consistency iv. Maintainablility 
 //Module : 45
-//react inline style
+1. React inline style
 <div style={{border: '2px solid red', margin: '20px'}}>
-	<h1>Name: {name}</h1>
-	<h1>Name: {email}</h1>
+	<p>Hello world</p>
 </div>
-
+2. 
 
 
 ```
@@ -673,7 +672,10 @@ ii. Props => বাইরে comomponent থেকে current comomponent a data
 8. Examples of SPA and MPA?
 Ans: SPA => i. Facebook nes feed ii. Twitter iii. Trello iv.Pinterest v. Gmail vi. google Maps vii. Airbnb
 MPS => i. Amazon ii. eBay iii. ALiexpress iv. Forbes v. Thumbtack vi. Angi
-	
+9. What is JSX? (JavaScript XML)
+Ans: JavaScript এর মধ্যে html এর মতো code type করার ability. JSX এর সাহায্যে HTML code JavaScript এর code সহজেই type করা যাই।
+100% Html না but Html এর Flever পাওয়া যায়।
+
 	
 	
   
