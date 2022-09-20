@@ -621,7 +621,12 @@ iii. no common pattern but breakdown for working purpose
 v. stand alone component
 2. advantages of components.
 i. code re-usability ii. Fast development iii. Design consistency iv. Maintainablility 
-
+//Module : 45
+//react inline style
+<div style={{border: '2px solid red', margin: '20px'}}>
+	<h1>Name: {name}</h1>
+	<h1>Name: {email}</h1>
+</div>
 
 
 
