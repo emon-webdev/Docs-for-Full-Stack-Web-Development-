@@ -38,15 +38,14 @@ Demo
  ```
 </details>
 
-
 ### useState
 <details>
 <summary>
   <h3>What is useState? (Click Me)</h3>
 </summary>
 <br >
+  
  ```js
-
 
 // import
 import React, { useState } from 'react';
@@ -67,6 +66,8 @@ const Example = () => {
   
  ```
 </details>
+
+
 
 
 
