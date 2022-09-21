@@ -649,7 +649,8 @@ i. code re-usability ii. Fast development iii. Design consistency iv. Maintainab
 <div style={{border: '2px solid red', margin: '20px'}}>
 	<p>Hello world</p>
 </div>
-2. 
+3. Props driling.
+Ans:
 
 
 ```
