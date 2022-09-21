@@ -76,32 +76,44 @@ const Example = () => {
 <br >
   
  ```js
+import React, { useState, useEffect } from 'react';
 
-- useEffect is
-
-// import
-import React, {useState, useEffect } from 'react';
-
-const Example = () => {
-const [count, setCount] = useState(0);
-  // Example
+//Example: 1
+  const [users, setUsers] = useState([]);
   useEffect(() => {
-  // Update the document title using the browser API
-      document.title = `You clicked ${count} times`;
-  // fetch
-    fetch('')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => setUsers(data))
   }, [])
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
+//Example: 2
+const User = () => {
+    const [users, setUsers] = useState([]);
+    useEffect(() => fetchData, [])
+    const fetchData = async () => {
+        const url = 'https://jsonplaceholder.typicode.com/users';
+        const res = await fetch(url);
+        const data = await res.json();
+        setUsers(data)
+    }
+    return (
+        <>
+            <h1>External User</h1>
+            {
+                users.map(user => {
+                    const {name, email, id} = user;
+                    return(
+                        <div key={user.id}>
+                            <h1>Name: {name}</h1>
+                            <h1>Email: {email}</h1>
+                            <h1>Id: {id}</h1>
+                        </div>
+                    )
+                }
+                )
+            }
+        </>
+    )
 }
   
  ```
