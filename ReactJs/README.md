@@ -92,16 +92,21 @@ const User = () => {
 //Ex : 1
 useEffect(() => fetchData, [])
 //Ex: 2
-// useEffect(() => {
-//     return fetchData()
-// }, [])
+  useEffect(() => {
+    return loadCountries
+  }, [])
 	
-const fetchData = async () => {
-const url = 'https://jsonplaceholder.typicode.com/users';
-const res = await fetch(url);
-const data = await res.json();
-setUsers(data)
-}
+  const loadCountries = async () => {
+    const url = 'https://restcountries.com/v3.1/all';
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      setCountries(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+	
 return (
 <>
     <h1>External User</h1>
