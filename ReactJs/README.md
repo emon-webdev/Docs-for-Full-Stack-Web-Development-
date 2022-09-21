@@ -89,31 +89,37 @@ import React, { useState, useEffect } from 'react';
 //Example: 2
 const User = () => {
     const [users, setUsers] = useState([]);
-    useEffect(() => fetchData, [])
-    const fetchData = async () => {
-        const url = 'https://jsonplaceholder.typicode.com/users';
-        const res = await fetch(url);
-        const data = await res.json();
-        setUsers(data)
+//Ex : 1
+useEffect(() => fetchData, [])
+//Ex: 2
+// useEffect(() => {
+//     return fetchData()
+// }, [])
+	
+const fetchData = async () => {
+const url = 'https://jsonplaceholder.typicode.com/users';
+const res = await fetch(url);
+const data = await res.json();
+setUsers(data)
+}
+return (
+<>
+    <h1>External User</h1>
+    {
+	users.map(user => {
+	    const {name, email, id} = user;
+	    return(
+		<div key={user.id}>
+		    <h1>Name: {name}</h1>
+		    <h1>Email: {email}</h1>
+		    <h1>Id: {id}</h1>
+		</div>
+	    )
+	}
+	)
     }
-    return (
-        <>
-            <h1>External User</h1>
-            {
-                users.map(user => {
-                    const {name, email, id} = user;
-                    return(
-                        <div key={user.id}>
-                            <h1>Name: {name}</h1>
-                            <h1>Email: {email}</h1>
-                            <h1>Id: {id}</h1>
-                        </div>
-                    )
-                }
-                )
-            }
-        </>
-    )
+</>
+)
 }
   
  ```
