@@ -2632,6 +2632,8 @@ fetch('') একটি function যা promise return করে।
 .then() একটি function  
 .then(res => res.json()) যা promise return করে	json a convet করে।
 .then(data => console.log(data))
+//Api fetch error handle
+.catch((error) => console.log(error.message))
 
 // async await
 1.  async await  করতে হলে function create করতে হবে।
@@ -2642,6 +2644,21 @@ const loadData = async () => {
 	const data = awit res.json()
 	console.log()data
 }
+//Api async await error handle
+const loadData = async () => {
+	try{
+	const res = await fetch('url')	
+	const data = awit res.json()
+	console.log()data
+	} catch(error) {
+	console.error(error)
+	}
+}
+
+	
+	
+	
+	
 
 **End Notes**
 ```
