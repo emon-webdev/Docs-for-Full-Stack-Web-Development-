@@ -2442,10 +2442,15 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 //21-4 class 
 3. Math, abs, pow, round, ceil, floor, and random number ?
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-	
-	
-	
-	
+
+//Es6 Concepts 
+1. Template string
+Ans: daynamic এর জন্য (` `) er vitor লিখা লাগবে।
+2. Tarnary Operator, Logincal and or ( &&, ||)
+const x = 5;
+let result;
+result = (x>0) ? '' : ''
+console.log(result)
 	
 	
 	
