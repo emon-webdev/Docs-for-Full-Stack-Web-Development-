@@ -638,7 +638,19 @@ const doMath = (num1, num2) => {
 const sum = num1 + num2
 return sum
 }
-
+	
+// function return array
+const fun1 = (x, y) => {
+	return [x, y]	
+}
+const [first, second] = fun(4, 5)
+	
+// function return object
+const funObject = (x, y) => {
+	return {x, y}
+}
+const {x:num, y} = fun1(4, 5);
+console.log(num, y)
 
 ```
 </details>
