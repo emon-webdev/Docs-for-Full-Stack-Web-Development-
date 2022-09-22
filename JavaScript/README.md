@@ -1616,20 +1616,20 @@ const loadPhones = async (searchText, dataLimit) => {
 	
 // fetch "POST" method
 const loadData = () => {
-	fetch('url',{
-	method: 'POST',
-	body: JSON.stringify(data),
-	headers: {
-	"Content-Type" : "application/json",
-	}
-  })
-.then(res => res.json())
-.then(data => {
-	// call function
-	console.log(data)
-})
+		fetch('url',{
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: {
+		"Content-Type" : "application/json",
+		}
+	  })
+	.then(res => res.json())
+	.then(data => {
+		// call function
+		console.log(data)
+	})
 }
-
+// fetch "PATCH" method
 
 
 ```
