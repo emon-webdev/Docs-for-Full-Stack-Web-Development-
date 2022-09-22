@@ -1630,8 +1630,10 @@ const loadData = () => {
 	})
 }
 // fetch "PATCH" method
+// data update করে।
 
-
+// fetch "PATCH" method
+// data delete করে UI থেকে।
 ```
 </details>
 
