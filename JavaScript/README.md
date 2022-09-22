@@ -1256,10 +1256,21 @@ console.log(special)
   <h3>What is reduce? (Click Me)</h3>
 </summary>
 <br >
- reduce
+reduce টা যোগ (initial value 0) and গুন (initial value 1) এ বেশি use হয় 
+ reduce array এর মান গুলা কে sum করে return করে। reduce function 2 টা parameter নেই। একটা previous value আর একটা current value.
 
 ```js
 //reduce
+//Example 1
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 5];
+const sum = arr.reduce((prev, current) => {
+	return prev + current
+	// 0 hossa initial value এর সাথে ১ম টা যোগ হই
+}, 0)
+console.log(sum)
+	
+	
+//Example 2
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 5];
 // .reduce (accumulator Function, initial value)
 // accumulator function use to parameters
