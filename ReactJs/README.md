@@ -635,7 +635,7 @@ export {
 
 ```js
 
-************Reat Notes************
+************React Notes************
 //Milestone: 8 Simple React
 //Module : 44
 1. Rypes of Component.
@@ -666,6 +666,7 @@ Ans:
 	
 	
 
+************End React Notes************
 ```
 </details>
   
@@ -713,9 +714,19 @@ MPS => i. Amazon ii. eBay iii. ALiexpress iv. Forbes v. Thumbtack vi. Angi
 Ans: JavaScript এর মধ্যে html এর মতো code type করার ability. JSX এর সাহায্যে HTML code JavaScript এর code সহজেই type করা যাই।
 100% Html না but Html এর Flever পাওয়া যায়।
 
+//Module : 47 (How React Works)
+10. 
 	
 	
-  
+	
+	
+	
+	
+	
+	
+	
+	
+  ************End React Js Interview Questions************
  ```
 </details>
 
