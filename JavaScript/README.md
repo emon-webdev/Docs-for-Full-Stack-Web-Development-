@@ -128,6 +128,7 @@ const fish = {
 //destructuring
 // use same name in the object
 const {name, phone, price} = fish;
+
 console.log(name, phone, age)
 
 //Array Destructuring
