@@ -33,7 +33,7 @@ List of JavaScript:
 - [numberStringConversion](#numberStringConversion)
 - [reduce](#reduce)
 - [JSON](#JSON)
-- [fetch](#fetch)
+- [Api](#Api)
 - [localStorage](#localStorage)
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
@@ -1506,13 +1506,31 @@ console.log(studentObject)
 ```
 </details>
 	
-### fetch
+### Api
 <details>
 <summary>
-  <h3>What is fetch? (Click Me)</h3>
+  <h3>What is Api? (Click Me)</h3>
 </summary>
 <br >
 - Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
+1. Api দিয়ে browser a data নিয়ে আসতে পারি। Api use করার জন্য fatch লাগে।
+2. fatch javascript browser এর default function. fatch করে data নিয়ে আসতে পার
+৩। promise return করলে .then দিয়া ধরতে হয়।
+//fatch
+fetch('') একটি function যা promise return করে।
+.then() একটি function  
+.then(res => res.json()) যা promise return করে	json a convet করে।
+.then(data => console.log(data))
+
+// async await
+1.  async await  করতে হলে function create করতে হবে।
+2. await use করলে data fatch করা পর্যন্ত wait করবে। data আসলে res এর ভিতর রাখবে।
+3. function call 
+const loadData = async () => {
+	const res = await fetch('url')	
+	const data = awit res.json()
+	console.log()data
+}
 
 ```js
 
@@ -2605,8 +2623,27 @@ ii. Trying to access block-scoped variables outside of their scopes.
 ************Module 42 ************
 #
 
+**Deep Dive Into API and Explore it**
+1. Api দিয়ে browser a data নিয়ে আসতে পারি। Api use করার জন্য fatch লাগে।
+2. fatch javascript browser এর default function. fatch করে data নিয়ে আসতে পার
+৩। promise return করলে .then দিয়া ধরতে হয়।
+//fatch
+fetch('') একটি function যা promise return করে।
+.then() একটি function  
+.then(res => res.json()) যা promise return করে	json a convet করে।
+.then(data => console.log(data))
 
+// async await
+1.  async await  করতে হলে function create করতে হবে।
+2. await use করলে data fatch করা পর্যন্ত wait করবে। data আসলে res এর ভিতর রাখবে।
+3. function call 
+const loadData = async () => {
+	const res = await fetch('url')	
+	const data = awit res.json()
+	console.log()data
+}
 
+**End Notes**
 ```
 </details>
   
