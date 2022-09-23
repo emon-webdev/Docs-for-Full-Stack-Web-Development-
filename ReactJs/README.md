@@ -811,7 +811,7 @@ iv. React alllows you to tailor your stack ass per your own project requerments 
 giving you the freedom to chosse additional libraries.
 v. React is backed and supported by Facebook, which makes it a top choice for many leading businesses.
 So list of popular companies that use ReactJS below.
-	
+51. module=> 47-7 How react works, Render, virtual dom, diff algorithm, fiber	
 
 
 	
