@@ -1,10 +1,10 @@
 # React Using Method And Example
 
 ### 🔭 What is React?
-i. React JS is a JavaScript library for building user interfaces.
-ii. React JS is a declarative, efficient, and flexible.
-iii. It is fast and component - based
-iv. It Was initaially debeloped and maintained by Facebook.
+- React JS is a JavaScript library for building user interfaces.
+- React JS is a declarative, efficient, and flexible.
+- It is fast and component - based
+- It Was initaially debeloped and maintained by Facebook.
 ##### must be know every single part for interview https://roadmap.sh/react
 
 - React's Virtual DOM is a JavaScript representation of the actual DOM. 
