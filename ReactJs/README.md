@@ -45,7 +45,12 @@ Demo
 </summary>
 
 <br >
-  
+	
+# const [count, setCount] = useState(0);
+1. useState(0) কে dispatch বলে
+2. [count, setCount] এইটা refarence রাখে
+3. setCount asynchronous
+4. state asynchronous ভাবে update হয়।	
  ```js
 
 // import
@@ -766,7 +771,6 @@ Ans: props works an Unidirectional data flow (one way binding). props এর  va
         <th>18</th>
         <td> </td>
         <td>   </td>
-	<td>   </td>
       </tr>
        <!-- row 19 -->
         <!-- row 18 -->
@@ -774,7 +778,6 @@ Ans: props works an Unidirectional data flow (one way binding). props এর  va
         <th>18</th>
         <td> </td>
         <td> </td>
-	<td>   </td>
       </tr>
 	       <!-- row 18 -->
 	<tr>
