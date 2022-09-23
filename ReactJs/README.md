@@ -787,6 +787,16 @@ ii. the changes without rewriting the entire HTML document, this renders updates
 iii. The regular DOM feature of Angular makes the application slow in performance,
 especially when comared to applications built using ReactJS.
 - Data bunding =>
+i. React js supports unidirectional data binding, or what is commonly known as one way data binding, means that data flows one way
+while synchronising the model and view.
+ii Angular data binding model is bi-directional, meaning that there is a two-way flow of data between the Model and the View.
+- Scalability => 
+i. React applications requires you to rely on third-party tools and supporting integrations external to React JS.
+ii. Angular includes additional tools like routing, state management, HTTPS, ete. which help you build large-scale apps,
+eans it comes packed with all the core features that you may require.
+- Learning curve =>
+i. React Js uses (JavaScript XML). which is fairly easy to learn if you have prior experience with writng code in JavaScript.
+ii. A beginner need to familiarise with the TypeScript language that Angular uses.
 
 
 <div class="overflow-x-auto">
@@ -794,37 +804,55 @@ especially when comared to applications built using ReactJS.
     <!-- head -->
     <thead>
       <tr>
-        <th></th>
-        <th>React</th>
+        <th>Attributes</th>
         <th>Angular</th>
+        <th>React</th>
 	<th>Vue</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>1</th>
-        <td> </td>
-        <td> </td>
-	<td> </td>
+        <th>Type</th>
+        <td>JavaScript framework </td>
+        <td>Open Source Js Library </td>
+	<td> Progressive JavaScript Framework</td>
       </tr>
        <!-- row 18 -->
       <tr>
-        <th>18</th>
-        <td> </td>
-        <td>   </td>
+        <th>Coding speed</th>
+        <td>SLow </td>
+        <td> Normal </td>
+	 <td>Fast </td>
       </tr>
        <!-- row 19 -->
         <!-- row 18 -->
       <tr>
-        <th>18</th>
-        <td> </td>
-        <td> </td>
+        <th>Performance</th>
+        <td> OK</td>
+        <td> OK</td>
+	<td> OK</td>
       </tr>
 	       <!-- row 18 -->
 	<tr>
-        <th>18</th>
-        <td> </td>
-        <td> </td>
+        <th>Startup Time</th>
+        <td>Longer due to its large codebase </td>
+        <td> Quick</td>
+	<td>Quick </td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>Complete web apps</th>
+        <td> Can be used on standalone basis</td>
+        <td>Needs to be integrated with many other tools </td>
+	<td> Requires third party tools</td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>Data binding</th>
+        <td> Bi-directional </td>
+        <td> uni-derectional </td>
+	<td>  Bi-directional</td>
+      </tr></td>
       </tr>
     </tbody>
   </table>
