@@ -24,16 +24,20 @@ i. Instagram ii. Twitter iii. Facebook iv. yahoo v. abnhub
 i. Youtube ii. telegram iii. udemy iv. paypal
 - Vue
 i. gramarly ii. alibaba iii. mi
+#### React JS popular features
+i. Reusability ii. JSX iii. The props (easy data flow)
+iv. The state v. virtual DOM vi. Boosts performance
+vii. Simple to migrate viii.SEO friendly ix. Easier debugging x. Testing is fairty smooth
 
+### 👯 When to use React JS?
+Ans: i. React js has a simple design and uses JSX which makes it easy to learn and use, even for beginners.
+ii. Owing to ites virtual DOM, ReacJS offers fast performance for applications.
+iii. Being a view library, react does not force on the specific architecture of you application
+iv. React alllows you to tailor your stack ass per your own project requerments by
+giving you the freedom to chosse additional libraries.
+v. React is backed and supported by Facebook, which makes it a top choice for many leading businesses.
+So list of popular companies that use ReactJS below.
 
-
-
-
-
-
-
-### 👯 Why use React?
-- 
 ###  🤔 How to Use?
 List of React:
 - [useState](#useState)
@@ -788,8 +792,8 @@ ii. the changes without rewriting the entire HTML document, this renders updates
 iii. The regular DOM feature of Angular makes the application slow in performance,
 especially when comared to applications built using ReactJS.
 - Data bunding =>
-i. React js supports unidirectional data binding, or what is commonly known as one way data binding, means that data flows one way
-while synchronising the model and view.
+i. React js supports unidirectional data binding, or what is commonly known as one way data binding,
+means that data flows one way while synchronising the model and view.
 ii Angular data binding model is bi-directional, meaning that there is a two-way flow of data between the Model and the View.
 - Scalability => 
 i. React applications requires you to rely on third-party tools and supporting integrations external to React JS.
@@ -799,74 +803,27 @@ eans it comes packed with all the core features that you may require.
 i. React Js uses (JavaScript XML). which is fairly easy to learn if you have prior experience with writng code in JavaScript.
 ii. A beginner need to familiarise with the TypeScript language that Angular uses.
 
+17. When to use React JS?
+Ans: i. React js has a simple design and uses JSX which makes it easy to learn and use, even for beginners.
+ii. Owing to ites virtual DOM, ReacJS offers fast performance for applications.
+iii. Being a view library, react does not force on the specific architecture of you application
+iv. React alllows you to tailor your stack ass per your own project requerments by
+giving you the freedom to chosse additional libraries.
+v. React is backed and supported by Facebook, which makes it a top choice for many leading businesses.
+So list of popular companies that use ReactJS below.
+	
 
 
 	
 	
 	
 	
-<div class="overflow-x-auto">
-  <table class="table w-full">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th>Attributes</th>
-        <th>Angular</th>
-        <th>React</th>
-	<th>Vue</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Type</th>
-        <td>JavaScript framework </td>
-        <td>Open Source Js Library </td>
-	<td> Progressive JavaScript Framework</td>
-      </tr>
-       <!-- row 18 -->
-      <tr>
-        <th>Coding speed</th>
-        <td>SLow </td>
-        <td> Normal </td>
-	 <td>Fast </td>
-      </tr>
-       <!-- row 19 -->
-        <!-- row 18 -->
-      <tr>
-        <th>Performance</th>
-        <td> OK</td>
-        <td> OK</td>
-	<td> OK</td>
-      </tr>
-	       <!-- row 18 -->
-	<tr>
-        <th>Startup Time</th>
-        <td>Longer due to its large codebase </td>
-        <td> Quick</td>
-	<td>Quick </td>
-      </tr>
-	       <!-- row 18 -->
-	<tr>
-        <th>Complete web apps</th>
-        <td> Can be used on standalone basis</td>
-        <td>Needs to be integrated with many other tools </td>
-	<td> Requires third party tools</td>
-      </tr>
-	       <!-- row 18 -->
-	<tr>
-        <th>Data binding</th>
-        <td> Bi-directional </td>
-        <td> uni-derectional </td>
-	<td>  Bi-directional</td>
-      </tr></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
 	
   ************End React Js Interview Questions************
  ```
 </details>
+
 
 
 ### Table
