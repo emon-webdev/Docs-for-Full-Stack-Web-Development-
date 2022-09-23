@@ -79,9 +79,9 @@ Demo
 
 <br >
 	
-##### const [ ] = useState( );
+##### const [state, setState ] = useState( initialValue);
 1. useState(0) কে dispatch বলে
-2. [count, setCount] এইটা refarence রাখে
+2. [state, setState] এইটা refarence রাখে
 3. setCount asynchronous
 4. state asynchronous ভাবে update হয়।	
  ```js
@@ -688,7 +688,7 @@ i. code re-usability ii. Fast development iii. Design consistency iv. Maintainab
 <div style={{border: '2px solid red', margin: '20px'}}>
 	<p>Hello world</p>
 </div>
-3. Props driling.
+3. 
 Ans:
 
 	
@@ -727,9 +727,11 @@ ii. Each component exists in the same space but works independntly
 iii. All of the components are being merged in a parcent component (the final UI)
 iv. Splits UI into independt and reusable pieces.
 v. Re-usable having their own structure and methods.
-vi. Markup language & logic কে আলাদা file এ না রেখে একই সাথে প্রয়োজনমত একই file এ রাখা যায়। এর জন্য React component ব্যবহার করা হয়।
+vi. Markup language & logic কে আলাদা file এ না রেখে একই সাথে প্রয়োজনমত একই file এ রাখা যায়।
+এর জন্য React component ব্যবহার করা হয়।
 2. What are single page applications (SPA)?
-Ans i. Only one webpage, and each time something happens, only part of the page in reloaded while the rest of HTml remains unchanged.
+Ans i. Only one webpage, and each time something happens, only part of the page in reloaded
+while the rest of HTml remains unchanged.
 ii. All use interaction with this service is carried out, using one screen (page)
 iii. Load all the necessary HTML, CSS and JavaScript in the initial page load.
 and then dynamically update thir DOM and retrieve extra data based on user interactions.
@@ -739,13 +741,16 @@ v. Enables to combine a complex functionality of an MPA with a convenient naviga
 i. linear navigation ii. instant loading iii. offline mode iv. native UX v. Feature rich UI vi.cross platform adaptability
 vii. Flexibility ix. Quicker & cheaper developement
 4. Disavantage of single page applications?	
-i. seo issues ii. longer initial iii. no work under high loads iv. security issues v. low sealability vi. no history of visits.
+i. seo issues ii. longer initial iii. no work under high loads iv. security issues v. low sealability vi.
+no history of visits.
 5. What is Props?
-Ans: Props হল data send করে একটা component থেকে অন্য comomponent এ। Props সব সময় Parent Component থেকে child Component এ data 
-send করে। child থেকে send করা যায় কিন্তু system করে।
+Ans: Props হল data send করে একটা component থেকে অন্য comomponent এ। Props সব সময় Parent Component থেকে 
+child Component এ data  send করে। child থেকে send করা যায় কিন্তু system করে করা যায়।
+Ans: We use props in React to pass data from one component to another (from a parent component to a child component)
 6. What is differens between Props and State ?
 Ans: i. State => টা manage হই component এর ভিতর।
-ii. Props => বাইরে comomponent থেকে current comomponent a data আসে আবার current comomponent থেকে অন্য comomponent data send করে।
+ii. Props => বাইরে comomponent থেকে current comomponent a data আসে আবার current comomponent থেকে
+অন্য comomponent data send করে।
 7. What is the best between SPA and MPS?
 8. Examples of SPA and MPA?
 Ans: SPA => i. Facebook nes feed ii. Twitter iii. Trello iv.Pinterest v. Gmail vi. google Maps vii. Airbnb
@@ -755,7 +760,11 @@ Ans:i. JSX JavaScript XML
 ii. JavaScript এর মধ্যে html এর মতো code type করার ability. JSX এর সাহায্যে HTML code JavaScript এর code সহজেই type করা যাই।
 100% Html না but Html এর Flever পাওয়া যায়। JSX এর ভিতর powerfull JS map, filter find সহজেই করা যায় {} এর মাধমে ।
 propery এর ভিতর dynamic expresion লিখা যায়।
-iii. Markup language & logic কে আলাদা file এ না রেখে একই সাথে প্রয়োজনমত একই file এ রাখা যায়। এর জন্য React component ব্যবহার করা হয়।
+iii. Markup language & logic কে আলাদা file এ না রেখে একই সাথে প্রয়োজনমত একই file এ রাখা যায়।
+এর জন্য React component ব্যবহার করা হয়।
+iv. JSX is a syntax extension for React JS
+v. Easier to read and write
+vi. Gets transpiled to JavaScript with BABEL.
 
 //Module : 47 (How React Works)
 10. npm and npx diffrence?
@@ -763,7 +772,8 @@ Ans: npm: Node package manager
 11. What is Babel Compiler?
 Ans Babel হল free & open source javascript Transpiler যা EcmaScript এর newer version কে previous verions a convert করে .
 12. what are the JSX Benifits?
-Ans: One of the advantages of JSX is that React creates a virtual DOM (a virtual representation of the page) to track changes and updates.
+Ans: One of the advantages of JSX is that React creates a virtual DOM 
+(a virtual representation of the page) to track changes and updates.
 13. how props works?
 Ans: props works an Unidirectional data flow (one way binding). props এর  value set করা যাই না এটা readonly.
 14. What is React JS?
@@ -811,14 +821,35 @@ iv. React alllows you to tailor your stack ass per your own project requerments 
 giving you the freedom to chosse additional libraries.
 v. React is backed and supported by Facebook, which makes it a top choice for many leading businesses.
 So list of popular companies that use ReactJS below.
-51. module=> 47-7 How react works, Render, virtual dom, diff algorithm, fiber	
+18. module=> 47-7 How react works, Render, virtual dom, diff algorithm, fiber	
+19. React এ প্রতিটা component 3ta stage অতিক্রম করে।
+i. Mounting
+=> initial stage.যখন কোন component DOM এ প্রবেশ করে তখন আই stage শুরু হয়। আই stage এ ৪ টি method ঘটে।
+- constructor() - getDerivedStateFromProps() - render() - componentDidMount()
+ii. Update
+যখন কোন props and state এর পরিবর্তন ঘটাই 
+iii. Unmounting
+যখন DOM থেকে কোন component  সরানোর প্রয়োজন হয়।
+20. Props driling?
+Ans: Prop drilling is a method where we pass a props with another componet with the help of 
+all the components that come between them.
+21. state vs props?
+Ans:
+22. React Hooks?
+i. Hooks were added to React in version 16.8
+ii. hooks allow function components to have access to state and other React features.
+iii. Hooks allow us to "hook" into React features such as state and lifecycle methods.
+- useState hook
+iv. The useState hook allows us to track state in a function component.
+23. useEffect Hook?
 
-
 	
 	
 	
 	
-
+	
+	
+	
 	
   ************End React Js Interview Questions************
  ```
