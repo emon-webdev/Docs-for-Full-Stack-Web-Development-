@@ -17,11 +17,24 @@ i. 2021 - The first signs of React
 ii. An early prototype of React
 iii. Something new had started at Facebook.
 iv. 2013 - The year of the Big Launch
+#### Compaines using React
+- React
+i. Instagram ii. Twitter iii. Facebook iv. yahoo v. abnhub
+- Angular
+i. Youtube ii. telegram iii. udemy iv. paypal
+- Vue
+i. gramarly ii. alibaba iii. mi
+
+
+
+
+
+
+
 
 ### 👯 Why use React?
 - 
 ###  🤔 How to Use?
-
 List of React:
 - [useState](#useState)
 - [useEffect](#useEffect)
@@ -757,10 +770,65 @@ iv. It Was initaially debeloped and maintained by Facebook.
 Ans: React's Virtual DOM is a JavaScript representation of the actual DOM. 
 When updates are made React compares the current DOM to the virtual DOM and only updates the differences bettween the two.
 16. React VS Angular VS Vue ? (important)
-Ans: 
-	
-	
-	
+Ans: React VS Angular.....
+ - Library VS Framework =>
+i. React is a JavaScript library. Angular is a complate framework built on TypeScript - a superset of JavaScript.
+ii. ReactJS is a smaller piece of the overall puzzle, whereas Angular is a collection of all different puzzle pieces.
+- Architecture => 
+i. React JS is responsible for the 'view' element of application development in a Model-View-Controller (MVC) framework.
+ii. Angular is a complete MVC framework for front-end development.
+- Components => 
+i. React JS is a library for building and rendering components.
+ii. Angular is not only about components, it offers more solutions that simply create components such as routing.
+state management, form validations, and other tools that you need to develop large applications.
+- Performance => 
+i. The virtual DOM feature of ReactJS allows its application to virtually update
+ii. the changes without rewriting the entire HTML document, this renders updates much quicker.
+iii. The regular DOM feature of Angular makes the application slow in performance,
+especially when comared to applications built using ReactJS.
+- Data bunding =>
+
+
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th></th>
+        <th>React</th>
+        <th>Angular</th>
+	<th>Vue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td> </td>
+        <td> </td>
+	<td> </td>
+      </tr>
+       <!-- row 18 -->
+      <tr>
+        <th>18</th>
+        <td> </td>
+        <td>   </td>
+      </tr>
+       <!-- row 19 -->
+        <!-- row 18 -->
+      <tr>
+        <th>18</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>18</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 	
 	
 	
