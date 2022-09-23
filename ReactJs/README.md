@@ -842,9 +842,18 @@ iii. Hooks allow us to "hook" into React features such as state and lifecycle me
 - useState hook
 iv. The useState hook allows us to track state in a function component.
 23. useEffect Hook?
-
-	
-	
+Ans: The useEffect Hook allows you to perform side effects in your components. 
+Some examples of side effets area: 
+i. fetching data.
+ii. directly updating the DOM and timers.
+24. What is Virtual DOM?
+Ans: i. Lightweight copy of a DOM object
+ii. Has propeties the same as real DOM object
+iii. Make changes in the Dom with the help of the Diff Algorithm
+iv. It's like: instead of moving actual rooms in a house, you edit the blueprint.
+25. How does work virtual dom?
+Ans: dom a কোন কিছু change হলে virtual dom বুজে যাই virtual dom এর ভিতর কোথাই change হইছে। 
+then virtual dom Real dom er সাথে compatre করে শুধু change হওয়াটা update করে।
 	
 	
 	
@@ -855,6 +864,65 @@ iv. The useState hook allows us to track state in a function component.
  ```
 </details>
 
+## Virtual DOM vs Real DOM
+
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>Virtual DOM</th>
+        <th>Real DOM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>2</th>
+        <td>Dom mainipulation is very easy</td>
+        <td>Dom mainipulation is very expensive </td>
+      </tr>
+       <!-- row 18 -->
+      <tr>
+        <th>3</th>
+        <td>No memory wastage </td>
+        <td> There is too much memory wastage </td>
+      </tr>
+       <!-- row 19 -->
+        <!-- row 18 -->
+      <tr>
+        <th>4</th>
+        <td> It updates fast</td>
+        <td>  It updates Slow</td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>5</th>
+        <td>It can't update HTML directly </td>
+        <td> It can update HTML directly </td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th> 6</th>
+        <td> It is only a virtual representation of the DOM </td>
+        <td> It represents the UI of you application </td>
+      </tr>
+	         <!-- row 8 -->
+	<tr>
+        <th> 7</th>
+        <td>Update the JSX if the element update </td>
+        <td> Create a new DOM if the element updates </td>
+      </tr>
+	         <!-- row 9 -->
+	<tr>
+        <th> 8</th>
+        <td>It can produce about 200,000 virtual DOM Nodes/ Second </td>
+        <td> It allows us to directly target any specific node  </td>
+      </tr>
+	    
+    </tbody>
+  </table>
+</div>
 
 
 ### Table
