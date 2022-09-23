@@ -725,7 +725,13 @@ Ans: npm: Node package manager
 Ans Babel হল free & open source javascript Transpiler যা EcmaScript এর newer version কে previous verions a convert করে .
 12. what are the JSX Benifits?
 Ans: One of the advantages of JSX is that React creates a virtual DOM (a virtual representation of the page) to track changes and updates.
-13. 
+13. how props works?
+Ans: props works an Unidirectional data flow (one way binding). props এর  value set করা যাই না এটা readonly.
+	
+	
+	
+	
+	
 	
 	
 	
@@ -752,21 +758,29 @@ Ans: One of the advantages of JSX is that React creates a virtual DOM (a virtual
     <tbody>
       <tr>
         <th>17</th>
-        <td> String</td>
-        <td>String হচ্ছে imutable. এর মান বা value change করা যাই না.  </td>
+        <td> </td>
+        <td> </td>
       </tr>
        <!-- row 18 -->
       <tr>
         <th>18</th>
-        <td> String</td>
-        <td>  Apply Search includes, indexOf, startswith, endswith </td>
+        <td> </td>
+        <td>   </td>
+	<td>   </td>
       </tr>
        <!-- row 19 -->
         <!-- row 18 -->
       <tr>
         <th>18</th>
-        <td> destructing two way (valriable value swap)</td>
-        <td> Array to Array /* [first, second] = [second, first] */, Object to Object </td>
+        <td> </td>
+        <td> </td>
+	<td>   </td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>18</th>
+        <td> </td>
+        <td> </td>
       </tr>
     </tbody>
   </table>
