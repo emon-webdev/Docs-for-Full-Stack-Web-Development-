@@ -46,7 +46,7 @@ Demo
 
 <br >
 	
-#### const [count, setCount] = useState(0);
+##### const [ ] = useState( );
 1. useState(0) কে dispatch বলে
 2. [count, setCount] এইটা refarence রাখে
 3. setCount asynchronous
