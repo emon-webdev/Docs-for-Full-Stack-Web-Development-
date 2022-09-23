@@ -805,7 +805,64 @@ ii. A beginner need to familiarise with the TypeScript language that Angular use
 	
 	
 	
-	
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>Attributes</th>
+        <th>Angular</th>
+        <th>React</th>
+	<th>Vue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Type</th>
+        <td>JavaScript framework </td>
+        <td>Open Source Js Library </td>
+	<td> Progressive JavaScript Framework</td>
+      </tr>
+       <!-- row 18 -->
+      <tr>
+        <th>Coding speed</th>
+        <td>SLow </td>
+        <td> Normal </td>
+	 <td>Fast </td>
+      </tr>
+       <!-- row 19 -->
+        <!-- row 18 -->
+      <tr>
+        <th>Performance</th>
+        <td> OK</td>
+        <td> OK</td>
+	<td> OK</td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>Startup Time</th>
+        <td>Longer due to its large codebase </td>
+        <td> Quick</td>
+	<td>Quick </td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>Complete web apps</th>
+        <td> Can be used on standalone basis</td>
+        <td>Needs to be integrated with many other tools </td>
+	<td> Requires third party tools</td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>Data binding</th>
+        <td> Bi-directional </td>
+        <td> uni-derectional </td>
+	<td>  Bi-directional</td>
+      </tr></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 	
   ************End React Js Interview Questions************
  ```
