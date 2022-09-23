@@ -688,6 +688,7 @@ ii. Each component exists in the same space but works independntly
 iii. All of the components are being merged in a parcent component (the final UI)
 iv. Splits UI into independt and reusable pieces.
 v. Re-usable having their own structure and methods.
+vi. Markup language & logic কে আলাদা file এ না রেখে একই সাথে প্রয়োজনমত একই file এ রাখা যায়। এর জন্য React component ব্যবহার করা হয়।
 2. What are single page applications (SPA)?
 Ans i. Only one webpage, and each time something happens, only part of the page in reloaded while the rest of HTml remains unchanged.
 ii. All use interaction with this service is carried out, using one screen (page)
@@ -711,16 +712,20 @@ ii. Props => বাইরে comomponent থেকে current comomponent a data
 Ans: SPA => i. Facebook nes feed ii. Twitter iii. Trello iv.Pinterest v. Gmail vi. google Maps vii. Airbnb
 MPS => i. Amazon ii. eBay iii. ALiexpress iv. Forbes v. Thumbtack vi. Angi
 9. What is JSX? (JavaScript XML)
-Ans: JavaScript এর মধ্যে html এর মতো code type করার ability. JSX এর সাহায্যে HTML code JavaScript এর code সহজেই type করা যাই।
-100% Html না but Html এর Flever পাওয়া যায়।
+Ans:i. JSX JavaScript XML
+ii. JavaScript এর মধ্যে html এর মতো code type করার ability. JSX এর সাহায্যে HTML code JavaScript এর code সহজেই type করা যাই।
+100% Html না but Html এর Flever পাওয়া যায়। JSX এর ভিতর powerfull JS map, filter find সহজেই করা যায় {} এর মাধমে ।
+propery এর ভিতর dynamic expresion লিখা যায়।
+iii. Markup language & logic কে আলাদা file এ না রেখে একই সাথে প্রয়োজনমত একই file এ রাখা যায়। এর জন্য React component ব্যবহার করা হয়।
 
 //Module : 47 (How React Works)
 10. npm and npx diffrence?
 Ans: npm: Node package manager
-	
-	
-	
-	
+11. What is Babel Compiler?
+Ans Babel হল free & open source javascript Transpiler যা EcmaScript এর newer version কে previous verions a convert করে .
+12. what are the JSX Benifits?
+Ans: One of the advantages of JSX is that React creates a virtual DOM (a virtual representation of the page) to track changes and updates.
+13. 
 	
 	
 	
