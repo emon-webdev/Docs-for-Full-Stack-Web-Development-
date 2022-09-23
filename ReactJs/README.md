@@ -799,6 +799,20 @@ i. React Js uses (JavaScript XML). which is fairly easy to learn if you have pri
 ii. A beginner need to familiarise with the TypeScript language that Angular uses.
 
 
+
+	
+	
+	
+	
+	
+	
+  ************End React Js Interview Questions************
+ ```
+</details>
+
+
+### Table
+	
 <div class="overflow-x-auto">
   <table class="table w-full">
     <!-- head -->
@@ -853,57 +867,6 @@ ii. A beginner need to familiarise with the TypeScript language that Angular use
         <td> uni-derectional </td>
 	<td>  Bi-directional</td>
       </tr></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-	
-	
-	
-	
-	
-	
-  ************End React Js Interview Questions************
- ```
-</details>
-
-
-### Table
-	
-<div class="overflow-x-auto">
-  <table class="table w-full">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Answer</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>17</th>
-        <td> </td>
-        <td> </td>
-      </tr>
-       <!-- row 18 -->
-      <tr>
-        <th>18</th>
-        <td> </td>
-        <td>   </td>
-      </tr>
-       <!-- row 19 -->
-        <!-- row 18 -->
-      <tr>
-        <th>18</th>
-        <td> </td>
-        <td> </td>
-      </tr>
-	       <!-- row 18 -->
-	<tr>
-        <th>18</th>
-        <td> </td>
-        <td> </td>
       </tr>
     </tbody>
   </table>
