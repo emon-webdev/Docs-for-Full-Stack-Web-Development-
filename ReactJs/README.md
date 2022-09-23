@@ -1,7 +1,23 @@
 # React Using Method And Example
 
 ### 🔭 What is React?
-- 
+i. React JS is a JavaScript library for building user interfaces.
+ii. React JS is a declarative, efficient, and flexible.
+iii. It is fast and component - based
+iv. It Was initaially debeloped and maintained by Facebook.
+##### must be know every single part for interview https://roadmap.sh/react
+
+- React's Virtual DOM is a JavaScript representation of the actual DOM. 
+When updates are made React compares the current DOM to the virtual DOM
+and only updates the differences bettween the two.
+React hot loaderis a plugin that allows React components to be live reloaded without the loss of state.
+
+- History of React
+i. 2021 - The first signs of React
+ii. An early prototype of React
+iii. Something new had started at Facebook.
+iv. 2013 - The year of the Big Launch
+
 ### 👯 Why use React?
 - 
 ###  🤔 How to Use?
@@ -636,7 +652,7 @@ export {
   <h3>Notes for javaScript (Click Me)</h3>
 </summary>
 <br >
- Notes
+  ##### Notes must be know every single part for interview https://roadmap.sh/react
 
 ```js
 
@@ -681,7 +697,7 @@ Ans:
   <h3>React Js Interview Questions (Click Me)</h3>
 </summary>
 <br >
-  
+  #####  must be know every single part for interview https://roadmap.sh/react
  ```js
 ************React Js Interview Questions************
 	
@@ -732,8 +748,16 @@ Ans Babel হল free & open source javascript Transpiler যা EcmaScript এ�
 Ans: One of the advantages of JSX is that React creates a virtual DOM (a virtual representation of the page) to track changes and updates.
 13. how props works?
 Ans: props works an Unidirectional data flow (one way binding). props এর  value set করা যাই না এটা readonly.
-	
-	
+14. What is React JS?
+Ans: i. React JS is a JavaScript library for building user interfaces.
+ii. React JS is a declarative, efficient, and flexible.
+iii. It is fast and component - based
+iv. It Was initaially debeloped and maintained by Facebook.
+15. More About React JS.
+Ans: React's Virtual DOM is a JavaScript representation of the actual DOM. 
+When updates are made React compares the current DOM to the virtual DOM and only updates the differences bettween the two.
+16. React VS Angular VS Vue ? (important)
+Ans: 
 	
 	
 	
