@@ -721,6 +721,8 @@ Ans:
 	
 //Milestone: 8 Simple React
 //Module : 44
+0. What is React?
+Ans:
 1. What are components in react?
 Ans: i. Building blocks of the user interface.
 ii. Each component exists in the same space but works independntly
@@ -854,6 +856,23 @@ iv. It's like: instead of moving actual rooms in a house, you edit the blueprint
 25. How does work virtual dom?
 Ans: dom a কোন কিছু change হলে virtual dom বুজে যাই virtual dom এর ভিতর কোথাই change হইছে। 
 then virtual dom Real dom er সাথে compatre করে শুধু change হওয়াটা update করে।
+26. what is the difference between class component and functional component?
+Ans: 
+27. What are react lifecycle methods?
+Ans: 
+28. What are hooks? Tell us the role of useState and useEffet?
+Ans: 
+29. What is diff algorithm?
+Ans: 
+30. What is the difference between attribute and property?
+Ans: 
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
