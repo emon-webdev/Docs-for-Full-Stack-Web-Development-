@@ -715,7 +715,8 @@ Ans: JavaScript এর মধ্যে html এর মতো code type করা
 100% Html না but Html এর Flever পাওয়া যায়।
 
 //Module : 47 (How React Works)
-10. 
+10. npm and npx diffrence?
+Ans: npm: Node package manager
 	
 	
 	
