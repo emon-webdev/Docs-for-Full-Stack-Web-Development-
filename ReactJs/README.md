@@ -681,6 +681,7 @@ Ans: i. similar in look, differnt in data
 ii. container component
 iii. no common pattern but breakdown for working purpose
 v. stand alone component
+	
 2. advantages of components.
 i. code re-usability ii. Fast development iii. Design consistency iv. Maintainablility 
 //Module : 45
@@ -688,9 +689,36 @@ i. code re-usability ii. Fast development iii. Design consistency iv. Maintainab
 <div style={{border: '2px solid red', margin: '20px'}}>
 	<p>Hello world</p>
 </div>
+	
 3. 
-Ans:
-
+Ans: i. //create utilites file
+const add = (first, second) => {
+    return first + second;
+};
+const multiply = (first, second) => {
+    return first * second;
+};
+export { add, multiply }; 
+i. // import utilites file
+import { add, multiply } from '../../utilities/calculator';
+iii. //uses
+const Shoes = () => {
+    const first = 13;
+    const second = 11;
+    const result = multiply(first, second);
+    const sum = add(first, second);
+    return (
+        <div>
+            <p>result {result}</p>
+            <p>sum {sum}</p>
+        </div>
+    );
+};
+	
+4.
+	
+	
+	
 	
 	
 	
