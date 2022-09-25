@@ -702,7 +702,7 @@ i. code re-usability ii. Fast development iii. Design consistency iv. Maintainab
 	<p>Hello world</p>
 </div>
 	
-3. 
+3. //export import
 Ans: i. //create utilites file
 const add = (first, second) => {
     return first + second;
@@ -710,7 +710,7 @@ const add = (first, second) => {
 const multiply = (first, second) => {
     return first * second;
 };
-export { add, multiply }; 
+export { add, multiply, getTotalPrice as getTotal };
 i. // import utilites file
 import { add, multiply } from '../../utilities/calculator';
 iii. //uses
@@ -983,7 +983,7 @@ Ans:
 </div>
 
 
-### Table
+### Angular vs React vs Vue
 	
 <div class="overflow-x-auto">
   <table class="table w-full">
@@ -1044,6 +1044,47 @@ Ans:
   </table>
 </div>
 
+
+### Angular vs React vs Vue
+	
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>Problem</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>export () </td>
+        <td>export { add, multiply, getTotalPrice as getTotal };</td>
+      </tr>
+       <!-- row 18 -->
+      <tr>
+        <th>2</th>
+        <td>SLow </td>
+        <td> Normal </td>
+      </tr>
+       <!-- row 19 -->
+        <!-- row 18 -->
+      <tr>
+        <th>3</th>
+        <td> OK</td>
+        <td> OK</td>
+      </tr>
+	       <!-- row 18 -->
+	<tr>
+        <th>4</th>
+        <td>Longer due to its large codebase </td>
+        <td> Quick</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 ## 🌐 Socials: Connect with Emon Hossain!
