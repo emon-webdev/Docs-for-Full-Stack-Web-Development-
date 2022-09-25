@@ -1281,8 +1281,17 @@ const sum = arr.reduce((prev, current) => {
 }, 0)
 console.log(sum)
 	
-	
 //Example 2
+const numbers = [20, 43, 54, 78, 90];
+const sumReducer = (previous, current) => {
+   return previous + current
+}
+
+const total = numbers.reduce(sumReducer , 0);
+
+console.log(total)
+	
+//Example 3
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 5];
 // .reduce (accumulator Function, initial value)
 // accumulator function use to parameters
