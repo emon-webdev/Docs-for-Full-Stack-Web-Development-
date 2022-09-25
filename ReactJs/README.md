@@ -500,14 +500,17 @@ const [cart, setCart] = useState([]);
 ```
 
 
-### 
+
+### localStorageSessionStorage 
 <details>
 <summary>
-  <h4> </h4>
+  <h3>What is localStorage and SessionStorage? (Click Me)</h3>
 </summary>
 <br >
-Local storage Module: 47_5-5 Store multiple data in an Object with local storage
-```js
+  Local storage Module: 47_5-5 Store multiple data in an Object with local storage
+ ```js
+	
+// Example 1 Full local storage
 const Cosmetic = ({ cosmetic }) => {
     const { name, price, _id } = cosmetic;
     
@@ -569,6 +572,7 @@ const Cosmetic = ({ cosmetic }) => {
     );
 };
 
+	
 //Example 2
 
 // localStorage connect to ui
@@ -589,27 +593,9 @@ if (products.length) {
 }
 
 }, [products])
-    
-    
-    
 
- // <h3>Local Storage Fake Db</h3>
-
-
-
-```
-</details>
-
-
-### localStorageSessionStorage 
-<details>
-<summary>
-  <h3>What is localStorage and SessionStorage? (Click Me)</h3>
-</summary>
-<br >
-  
- ```js
-
+//Example 3
+// Local Storage Fake Db
 // use local storage to manage cart data
 const addToDb = id =>{
 // set localStorage
