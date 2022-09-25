@@ -669,7 +669,7 @@ export {
   <h3>Notes for javaScript (Click Me)</h3>
 </summary>
 <br >
-  ##### Notes must be know every single part for interview https://roadmap.sh/react
+  - Notes must be know every single part for interview https://roadmap.sh/react
 
 ```js
 
