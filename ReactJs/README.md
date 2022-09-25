@@ -500,10 +500,10 @@ const [cart, setCart] = useState([]);
 ```
 
 
-### localStorageSessionStorage
+### 
 <details>
 <summary>
-  <h4>What is localStorage and SessionStorage? (Click Me)</h4>
+  <h4> </h4>
 </summary>
 <br >
 Local storage Module: 47_5-5 Store multiple data in an Object with local storage
@@ -595,6 +595,21 @@ if (products.length) {
 
  // <h3>Local Storage Fake Db</h3>
 
+
+
+```
+</details>
+
+
+### localStorageSessionStorage 
+<details>
+<summary>
+  <h3>What is localStorage and SessionStorage? (Click Me)</h3>
+</summary>
+<br >
+  
+ ```js
+
 // use local storage to manage cart data
 const addToDb = id =>{
 // set localStorage
@@ -658,10 +673,12 @@ export {
     getStoredCart,
     removeFromDb,
     deleteShoppingCart
-};- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.
-
-```
+};- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.	
+  
+ ```
 </details>
+
+
 
 ### Notes
 <details>
