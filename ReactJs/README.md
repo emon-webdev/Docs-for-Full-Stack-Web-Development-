@@ -500,15 +500,21 @@ const [cart, setCart] = useState([]);
 ```
 
 
-
-### localStorageSessionStorage 
+### localStorageSessionStorage
 <details>
 <summary>
   <h3>What is localStorage and SessionStorage? (Click Me)</h3>
 </summary>
 <br >
-  Local storage Module: 47_5-5 Store multiple data in an Object with local storage
+ Local storage Module: 47_5-5 Store multiple data in an Object with local storage
+	
  ```js
+************Local storage************
+	
+	
+	
+	
+	
 	
 // Example 1 Full local storage
 const Cosmetic = ({ cosmetic }) => {
@@ -660,7 +666,9 @@ export {
     removeFromDb,
     deleteShoppingCart
 };- Find is used to conditionally find the first element in an array. If more than one element meets the condition, find returns the first element.	
-  
+	
+	
+  ************End React Js Interview Questions************
  ```
 </details>
 
