@@ -1045,7 +1045,7 @@ Ans:
 </div>
 
 
-### Angular vs React vs Vue
+### Table
 	
 <div class="overflow-x-auto">
   <table class="table w-full">
