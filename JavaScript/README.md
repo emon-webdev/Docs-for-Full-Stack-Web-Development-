@@ -1304,6 +1304,28 @@ const total2 = numbers.reduce((previous, current) => {
 console.log(total)
 console.log(total2)
 
+	
+//Example 4 object reduce?
+const items = [
+    {id:1, name: 'alta', price: 100},
+    {id:2, name: 'alta', price: 100},
+    {id:3, name: 'alta', price: 100},
+    {id:4, name: 'alta', price: 100},
+    {id:5, name: 'alta', price: 100},
+];
+const itemSumReducer = (previous, current) => previous + current.price;
+const itemTotal = items.reduce( itemSumReducer, 0);
+console.log(itemTotal)
+
+// Example: 5
+Module number: 47_5-8 Module Summary and simple intro to array reduce
+const getTotalPrice = products => {
+    const reducer = (previous, current) => previous + current.price;
+    const total = products.reduce(reducer, 0);
+    return total;
+};
+getTotalPrice()
+	
 ```
 </details>
 
