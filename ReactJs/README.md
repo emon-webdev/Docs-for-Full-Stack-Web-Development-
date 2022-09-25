@@ -508,7 +508,7 @@ const [cart, setCart] = useState([]);
 </summary>
 <br >
   Local storage Module: 47_5-5 Store multiple data in an Object with local storage
- ```js
+ ```css
 	
 // Example 1 Full local storage
 const Cosmetic = ({ cosmetic }) => {
