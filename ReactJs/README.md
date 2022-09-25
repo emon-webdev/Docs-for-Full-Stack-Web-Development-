@@ -506,7 +506,7 @@ const [cart, setCart] = useState([]);
   <h4>What is localStorage and SessionStorage? (Click Me)</h4>
 </summary>
 <br >
-
+Local storage Module: 47_5-5 Store multiple data in an Object with local storage
 ```js
 const Cosmetic = ({ cosmetic }) => {
     const { name, price, _id } = cosmetic;
