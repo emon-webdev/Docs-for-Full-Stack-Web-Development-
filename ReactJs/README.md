@@ -113,8 +113,8 @@ const Example = () => {
   <h3>What is useEffect? (Click Me)</h3>
 </summary>
 <br >
-- i. dependancy 
-- ii. 
+- i. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
+- ii. যদি 
  ```js
 import React, { useState, useEffect } from 'react';
 
