@@ -727,8 +727,18 @@ const Shoes = () => {
     );
 };
 	
-4.
-	
+4. //card total price sum
+//Example 1
+//import cart (array like obj)
+let total = 0;
+for (const product of cart) {
+console.log(product.price)
+total = total + product.price
+}
+//Example 2
+//import cart (array like obj)
+const reducer = (prv, curr) => prv + curr.price;
+const total = cart.reduce(reducer, 0);	
 	
 	
 	
