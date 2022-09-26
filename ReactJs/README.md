@@ -737,14 +737,16 @@ total = total + product.price
 }
 //Example 2
 //import cart (array like obj)
-const reducer = (prv, curr) => prv + curr.price;
-const total = cart.reduce(reducer, 0);	
-	
-//Tax
-const tax = total * 10 / 100;
-// or
-const tax = total * 0.1;	
-	
+//total price
+const totalReducer = (prv, curr) => prv + curr.price;
+const total = cart.reduce(totalReducer, 0);
+//total shipping
+const shippingReducer = (prv, curr) => prv + curr.shipping;
+const shipping = cart.reduce(shippingReducer, 0);
+//Tax (string to number convert)
+const tax = parseFloat((total * 10 / 100).toFixed(2));
+// Grand price
+const grandTotal = (total + shipping + tax).toFixed(2);
 	
 	
 	
