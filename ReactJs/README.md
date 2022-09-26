@@ -114,7 +114,8 @@ const Example = () => {
 </summary>
 <br >
 - i. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
-- ii. যদি 
+- ii. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
+useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
  ```js
 import React, { useState, useEffect } from 'react';
 
