@@ -727,7 +727,7 @@ const Shoes = () => {
     );
 };
 	
-4. //card total price sum
+4. //card total price sum (Module: 49-3 )
 //Example 1
 //import cart (array like obj)
 let total = 0;
@@ -740,6 +740,10 @@ total = total + product.price
 const reducer = (prv, curr) => prv + curr.price;
 const total = cart.reduce(reducer, 0);	
 	
+//Tax
+const tax = total * 10 / 100;
+// or
+const tax = total * 0.1;	
 	
 	
 	
