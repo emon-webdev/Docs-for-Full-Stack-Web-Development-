@@ -113,7 +113,8 @@ const Example = () => {
   <h3>What is useEffect? (Click Me)</h3>
 </summary>
 <br >
-  
+- i. dependancy 
+- ii. 
  ```js
 import React, { useState, useEffect } from 'react';
 
