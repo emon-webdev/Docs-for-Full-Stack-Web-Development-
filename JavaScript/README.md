@@ -1340,7 +1340,12 @@ getTotalPrice()
 <br >
 - If you want to return an array by working for the element, you need to use a map. 
 - Map return array
-
+আমরা কোন একটি অবজেক্টের প্রোপ্রাটি ২ ভাবে এক্সেস করতে পারি। একটি ডট নোটেশন অন্যটি ব্রাকেট নোটেশন পদ্ধতি। এখানে ব্রাকেট নোটেশন ব্যবহার করা হয়েছে।
+ধরুন একটি অবজেক্ট
+const obj = { name : "hero", age: 23 };
+আমরা যদি শুধু নামটি দেখতে চাই তাহলে
+console.log(obj['name'])
+এভাবে করতে পারি।
 ```js
 //access property by name
 const student = {
@@ -2543,17 +2548,13 @@ let result;
 result = (x>0) ? '' : ''
 console.log(result)
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+//Object
+আমরা কোন একটি অবজেক্টের প্রোপ্রাটি ২ ভাবে এক্সেস করতে পারি। একটি ডট নোটেশন অন্যটি ব্রাকেট নোটেশন পদ্ধতি। এখানে ব্রাকেট নোটেশন ব্যবহার করা হয়েছে।
+ধরুন একটি অবজেক্ট
+const obj = { name : "hero", age: 23 };
+আমরা যদি শুধু নামটি দেখতে চাই তাহলে
+console.log(obj['name'])
+এভাবে করতে পারি।
 	
 	
 ************8 ways to get undefine************
