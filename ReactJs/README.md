@@ -116,6 +116,7 @@ const Example = () => {
 - i. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
 - ii. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
 useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
+- iii. re-run effect when the values within the array change across re-renders.
  ```js
 import React, { useState, useEffect } from 'react';
 
