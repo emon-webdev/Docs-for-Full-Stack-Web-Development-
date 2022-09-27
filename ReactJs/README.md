@@ -118,7 +118,9 @@ const Example = () => {
 
 <br >
 	
-##### const [state, setState ] = useState( initialValue);
+##### useEffect(() => {
+	console.log('Hello World')
+}, [dependancy])
 1. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
 2. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
 useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
