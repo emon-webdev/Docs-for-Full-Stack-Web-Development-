@@ -84,6 +84,8 @@ Demo
 2. [state, setState] এইটা refarence রাখে
 3. setCount asynchronous
 4. state asynchronous ভাবে update হয়।	
+5. state variable er মতো কাজ করে
+6. js এ data variable এর ভিতর রাখতে হয় but react এ useState এর ভিতর রাখতে হয়।
  ```js
 
 // import
@@ -117,10 +119,31 @@ const Example = () => {
 - ii. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
 useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
 - iii. re-run effect when the values within the array change across re-renders.
+- iv. 
  ```js
 import React, { useState, useEffect } from 'react';
 
+//Example: 0
+  const [control, setControl] = useState(false);
+
+useEffect(() => {
+	console.log('Hello World')
+}, [control])
+const handleEffect = () => {
+setControl(!control)	
+}
+<button onClick={handleEffect}>Check Effect</button>
+
 //Example: 1
+useEffect(() => {
+fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=fish')
+    .then(res => res.json())
+    .then(data => {
+	setMeals(data.meals)
+    })
+}, [])
+
+//Example: 2
   const [users, setUsers] = useState([]);
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -128,16 +151,13 @@ import React, { useState, useEffect } from 'react';
       .then(data => setUsers(data))
   }, [])
 
-//Example: 2
+//Example: 3
 const User = () => {
     const [users, setUsers] = useState([]);
 //Ex : 1
 useEffect(() => fetchData, [])
 //Ex: 2
   useEffect(() => {
-    return loadCountries
-  }, [])
-	
   const loadCountries = async () => {
     const url = 'https://restcountries.com/v3.1/all';
     try {
@@ -148,6 +168,10 @@ useEffect(() => fetchData, [])
       console.error(error)
     }
   }
+  loadCountries ()
+}, [])
+	
+  
 	
 return (
 <>
