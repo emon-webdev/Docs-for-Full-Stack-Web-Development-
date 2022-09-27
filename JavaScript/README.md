@@ -3200,7 +3200,7 @@ javascript only hoist declarations, not initializations.
       <tr>
         <th>24</th>
         <td> </td>
-        <td> </td>
+        <td> <input onChange={(e) => handleChange(e.target.value)} type="text" placeholder="Search Your Food" class="" /> </td>
       </tr>
 <!-- row 24-->
       <tr>
