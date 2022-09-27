@@ -109,17 +109,44 @@ const Example = () => {
 </details>
 
 
+
 ### useEffect
 <details>
 <summary>
   <h3>What is useEffect? (Click Me)</h3>
 </summary>
+
 <br >
-- i. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
-- ii. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
+	
+##### const [state, setState ] = useState( initialValue);
+1. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
+2. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
 useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
-- iii. re-run effect when the values within the array change across re-renders.
-- iv. 
+3. re-run effect when the values within the array change across re-renders.
+
+ ```js
+
+// import
+import React, { useState } from 'react';
+
+const Example = () => {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+  
+ ```
+</details>
+
+
  ```js
 import React, { useState, useEffect } from 'react';
 
