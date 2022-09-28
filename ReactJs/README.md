@@ -783,7 +783,13 @@ const tax = parseFloat((total * 10 / 100).toFixed(2));
 // Grand price
 const grandTotal = (total + shipping + tax).toFixed(2);
 	
-	
+5. conceptual session expoloar sport db (gias vai)
+//filter remove from cart list
+    // delete from cart
+    const handleDelete = (idMeal) => {
+        const newCart = cart.filter(singleCart => singleCart.idMeal !== idMeal);
+        setCart(newCart)
+    };
 	
 	
 	
