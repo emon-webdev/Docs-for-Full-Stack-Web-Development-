@@ -542,8 +542,12 @@ const [cart, setCart] = useState([]);
   <h3>What is localStorage ? (Click Me)</h3>
 </summary>
 <br >
+// clear Local storage 
+1. Conceptual session:  Explore Sportsdb and Make your Own Sport Team -- Gias Uddin Hasan [26th September]]
+
 i. Local storage Module: 47_5-5 Store multiple data in an Object with local storage
-ii. 49-6 -> 49-8 (advanced) Add to the cart with quantity and explanation	
+ii. 49-6 -> 49-8 (advanced) Add to the cart with quantity and explanation
+iii. 
  ```js
 ************Local storage************
 	
