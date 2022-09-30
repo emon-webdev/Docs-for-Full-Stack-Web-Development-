@@ -128,16 +128,16 @@ const toggledClass = mode ? light : dark;
 ##### useEffect(() => {},[])
 console.log('Hello World')
 }, [dependancy])
-1. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
+1. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে
 2. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
-useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
-3. re-run effect when the values within the array change across re-renders.
-// useEffect use cases
-i. validating input field.
-ii. fetch API data
-iii. live filtering
-iv. trigger animation on new array value
-v. Reading data from local storage
+useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে
+3. re-run effect when the values within the array change across re-renders
+#### useEffect use cases
+1. validating input field.
+2. fetch API data
+3. live filtering
+4. trigger animation on new array value
+5. Reading data from local storage
  ```js
 
 import React, { useState, useEffect } from 'react';
@@ -994,16 +994,29 @@ Ans:
 Ans: 
 30. What is the difference between attribute and property?
 Ans: 
+
+//Module 50.5
 31. What is state in react? (M- 50_5-1)
 Ans: i. A built in react object
 ii. Used to contain data about the component
 iii. Cangeable over time
 iv. React Component rendering and states are dependent
-	
-	
-	
-	
-	
+32. What is the useEffect cleanup function? and why uses ?
+Ans:
+//Example 1
+useEffect(() => {
+effect();
+return() => {
+	cleanup();
+}
+}, [])
+33. What is Render in React?
+Ans: Reader technically means to provide serviced. React schedules a render every time the sate of a component changes.
+35. defference of SSR and CSR? // MOdule 50_5-3 (important)
+1. SSR (Server Side Rendering)
+Ans: 
+2. CSR (Client Side Rendering)
+CRS is a technique where all the pagte resoures are rendered on the client brower rather than the server.
 	
 	
 	
