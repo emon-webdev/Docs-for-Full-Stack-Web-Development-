@@ -76,9 +76,7 @@ Demo
 <summary>
   <h3>What is useState? (Click Me)</h3>
 </summary>
-
 <br >
-	
 ##### const [state, setState ] = useState( initialValue);
 1. useState(0) কে dispatch বলে
 2. [state, setState] এইটা refarence রাখে
@@ -86,6 +84,7 @@ Demo
 4. state asynchronous ভাবে update হয়।	
 5. state variable er মতো কাজ করে
 6. js এ data variable এর ভিতর রাখতে হয় but react এ useState এর ভিতর রাখতে হয়।
+	
  ```js
 
 // import
@@ -104,6 +103,14 @@ const Example = () => {
     </div>
   );
 }
+	
+//Example 2 Toggole Flags (true / false)
+const [mode, setMode] = useState(false)
+const clickHandler = () => {
+	setMode(!mode)	
+}
+const toggledClass = mode ? light : dark;
+<button onClick={clickHandler} >Toggle Display</button>
   
  ```
 </details>
@@ -118,14 +125,19 @@ const Example = () => {
 
 <br >
 	
-##### useEffect(() => {
-	console.log('Hello World')
+##### useEffect(() => {},[])
+console.log('Hello World')
 }, [dependancy])
 1. dependancy injection এ যদি [] (empty array ) থাকে তাহলে এক বার call করে।
 2. যদি [products, cart] (array) এর ভিতর কিছু থাকলে সেইটার উপর useEffect টা depend করে ওইটার কোন change হলে 
 useEffect আবার call করে। (যেমন products, cart ) এর উপর depend করছে।
 3. re-run effect when the values within the array change across re-renders.
-
+// useEffect use cases
+i. validating input field.
+ii. fetch API data
+iii. live filtering
+iv. trigger animation on new array value
+v. Reading data from local storage
  ```js
 
 import React, { useState, useEffect } from 'react';
@@ -960,7 +972,7 @@ iv. Counter
 v. Store API data in sate.
 
 23. useEffect Hook?
-Ans: The useEffect Hook allows you to perform side effects in your components. 
+Ans: The useEffect Hook allows you to perform side effects in your components.  Preforms asynchronuous tasks.
 Some examples of side effets area: 
 i. fetching data.
 ii. directly updating the DOM and timers.
