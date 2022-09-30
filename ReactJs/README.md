@@ -795,7 +795,10 @@ const grandTotal = (total + shipping + tax).toFixed(2);
         setCart(newCart)
     };
 	
-	
+6. React Hooks uses?
+Ans: Hooks were first introuced in react 16.8 . They let us use more of react features like Managing our component state, 
+or performing an after effect when certain changes occur in state without writing a class.
+
 	
 	
 	
@@ -924,6 +927,7 @@ iv. React alllows you to tailor your stack ass per your own project requerments 
 giving you the freedom to chosse additional libraries.
 v. React is backed and supported by Facebook, which makes it a top choice for many leading businesses.
 So list of popular companies that use ReactJS below.
+
 18. module=> 47-7 How react works, Render, virtual dom, diff algorithm, fiber	
 19. React এ প্রতিটা component 3ta stage অতিক্রম করে।
 i. Mounting
@@ -944,6 +948,17 @@ ii. hooks allow function components to have access to state and other React feat
 iii. Hooks allow us to "hook" into React features such as state and lifecycle methods.
 - useState hook
 iv. The useState hook allows us to track state in a function component.
+22.1 What is useState?
+Ans: i. Allows to have state variables in functional components.
+ii. Takes the inital state to this function.
+iii. Returns a variable with the current state value and another function to update this value.
+// use cases of useState()
+i. State management
+ii. conditional rendering
+iii. Toggle flages (true/ false)
+iv. Counter
+v. Store API data in sate.
+
 23. useEffect Hook?
 Ans: The useEffect Hook allows you to perform side effects in your components. 
 Some examples of side effets area: 
@@ -967,7 +982,11 @@ Ans:
 Ans: 
 30. What is the difference between attribute and property?
 Ans: 
-	
+31. What is state in react? (M- 50_5-1)
+Ans: i. A built in react object
+ii. Used to contain data about the component
+iii. Cangeable over time
+iv. React Component rendering and states are dependent
 	
 	
 	
