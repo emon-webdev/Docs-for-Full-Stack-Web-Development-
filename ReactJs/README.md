@@ -40,6 +40,7 @@ So list of popular companies that use ReactJS below.
 
 ###  🤔 How to Use?
 List of React:
+- [Axios](#Axios)
 - [useState](#useState)
 - [useEffect](#useEffect)
 - [searchItems](#searchItems)
@@ -66,6 +67,45 @@ List of React:
   
  ```js
 Demo
+	
+  
+ ```
+</details>
+
+### Axios
+<details>
+<summary>
+  <h3>What is Axios? (Click Me)</h3>
+</summary>
+<br >
+Axios and Fetch almost same. যখন অনেক api call করে তখন সহজেই api গুলো রোধ করে অন্য কাজ করতে পারে।
+যেমন : i. api রোধ করে token collect করা।
+More Details
+https://axios-http.com/docs/intro
+  
+ ```js
+Axios Features:
+i.Make XMLHttpRequests from the browser
+ii. Make http requests from node.js
+iii. Supports the Promise API
+iv. Intercept request and response
+v. Transform request and response data
+vi. Cancel requests
+vii. Automatic transforms for JSON data
+vii. Client side support for protecting against XSRF
+
+//Example: 
+
+
+
+
+
+
+
+
+
+
+
 	
   
  ```
