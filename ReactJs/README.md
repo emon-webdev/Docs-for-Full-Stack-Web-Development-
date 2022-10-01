@@ -810,8 +810,15 @@ const grandTotal = (total + shipping + tax).toFixed(2);
 6. React Hooks uses?
 Ans: Hooks were first introuced in react 16.8 . They let us use more of react features like Managing our component state, 
 or performing an after effect when certain changes occur in state without writing a class.
-
-	
+7. React togle Click
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+const [open, setOpen] = useState(false);		
+{
+open ?
+<XMarkIcon onClick={() => { setOpen(!open) }} className="h-6 w-6 " />
+:
+<Bars3Icon onClick={() => { setOpen(!open) }} className="h-6 w-6 " />
+}
 	
 	
 	
