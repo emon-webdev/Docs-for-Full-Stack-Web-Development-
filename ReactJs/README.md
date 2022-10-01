@@ -82,7 +82,7 @@ Axios and Fetch almost same. যখন অনেক api call করে তখন
 যেমন : i. api রোধ করে token collect করা।
 More Details
 https://axios-http.com/docs/intro
-  
+	
  ```js
 Axios Features:
 i.Make XMLHttpRequests from the browser
@@ -94,8 +94,39 @@ vi. Cancel requests
 vii. Automatic transforms for JSON data
 vii. Client side support for protecting against XSRF
 
-//Example: 
-
+//Example: Slag and split data 
+//input
+("slug": "apple_iphone_13_mini-11104",)
+//output
+{name: 'iPhone 13 mini', price: 11104}
+	
+"data": [
+	{
+	"brand": "Apple ",
+	"phone_name": "iPhone 13 mini",
+	"slug": "apple_iphone_13_mini-11104",
+	"image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg"
+	},
+]
+const [phones, setPhones] = useState([])
+useEffect(() => {
+axios.get('https://openapi.programming-hero.com/api/phones?search=iphone')
+    .then(data => {
+	const phonesLoaded = data.data.data;
+	const phoneData = phonesLoaded.map(phone => {
+	    const parts = phone.slug.split('-');
+	    const price = parseInt(parts[1]);
+	    const singlePhone = {
+		name: phone.phone_name,
+		price: price
+	    };
+	    return singlePhone;
+	});
+	console.log(phoneData)
+	setPhones(phoneData)
+    })
+}, [])
+console.log(phones)
 
 
 
