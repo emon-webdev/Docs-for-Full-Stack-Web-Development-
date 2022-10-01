@@ -1171,8 +1171,8 @@ CRS is a technique where all the pagte resoures are rendered on the client browe
        <!-- row 18 -->
       <tr>
         <th>2</th>
-        <td>SLow </td>
-        <td> Normal </td>
+        <td>React Toggle Click (true/false) </td>
+        <td> const [open, setOpen] = useState(false); <Bars3Icon onClick={() => { setOpen(!open) }} className="h-6 w-6 " /> </td>
       </tr>
        <!-- row 19 -->
         <!-- row 18 -->
