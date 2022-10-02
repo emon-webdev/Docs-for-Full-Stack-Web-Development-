@@ -5,28 +5,74 @@
 ### 👯 Why use React Router?
 
 ###  🤔 How to Use ?
-
- <h4>রাউটার সেটাপ করার জাস্ট পাঁচটা স্টেপ-</h4>
-
+### routerSetUp
+<details>
+<summary>
+  <h3>রাউটার সেটাপ করার  স্টেপ-(Click Me)</h3>
+</summary>
+<br >
+	
 ```js
-//install react router
-npm i react-router-dom
+1. Install react router: npm i react-router-dom
+2. crate a router use createBrowserRouter
+import { createBrowserRouter } from 'react-router-dom';
+const router = createBrowserRouter([
 
-১. প্রথমেই তোমাকে BrowserRouter ইউজ করতে হবে index.js এ। 
-২. তারপর আমরা App.js এ গিয়ে Routes সেট করবো। 
-৩. তার ভিতরে থাকবে এক একটা Route  
-৪. সেইসব Route এর মধ্যে থাকবে path 
-৫. আর Route এর মধ্যে element নামে আরেকটা prop সেট করে দিবো তাহলেই কাজ শেষ।  
-  
+]);
+3. Add RouterProvider and pass router props
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+  return (
+    <div className="App">
+      <RouterProvider router={router}></RouterProvider>
+    </div>
+  );
+4. Create some route inside the router
+function App() {
+  const router = createBrowserRouter([
+    // Create some route inside the router
+    { path: '/', element: <div>Default Page</div> },
+    //set component in router
+     { path: '/home', element: <Home/> },
+    { path: '/about', element: <About/> },
+  ]);
+  return (
+    <div className="App">
+      <RouterProvider router={router}></RouterProvider>
+    </div>
+  );
+}
+// Thinks you need to create a route
+1. crate a Link: so that you can go to this route
+2. Crate component: to add what you will show once you go to that route
+3. Add roter so that react router know the component it needs
+to display it needs to display while you are visiting to that route
+ <Link to='/home'>Home</Link>
+<Link to='/about'>About</Link>
+
 ```
+</details>
 
 
 List of React:
-
 - [NestedRoute](#NestedRoute)
 - [CustomLink](#CustomLink)
 - [dynamicRoute](#dynamicRoute)
 - [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
+
+### demo
+<details>
+<summary>
+  <h3> Demo-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+demo code
+
+```
+</details>
+
 
 ### NestedRoute
 
