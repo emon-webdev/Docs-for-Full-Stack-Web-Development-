@@ -4,12 +4,13 @@
 - 
 ### 👯 Why use React Router?
 
-###  🤔 How to Use ?
+### 🤔 How to Use ?
 <details>
 <summary>
   <h3>Router setup step by step(Click Me)</h3>
 </summary>
 <br >
+	
 ```js
 1. Install react router: npm i react-router-dom
 2. crate a router use createBrowserRouter
