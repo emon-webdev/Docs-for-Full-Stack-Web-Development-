@@ -44,7 +44,7 @@ List of JavaScript:
 - [Table](#Table)
 - [PrerequisitesOfReact](#PrerequisitesOfReact)
 
-### JsErrorAndDebug
+### demo
 <details>
 <summary>
   <h3>What is ? (Click Me)</h3>
