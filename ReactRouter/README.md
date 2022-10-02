@@ -272,11 +272,10 @@ export default FriendDetail;
 
 
 ### simpleNavbarwithResponsive
-<details>
-<summary>
+
   <h4>simpleNavbarwithResponsive</h4>
-</summary>
-<br >
+
+
 ```js
   import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import React, { useState } from 'react';
@@ -313,7 +312,6 @@ const Navbar = () => {
 export default Navbar;
   
 ```
-</details>
 
 
 
@@ -345,8 +343,26 @@ export default Navbar;
       <!-- row 3 -->
       <tr>
         <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
+        <td>map key</td>
+        <td>
+	{ posts.map((post, index) => <Post
+		key={index}
+		post={post}
+	    />)
+	   }
+	   </td>
+      </tr>
+       <!-- row 1 -->
+      <tr>
+        <th>3</th>
+        <td> </td>
+        <td> </td>
+      </tr>
+       <!-- row 1 -->
+      <tr>
+        <th>4</th>
+        <td> </td>
+        <td> </td>
       </tr>
     </tbody>
   </table>
