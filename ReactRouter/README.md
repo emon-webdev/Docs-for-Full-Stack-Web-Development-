@@ -344,7 +344,7 @@ export default Navbar;
       <tr>
         <th>3</th>
         <td>map key</td>
-        <td>{ posts.map((post, index) => <Post key={index} post={post}/>)}</td>
+        <td>{ posts.map((post, index) => post key={index} post={post})}</td>
       </tr>
        <!-- row 1 -->
       <tr>
