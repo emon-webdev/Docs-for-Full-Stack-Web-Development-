@@ -9,6 +9,9 @@
  <h4>রাউটার সেটাপ করার জাস্ট পাঁচটা স্টেপ-</h4>
 
 ```js
+//install react router
+npm i react-router-dom
+
 ১. প্রথমেই তোমাকে BrowserRouter ইউজ করতে হবে index.js এ। 
 ২. তারপর আমরা App.js এ গিয়ে Routes সেট করবো। 
 ৩. তার ভিতরে থাকবে এক একটা Route  
