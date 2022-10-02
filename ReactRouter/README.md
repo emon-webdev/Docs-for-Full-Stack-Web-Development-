@@ -57,6 +57,7 @@ List of React:
 - [CustomLink](#CustomLink)
 - [dynamicRoute](#dynamicRoute)
 - [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
+- [Table](#Table)
 
 ### demo
 <details>
