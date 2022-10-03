@@ -53,6 +53,7 @@ to display it needs to display while you are visiting to that route
 
 
 List of React:
+- [ActiveNavLink](#ActiveNavLink)
 - [NestedRoute](#NestedRoute)
 - [CustomLink](#CustomLink)
 - [dynamicRoute](#dynamicRoute)
@@ -69,6 +70,20 @@ List of React:
 ```js
 
 demo code
+
+```
+</details>
+
+### ActiveNavLink
+<details>
+<summary>
+  <h3> Active Nav Link-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+import { NavLink } from 'react-router-dom';
+<NavLink className={(isActive) => isActive ? 'active' : undefined} to='/home' className='p-3 mr-3 hover:text-blue-700'>Home</NavLink>
 
 ```
 </details>
