@@ -54,6 +54,7 @@ to display it needs to display while you are visiting to that route
 
 List of React:
 - [ActiveNavLink](#ActiveNavLink)
+- [loader](#loader)
 - [NestedRoute](#NestedRoute)
 - [CustomLink](#CustomLink)
 - [dynamicRoute](#dynamicRoute)
@@ -87,6 +88,84 @@ import { NavLink } from 'react-router-dom';
 
 ```
 </details>
+
+
+### loader
+<details>
+<summary>
+  <h3> loader (Click Me)</h3>
+</summary>
+<br >
+	
+```js
+// step 1: 
+ {
+  path: '/friends',
+  loader: async () => {
+    return fetch('https://jsonplaceholder.typicode.com/users')
+  },
+  element: <Friends />
+},
+
+//step 2: open <Friends /> component
+const friends = useLoaderData();
+
+//Full Example
+//App.js
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Friends from './components/Friends/Friends';
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main />,
+      children: [
+        {
+          path: '/friends',
+
+          loader: async () => {
+            return fetch('https://jsonplaceholder.typicode.com/users')
+          },
+          element: <Friends />
+        },
+      ]
+    },
+  ]);
+
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+}
+
+export default App;
+
+// Friends components
+//Friends.js
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+
+const Friends = () => {
+    const friends = useLoaderData();
+    
+    return (
+        <div>
+            <h2>Friends {friends.length}</h2>
+	    {
+                friends.map(friend => <Friend
+                    key={friend.id}
+                    friend={friend}
+                />)
+            }
+        </div>
+    );
+};
+
+export default Friends;
+```
+</details>
+
 
 
 ### NestedRoute
