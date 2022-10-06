@@ -174,8 +174,10 @@ export default Friends;
   <h3> update Dynamic Route-(Click Me)</h3>
 </summary>
 <br >
-Module: 52-5 React route parameter and load data based on dynamic route
+
 ```js
+Module: 52-5 React route parameter and load data based on dynamic route
+
 //step 1: 
 //distructure
 const {id} = friend;
