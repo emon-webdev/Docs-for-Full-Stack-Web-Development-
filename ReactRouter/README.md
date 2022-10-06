@@ -55,13 +55,14 @@ to display it needs to display while you are visiting to that route
 List of React:
 - [ActiveNavLink](#ActiveNavLink)
 - [loader](#loader)
+- [updateDynamicRoute](#updateDynamicRoute)
 - [NestedRoute](#NestedRoute)
 - [CustomLink](#CustomLink)
 - [dynamicRoute](#dynamicRoute)
 - [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
 - [Table](#Table)
 
-### demo
+### updateDynamicRoute
 <details>
 <summary>
   <h3> Demo-(Click Me)</h3>
@@ -93,7 +94,7 @@ import { NavLink } from 'react-router-dom';
 ### loader
 <details>
 <summary>
-  <h3> loader (Click Me)</h3>
+  <h3> loader / Nested Route (Click Me)</h3>
 </summary>
 <br >
 	
@@ -163,6 +164,35 @@ const Friends = () => {
 };
 
 export default Friends;
+```
+</details>
+
+
+### updateDynamicRoute
+<details>
+<summary>
+  <h3> update Dynamic Route-(Click Me)</h3>
+</summary>
+<br >
+Module: 52-5 React route parameter and load data based on dynamic route
+```js
+//step 1: 
+//distructure
+const {id} = friend;
+//route set
+<div class="card-actions justify-end">
+	<Link to={`/friend/${id}`} class="btn btn-primary">{username}</Link>
+</div>
+
+//step: 2
+{
+  path: '/friend/:friendId',
+  element: <FriendDetails />
+}
+
+
+
+
 ```
 </details>
 
