@@ -187,11 +187,21 @@ const {id} = friend;
 //step: 2
 {
   path: '/friend/:friendId',
+  loader: async ({ params }) => {
+    return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
+  },
   element: <FriendDetails />
 }
-
-
-
+//step:3
+//open <FriendDetails /> components
+const FriendDetails = () => {
+    const friend = useLoaderData();
+    return (
+        <div>
+            <h2>Friend Details {friend.name}</h2>
+        </div>
+    );
+};
 
 ```
 </details>
