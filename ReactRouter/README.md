@@ -48,6 +48,46 @@ to display it needs to display while you are visiting to that route
  <Link to='/home'>Home</Link>
 <Link to='/about'>About</Link>
 
+
+// another setup react router
+1. Install react router: npm i react-router-dom
+2. crate a router use createBrowserRouter
+3. Add RouterProvider and pass router props
+4. Create some route inside the router
+5. Create Main layout with some common part and one changing part based on the router
+const Main = () => {
+  return (
+    <div>
+      <Header />
+      <Outlet />
+    </div>
+  );
+};
+6. set main layout at the root of the router
+7. set children routes
+8. set links on the header components
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+      ],
+    },
+    {path:'/', element: <Notfound/>}
+  ]);
+
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
+}
+
 ```
 </details>
 
