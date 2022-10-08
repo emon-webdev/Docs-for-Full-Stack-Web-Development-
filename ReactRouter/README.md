@@ -93,6 +93,7 @@ function App() {
 
 
 List of React:
+- [conditionRendering](#conditionRendering)
 - [ActiveNavLink](#ActiveNavLink)
 - [loader](#loader)
 - [updateDynamicRoute](#updateDynamicRoute)
@@ -102,7 +103,7 @@ List of React:
 - [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
 - [Table](#Table)
 
-### updateDynamicRoute
+### demo
 <details>
 <summary>
   <h3> Demo-(Click Me)</h3>
@@ -112,6 +113,72 @@ List of React:
 ```js
 
 demo code
+
+```
+</details>
+
+### conditionRendering
+<details>
+<summary>
+  <h3> conditionRendering-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+/* 
+//condition Rendering 4 way
+1. use element in a variable and use if - else to set value
+2. ternary operation condition ? true :  false
+3. && operator (if condition is true, i want to display something)
+4. || operator (if condition is false, i want to display something)
+*/
+//full Example
+const Cart = ({ cart, handleRemoveItem }) => {
+  let message;
+  if (cart.length === 0) {
+    message = <p>Please buy at least one item!!</p>;
+  } else if (cart.length === 1) {
+    message = (
+      <div>
+        <h3>Aamr jonno ekta</h3>
+        <small>Tomar jonno ekta</small>
+      </div>
+    );
+  } else {
+    message = <p>Thanks for buy</p>;
+  }
+
+  return (
+    <div className="text-center " style={{ padding: "10px" }}>
+      <h2 className={cart.length === 2? `orange` : `purple` }>Order Summary</h2>
+      <h4 className={`bold ${cart.length === 2 ? 'orange' : 'blue'}`}>Order Quantity {cart.length}</h4>
+      {cart.map((tShirt) => (
+        <div key={tShirt._id}>
+          <h3>
+            {tShirt.name}{" "}
+            <button
+              onClick={() => {
+                handleRemoveItem(tShirt);
+              }}
+            >
+              X
+            </button>
+          </h3>
+        </div>
+      ))}
+      {message}
+      {cart.length >3 ? <p>gift 3 person</p> : <p>gift dibo na</p>}
+      <p>&& operator</p>
+      {
+        cart.length === 2 && <h2>Double Item</h2>
+      }
+      <p>Or Operator</p>
+      {
+        cart.length === 4 || <p>Selected item na</p>
+      }
+    </div>
+  );
+};
 
 ```
 </details>
