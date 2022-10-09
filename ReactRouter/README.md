@@ -557,6 +557,51 @@ export default Navbar;
   
 ```
 
+### Notes
+<details>
+<summary>
+  <h3>Notes for React Router (Click Me)</h3>
+</summary>
+<br >
+  - Notes must be know every single part for interview 
+
+```js
+
+************React Router Notes************
+//Milestone: 8  
+
+	
+	
+	
+	
+	
+	
+
+************End React Router Notes************
+```
+</details>
+  
+### ReactRouterInterviewQuestions
+<details>
+<summary>
+  <h3>React Router Interview Questions (Click Me)</h3>
+</summary>
+<br >
+ must be know every single part for interview https://roadmap.sh/react
+	
+ ```js
+************React Router Interview Questions************
+	
+//Milestone: 9 React  Router
+
+	
+	
+
+	
+	
+  ************End React Js Interview Questions************
+ ```
+</details>
 
 
 
