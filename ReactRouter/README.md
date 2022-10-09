@@ -93,6 +93,7 @@ function App() {
 
 
 List of React:
+- [useRouteError](#useRouteError)
 - [conditionRendering](#conditionRendering)
 - [ActiveNavLink](#ActiveNavLink)
 - [loader](#loader)
@@ -113,6 +114,63 @@ List of React:
 ```js
 
 demo code
+
+```
+</details>
+
+### useRouteError
+<details>
+<summary>
+  <h3> useRouteError -(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+Step 1:
+{
+path: "/",
+element: <Home />,
+errorElement: <ErrorPage />,
+},
+Step 2:
+const error = useRouteError();
+Step 3:
+//full example
+//App.js
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: <ErrorPage />,
+    }
+  ]);
+  return (
+    <>
+      <Header />
+      <RouterProvider router={router} />
+    </>
+  );
+}
+
+//ErrorPage component
+import { useRouteError } from 'react-router-dom';
+const ErrorPage = () => {
+  const error = useRouteError();
+  return (
+    <>
+      <div className='flex flex-col min-h-[700px] justify-center items-center'>
+        {error && (
+          <div>
+            <p className='text-red-500'>{error.statusText || error.message}</p>
+            <p>{error.status}</p>
+          </div>
+        )}
+      </div>
+    </>
+  )
+}
 
 ```
 </details>
