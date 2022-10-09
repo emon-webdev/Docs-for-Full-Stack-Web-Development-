@@ -70,15 +70,14 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Main />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-      ],
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children:[
+        { path: "/home", element: <Home /> },
+        { path: "/about", element: <About /> },
+      ]
     },
-    {path:'/', element: <Notfound/>}
+    {path:'*', element: <div>404 ! page Not Found</div>}
   ]);
 
   return (
