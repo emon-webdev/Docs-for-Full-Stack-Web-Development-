@@ -73,6 +73,8 @@ function App() {
       element: <Root />,
       errorElement: <ErrorPage />,
       children:[
+	//index দিলে default index true এর পেজ ui show kore.
+	{ index: true, element: <Home /> },
         { path: "/home", element: <Home /> },
         { path: "/about", element: <About /> },
       ]
