@@ -568,10 +568,27 @@ export default Navbar;
 ```js
 
 ************React Router Notes************
-//Milestone: 8  
+//Milestone: 9 React Router and States
+1. // Handle add to cart
+  const tShirts = useLoaderData();
+  const [cart, setCart] = useState([]);
 
+  const handleAddToCart = (tShirts) => {
+    const exists = cart.find(tSrt => tSrt._id === tShirts._id);
+    if (exists) {
+      alert("t-shirt already added");
+    } else {
+      const newCart = [...cart, tShirts];
+      setCart(newCart);
+    }
+  };
+// Handle remove to cart
+  const handleRemoveItem = tShirts=> {
+    const remaining = cart.filter(tShirt => tShirt._id !== tShirts._id);
+    setCart(remaining)
+  };
 	
-	
+2.
 	
 	
 	
@@ -592,9 +609,16 @@ export default Navbar;
  ```js
 ************React Router Interview Questions************
 	
-//Milestone: 9 React  Router
-
-	
+//Milestone: 9 React Router and States
+//Module 54
+1. When to use context api?
+Ans: Context provides a way to share values between components without having to explicitly pass a prop through every level of the tree
+To aboid prop drilling, we can use context api.
+2. How is React routing different from conventional routing?
+3. How do you implement React routing?
+4. Can you explain how the Provider works with the React Context API?
+5. What is a custom hook?
+6. How many ways can we implement conditional rendering in React?
 	
 
 	
