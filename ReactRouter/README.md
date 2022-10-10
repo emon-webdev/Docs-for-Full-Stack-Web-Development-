@@ -641,6 +641,12 @@ export default Navbar;
       setCart(newCart);
     }
   };
+	
+// handle Add To Cart
+const handleAddToCart = (product) => {
+	setCart((previous=> [...previous, product]))
+}
+	
 // Handle remove to cart
   const handleRemoveItem = tShirts=> {
     const remaining = cart.filter(tShirt => tShirt._id !== tShirts._id);
