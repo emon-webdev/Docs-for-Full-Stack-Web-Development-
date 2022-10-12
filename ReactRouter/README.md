@@ -691,8 +691,19 @@ i. Stores, sends andf receives data.
 ii. Accepts and responds to requests made over a network.
 iii. As the name pimples, serves information to the computers connected to it.
 iv. A computer, software program or even storage device may act as a server.
+8. How does server work?
+Ans: i. When you type a url, lets say (facebook.com) on your device, your device or your browser is client.
+ii. Your device requests web content for facebook to the web server of Facebook Located somewhere in the datacenter.
+iii. Then server gets the request from your device and sends data to your device.
+This is just an example of how web server and web client work.
 
-
+	
+	
+	
+	
+	
+	
+	
 	
 	
   ************End React Js Interview Questions************
