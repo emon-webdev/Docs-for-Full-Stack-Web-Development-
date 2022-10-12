@@ -684,7 +684,14 @@ To aboid prop drilling, we can use context api.
 4. Can you explain how the Provider works with the React Context API?
 5. What is a custom hook?
 6. How many ways can we implement conditional rendering in React?
-	
+//Module 55.5
+7. What is a server?
+Ans: Ususally, servers are powerful computers connected via a network to a group of less powerfull cliend devices.
+i. Stores, sends andf receives data.
+ii. Accepts and responds to requests made over a network.
+iii. As the name pimples, serves information to the computers connected to it.
+iv. A computer, software program or even storage device may act as a server.
+
 
 	
 	
