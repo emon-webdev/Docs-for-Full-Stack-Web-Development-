@@ -8,7 +8,7 @@
 
 List of React:
 - [InitialSetup](#InitialSetup)
-- [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
+- [GoogleSingIn](#GoogleSingIn)
 - [Table](#Table)
 
 ### demo
@@ -33,7 +33,7 @@ demo code
 <br >
 	
 ```js
-/* 
+	
 //Initial setup
 1. visit: console.firebase.google.com
 2. Create a new firebase
@@ -63,10 +63,6 @@ iv.
 3. get clientId and Secret
 
 
-
-
-
-*/
 
 
 
@@ -101,14 +97,66 @@ iv.
 </details>
 
 
-### updateDynamicRoute
+### GoogleSingIn
 <details>
 <summary>
-  <h3> update Dynamic Route-(Click Me)</h3>
+  <h3> GoogleSingIn-(Click Me)</h3>
 </summary>
 <br >
 
 ```js
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import { useState } from "react";
+import "./App.css";
+import app from "./firebase.init";
+
+const auth = getAuth(app);
+function App() {
+const [user, setUser] = useState({});
+  const googleProvider = new GoogleAuthProvider();
+  //handle GoogleS ingIn
+  const handleGoogleSingIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user)
+        setUser(user)
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  //handle Google Sing Out
+  const handleGoogleSingOut = () => {
+    signOut(auth)
+    .then(() => {
+      setUser({})
+    })
+    .catch(() =>{
+      setUser({})
+    })
+  };
+
+  return (
+    <div className="App">
+      {
+        user.uid? 
+        <button onClick={handleGoogleSingOut}>Google Sing Out</button>
+        :
+        <button onClick={handleGoogleSingIn}>Google Sing In</button>
+      }
+      {
+        user.uid && <div>
+          <h3>Name: {user.displayName}</h3>
+          <p>Email: {user.email}</p>
+          <img src={user.photoURL} alt="" srcset="" />
+        </div>
+      }
+    </div>
+  );
+}
+
+export default App;
 
 
 ```
