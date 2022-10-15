@@ -7,7 +7,7 @@
 ###  🤔 How to Use?
 
 List of React:
-- [useRouteError](#useRouteError)
+- [InitialSetup](#InitialSetup)
 - [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
 - [Table](#Table)
 
@@ -25,14 +25,49 @@ demo code
 ```
 </details>
 
-### useRouteError
+### InitialSetup
 <details>
 <summary>
-  <h3> useRouteError -(Click Me)</h3>
+  <h3> InitialSetup -(Click Me)</h3>
 </summary>
 <br >
 	
 ```js
+/* 
+//Initial setup
+1. visit: console.firebase.google.com
+2. Create a new firebase
+3. Google Analytics
+i. একটি web analytics service
+ii. website traffic কে track kore report তৈরি করে।
+iii. website এর সাথে visitor এর interaction এর trend এবং pattern নির্ণয় করতে user কে সাহায্য করে।
+iv. 
+4. Visit doc (go to docs): Build > authentication > web > getting started
+5. Register web app > firebase project home > click web > give name and register
+6. Install firebase for your project: npm install firebase
+7. Dangerous: get firebase config and put it in firebase.init.js
+//Setup provider
+8. export app from firebase.init.js
+9. Create auth using getAuth from firebase by using app from firebase.init.js
+10. Create a google auth provider 
+11. go to firebase > Build > Authentication > Sing in method
+11. Enable google sign in method
+12. Create a button for google sign in method with a click handler
+13. Inside the event handler, call signInWithPopup with auth, provider
+14. After SingWithPopup .then result , error
+// display data
+
+//add a new sign in method
+1. enable the sign in method
+2. Create gitbub, twitter, fb, etc. app create
+3. get clientId and Secret
+
+
+
+
+
+*/
+
 
 
 ```
