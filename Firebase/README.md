@@ -9,6 +9,9 @@
 List of React:
 - [InitialSetup](#InitialSetup)
 - [GoogleSignIn](#GoogleSignIn)
+- [EmailPasswordAuth](#EmailPasswordAuth)
+- [Table](#Table)
+- [Table](#Table)
 - [Table](#Table)
 
 ### demo
@@ -138,42 +141,21 @@ export default App;
 
 
 
-### NestedRoute
-
+### EmailPasswordAuth
+<details>
+<summary>
+  <h3> Email Password Authentication-(Click Me)</h3>
+</summary>
+<br >
+	
 ```js
 
+demo code
 
 ```
-
-### CustomLink
-
-```js
+</details>
 
 
-
-```
-
-### dynamicRoute
-
-```js
-
-
-  
-```
-
-
-
-### simpleNavbarwithResponsive
-
-  <h4>simpleNavbarwithResponsive</h4>
-
-
-```js
-
-
-
-  
-```
 
 ### Notes
 <details>
