@@ -10,8 +10,8 @@ List of React:
 - [InitialSetup](#InitialSetup)
 - [GoogleSignIn](#GoogleSignIn)
 - [EmailPasswordAuth](#EmailPasswordAuth)
-- [Table](#Table)
-- [Table](#Table)
+- [Notes](#Notes)
+- [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
 - [Table](#Table)
 
 ### demo
@@ -182,7 +182,7 @@ demo code
 ### FirebaseInterviewQuestions
 <details>
 <summary>
-  <h3>React Router Interview Questions (Click Me)</h3>
+  <h3>Firebase Interview Questions (Click Me)</h3>
 </summary>
 <br >
  must be know every single part for interview https://roadmap.sh/react
