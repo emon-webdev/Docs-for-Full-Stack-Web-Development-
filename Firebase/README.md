@@ -210,6 +210,19 @@ const Orders = () => {
 };
 export default Orders;
 
+//  Another private Route (just set PrivateRoute inside)
+{
+  path: "/",
+  element: <PrivateRoute><Home /></PrivateRoute>
+},
+{
+  path: "/orders",
+  element: (
+    <PrivateRoute>
+      <Orders />
+    </PrivateRoute>
+  ),
+},
 
 
 ```
