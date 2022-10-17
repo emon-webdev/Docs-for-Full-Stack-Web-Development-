@@ -10,6 +10,7 @@ List of React:
 - [InitialSetup](#InitialSetup)
 - [GoogleSignIn](#GoogleSignIn)
 - [EmailPasswordAuth](#EmailPasswordAuth)
+- [PrivateRoute](#PrivateRoute)
 - [Notes](#Notes)
 - [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
 - [Table](#Table)
@@ -155,6 +156,64 @@ demo code
 ```
 </details>
 
+### PrivateRoute
+<details>
+<summary>
+  <h3> Private Route-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+//step 1
+//Create 2 components
+i. PrivateRoute ii. PrivateRoute Children component (যেইটা PrivateRoute হবে। login বাদে ঐ route lock থাকবে)
+
+Example:
+// App.js
+{
+  path: "/orders",
+  element: (
+    <PrivateRoute>
+      <Orders />
+    </PrivateRoute>
+  ),
+},
+
+// PrivateRoute componets
+import React, { useContext } from "react";
+import { Navigate } from "react-router-dom";
+import { AuthContext } from "../contexts/UserContext";
+
+const PrivateRoute = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+//loading যাতে page reload দেওয়ার পরে user ঐ page এ থাকে।
+  if(loading){
+    return <div>loading...</div>
+  }
+
+  if (user && user.uid) {
+    return children;
+  }
+  return <Navigate to='/login'></Navigate>;
+};
+
+export default PrivateRoute;
+
+//Orders componets
+import React from 'react';
+const Orders = () => {
+    return (
+        <div>
+            <h2>Orders</h2>
+        </div>
+    );
+};
+export default Orders;
+
+
+
+```
+</details>
 
 
 ### Notes
