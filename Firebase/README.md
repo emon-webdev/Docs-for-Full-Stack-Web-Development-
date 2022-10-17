@@ -12,6 +12,7 @@ List of React:
 - [EmailPasswordAuth](#EmailPasswordAuth)
 - [PrivateRoute](#PrivateRoute)
 - [useNavigate](#useNavigate)
+- [AuthContext](#AuthContext)
 - [Notes](#Notes)
 - [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
 - [Table](#Table)
@@ -19,7 +20,7 @@ List of React:
 ### demo
 <details>
 <summary>
-  <h3> Demo-(Click Me)</h3>
+  <h3>AuthContext-(Click Me)</h3>
 </summary>
 <br >
 	
@@ -254,6 +255,35 @@ form.reset();
 navigate("/home");
 })
 .catch((error) => console.error(error));
+
+```
+</details>
+
+### AuthContext
+<details>
+<summary>
+  <h3>AuthContext-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+//step 1 create (UserContext) component
+//UserContext.js (component)
+import React, { createContext } from 'react';
+export const AuthContext = createContext();
+const UserContext = ({children}) => {
+const authInfo = {};
+    return (
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
+    );
+};
+export default UserContext;
+
+//step 2 
+
 
 ```
 </details>
