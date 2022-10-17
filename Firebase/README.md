@@ -11,6 +11,7 @@ List of React:
 - [GoogleSignIn](#GoogleSignIn)
 - [EmailPasswordAuth](#EmailPasswordAuth)
 - [PrivateRoute](#PrivateRoute)
+- [useNavigate](#useNavigate)
 - [Notes](#Notes)
 - [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
 - [Table](#Table)
@@ -224,6 +225,35 @@ export default Orders;
   ),
 },
 
+
+```
+</details>
+
+
+### useNavigate
+<details>
+<summary>
+  <h3> useNavigate-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+//step 1:
+import { useNavigate } from "react-router-dom";
+const navigate = useNavigate();
+	
+//step 2: 
+// যখন user sign in করবে তখন user কে navigate করতে হবে
+signIn(email, password)
+.then((result) => {
+const user = result.user;
+console.log(user);
+form.reset();
+//step 3:
+// navigate user home page
+navigate("/home");
+})
+.catch((error) => console.error(error));
 
 ```
 </details>
