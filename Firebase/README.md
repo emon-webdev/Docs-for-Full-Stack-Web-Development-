@@ -273,7 +273,9 @@ navigate("/home");
 import React, { createContext } from 'react';
 export const AuthContext = createContext();
 const UserContext = ({children}) => {
-const authInfo = {};
+//check user where use context 
+const user = {email: 'abc'};
+const authInfo = {user};
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
@@ -282,8 +284,30 @@ const authInfo = {};
 };
 export default UserContext;
 
-//step 2 
+//step 2 (go index.js file then set UserContext)
+import UserContext from "./context/UserContext";
+<React.StrictMode>
+    <UserContext>
+      <App />
+    </UserContext>
+ </React.StrictMode>
+	
+//step 3 (access to UserContext in Header.js)
+//Header.js (component)
+import UserContext, { AuthContext } from "../../context/UserContext";
+const Header = () => {
+const user = UserContext(AuthContext);
+return (
+	 <span>{user.email}</span>
+    )
+};
 
+export default Header;
+	
+<!-- Full Example -->
+
+	
+	
 
 ```
 </details>
