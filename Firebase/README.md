@@ -13,6 +13,8 @@ List of React:
 - [PrivateRoute](#PrivateRoute)
 - [useNavigate](#useNavigate)
 - [AuthContext](#AuthContext)
+
+- [FireBaseHosting](#FireBaseHosting)
 - [Notes](#Notes)
 - [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
 - [Table](#Table)
@@ -26,7 +28,7 @@ List of React:
 	
 ```js
 
-demo code
+FireBaseHosting code
 
 ```
 </details>
@@ -359,6 +361,43 @@ export default Header;
 
 	
 	
+
+```
+</details>
+
+
+
+
+
+
+
+### FireBaseHosting
+<details>
+<summary>
+  <h3>FireBase Hosting-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+//Firebase Hosting
+// One time for each computer
+1. npm install -g firebase-tools
+2. firebase login
+
+//for each project one time
+3. firebase init
+4. Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+5. Use an existing project
+6. Select you project (ema-john-fa6f4 must be match firebase.google.com your project name)
+7.  (you just write build) What do you want to use as your public directory? (public) build 
+8. (you select y) Configure as a single-page app (rewrite all urls to /index.html)? Yes
+9. Configure as a single-page app (rewrite all urls to /index.html)? Yes
+
+// for every deploy
+10. npm run build
+11. firebase deploy
+
 
 ```
 </details>
