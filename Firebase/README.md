@@ -265,8 +265,12 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/UserContext";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
+ const { user, loading } = useContext(AuthContext);
   const location = useLocation()
+// loading state যাতে user page reload এর পরে same page এ থাকে।
+  if(loading){
+    return <div>loading</div>
+  }
   if (user && user.uid) {
     return children;
   }
