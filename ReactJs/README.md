@@ -17,6 +17,16 @@ i. 2021 - The first signs of React
 ii. An early prototype of React
 iii. Something new had started at Facebook.
 iv. 2013 - The year of the Big Launch
+
+### React কোর কনসেপ্ট:
+- কিভাবে create react app দিয়ে নতুন React app তৈরি করবে 
+- কিভাবে কম্পোনেন্ট তৈরি করবে, এবং কম্পোনেন্ট ইউজ করবে
+- props ইউজ করে কিভাবে কম্পোনেন্ট এ ডাটা সেন্ড করবে 
+- destructuring ইউজ করে object এর প্রপার্টি ইউজ করবে 
+- কিভাবে useState ইউজ করে স্টেট ডিক্লেয়ার করতে হয় 
+- eventHandler দিয়ে কিভাবে স্টেট চেইঞ্জ করতে হয়।
+- useEffect ইউজ করে কিভাবে API থেকে ডাটা লোড করতে হয়। লোড করা ডাটা কিভাবে দেখানো যায়
+
 #### Compaines using React
 - React
 i. Instagram ii. Twitter iii. Facebook iv. yahoo v. abnhub
