@@ -256,6 +256,53 @@ navigate("/home");
 })
 .catch((error) => console.error(error));
 
+
+<--- Advace Example () --->
+// step 1: (PrivateRoute)
+//Private.js (component)
+import React, { useContext } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from "../context/UserContext";
+
+const PrivateRoute = ({ children }) => {
+  const { user } = useContext(AuthContext);
+  const location = useLocation()
+  if (user && user.uid) {
+    return children;
+  }
+  return <Navigate to="/login" state={{from:location}} replace ></Navigate>;
+};
+
+export default PrivateRoute;
+
+//step 2: 
+//Login.js (component)
+import { useLocation, useNavigate } from "react-router-dom";
+const Login = () => {
+  //navigate after login
+  const navigate = useNavigate();
+  // call location
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+    //sign in user in firebase
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        //navigate
+        // navigate("/home");
+        navigate(from, {replace:true})
+      })
+      .catch((error) => console.error(error));
+  };
+  
+ return (
+	<div></div>
+ );
+};
+
+
 ```
 </details>
 
