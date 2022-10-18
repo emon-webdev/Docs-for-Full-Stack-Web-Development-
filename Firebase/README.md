@@ -377,6 +377,7 @@ export default Header;
   <h3>FireBase Hosting-(Click Me)</h3>
 </summary>
 <br >
+59-9 (bonus video) Host your react app to firebase
 	
 ```js
 
