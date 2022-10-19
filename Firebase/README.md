@@ -283,17 +283,21 @@ const PrivateRoute = ({ children }) => {
   if (user && user.uid) {
     return children;
   }
+	
+//step 2 :
   return <Navigate to="/login" state={{from:location}} replace ></Navigate>;
 };
 
 export default PrivateRoute;
 
-//step 2: 
+
 //Login.js (component)
 import { useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
   //navigate after login
   const navigate = useNavigate();
+	
+//step 3: 
   // call location
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -305,6 +309,8 @@ const Login = () => {
         form.reset();
         //navigate
         // navigate("/home");
+	
+	//step 4:
         navigate(from, {replace:true})
       })
       .catch((error) => console.error(error));
