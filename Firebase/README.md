@@ -239,14 +239,13 @@ export default Orders;
   <h3> useNavigate-(Click Me)</h3>
 </summary>
 <br >
-```js
-	
 Before Use:
 useNavigate er 2টা কাজ 
 1. Login / Sign Up এর পরে কোথায় যাবে।
 2. login না থাকা অবস্থাই কিছু route এ যেতে দেই না redirect করে Login Page আসে। 
-আবার login করলে same page নিয়ে যেতে হবে।
+আবার login করলে same page নিয়ে যেতে হবে।	
 	
+```js	
 	
 // Simple Way (Login / Sign Up এর পরে কোথায় যাবে।)	
 //step 1:
