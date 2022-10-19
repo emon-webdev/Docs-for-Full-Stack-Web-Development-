@@ -598,8 +598,8 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
       <!-- row 1 -->
       <tr>
         <th>1</th>
-        <td> </td>
-        <td> </td>
+        <td> Reset Form After Submit Form</td>
+        <td>form.reset()</td>
       </tr>
       <!-- row 2 -->
       <tr>
