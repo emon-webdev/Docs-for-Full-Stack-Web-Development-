@@ -357,11 +357,127 @@ return (
 
 export default Header;
 	
+<!-- End intial set up -->
+	
+	
 <!-- Full Example -->
+//step 1 (create UserCompnet and export AuthContext)
+//UserCOntext.js (component)
+import {
+    createUserWithEmailAndPassword,
+    getAuth,
+    onAuthStateChanged,
+    signInWithEmailAndPassword,
+    signOut
+} from "firebase/auth";
+import React, { createContext, useEffect, useState } from "react";
+import app from "../Firebase/Firebase.init";
 
-	
-	
+//AuthContext export
+export const AuthContext = createContext();
+const auth = getAuth(app);
 
+const UserContext = ({ children }) => {
+  const [user, setUser] = useState({});
+  // loading state যাতে user page reload এর পরে same page এ থাকে।
+  const [loading, setLoading] = useState(true);
+  //create user for firebase
+  const createUser = (email, password) => {
+    setLoading(true)
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //sign in user for firebase
+  const signIn = (email, password) => {
+    setLoading(true)
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  //sign out user from ui
+  const logOut = () => {
+    setLoading(true)
+    return signOut(auth);
+  };
+
+  //current user
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser, "current User ");
+      setUser(currentUser);
+      setLoading(false)
+    });
+
+    return () => unSubscribe;
+  }, []);
+
+  //send Data any where
+  const authInfo = { user, loading, createUser, signIn, logOut };
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
+};
+
+export default UserContext;
+
+//step 2 (use AuthContext)
+import React, { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/UserContext";
+	
+const Login = () => {
+//receive data from UserContext
+  const { signIn } = useContext(AuthContext);
+  //navigate after login
+  const navigate = useNavigate();
+  // call location
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+	
+  //handleSubmit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //catch input field
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    //sign in user in firebase
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        //navigate
+        navigate(from, { replace: true });
+      })
+      .catch((error) => console.error(error));
+  };
+	
+  return (
+	
+	<form onSubmit={handleSubmit}>
+	<input
+	  type="text"
+	  required
+	  name="email"
+	  placeholder="Email"
+	  className="input input-bordered border border-[#95A0A7] rounded-[5px] h-14"
+	/>
+	<input
+	  type="text"
+	  required
+	  name="password"
+	  placeholder="Password"
+	  className="input input-bordered border border-[#95A0A7] rounded-[5px] h-14"
+	/>
+	<button> Login </button>
+      </form>
+	
+  );
+};
+
+export default Login;
+	
 ```
 </details>
 
