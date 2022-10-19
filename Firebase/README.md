@@ -349,7 +349,7 @@ import UserContext from "./context/UserContext";
 //Header.js (component)
 import UserContext, { AuthContext } from "../../context/UserContext";
 const Header = () => {
-const user = useContext(AuthContext);
+const {user} = useContext(AuthContext);
 return (
 	 <span>{user.email}</span>
     )
