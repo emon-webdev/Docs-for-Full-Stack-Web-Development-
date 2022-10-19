@@ -267,6 +267,23 @@ navigate("/home");
 
 
 <--- Advace Example () --->
+Before use:
+1. PrivateRoute Componet set 
+ return <Navigate to="/signin" state={{ from: location }} replace />
+2. Singin Componet set
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+signInUser(email, password)
+	.then((result) => {
+	const user = result.user;
+	console.log(user);
+	navigate(from, {replace:true})
+})
+	
+<!-- Full Example -->
+	
 // step 1: (PrivateRoute)
 //Private.js (component)
 import React, { useContext } from "react";
