@@ -239,7 +239,10 @@ export default Orders;
   <h3> useNavigate-(Click Me)</h3>
 </summary>
 <br >
-	
+useNavigate er 2টা কাজ 
+1. Login / Sign Up এর পরে কোথায় যাবে।
+2. 
+
 ```js
 //step 1:
 import { useNavigate } from "react-router-dom";
