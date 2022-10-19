@@ -104,6 +104,8 @@ List of React Router:
 - [CustomLink](#CustomLink)
 - [dynamicRoute](#dynamicRoute)
 - [simpleNavbarwithResponsive](#simpleNavbarwithResponsive)
+- [Notes](#Notes)
+- [ReactRouterInterviewQuestions](#ReactRouterInterviewQuestions)
 - [Table](#Table)
 
 ### demo
