@@ -267,7 +267,7 @@ navigate("/home");
 
 
 <--- Advace Example () --->
-Before use:
+Before use: and loading use করতে হবে।
 1. PrivateRoute Componet set 
  return <Navigate to="/signin" state={{ from: location }} replace />
 2. Singin Componet set
