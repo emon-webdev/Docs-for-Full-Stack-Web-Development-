@@ -347,7 +347,7 @@ import UserContext from "./context/UserContext";
 	
 //step 3 (access to UserContext in Header.js)
 //Header.js (component)
-import UserContext, { AuthContext } from "../../context/UserContext";
+import { AuthContext } from "../../context/UserContext";
 const Header = () => {
 const {user} = useContext(AuthContext);
 return (
