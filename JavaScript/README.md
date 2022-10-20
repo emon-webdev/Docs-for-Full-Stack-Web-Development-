@@ -4,7 +4,14 @@
 -JavaScript is a single threaded, non-blocking asynchronous concurrent Langguage. JavaScript is high level, interpreted programming language used to make web pages more interactive. JavaScript is a dynamic programming language that's used for web development, web applications, game development, and lots more. JavaScript language is used both on the client-side and server-side allowing you to make web pages interactive.
 ### Why use JavaScript?
 - Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user.
-
+- Important things of JavaScript
+- https://fahimahammed-cse.medium.com/important-things-of-javascript-ead3e2b5f5eb
+- Core Concept of JavaScript
+- https://fahimahammed-cse.medium.com/core-concept-of-javascript-41360cf3b4c
+- Tricks to write less JavaScript
+- https://fahimahammed-cse.medium.com/tricks-to-write-less-javascript-733b0b01187e
+- 10 Important topics of JavaScript
+- https://fahimahammed-cse.medium.com/10-important-topics-of-javascript-8917deb0f423
 
 List of JavaScript:
 
