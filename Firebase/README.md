@@ -600,8 +600,17 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
 সেই তথ্যর orginal representation কে different representation er মাধ্যমে প্রকাশ করা।
 10. Can you tell me names of 3 authentication method?(hint: Sms/email code, voice, password, fingerprint, face verification)
 11. Which authentication methods have you ever used for your project purpoose?
-	
-	
+12. Have you ever used custom hook? For which task you used it? 
+13. Do you need private route in project? 
+14. How will create a private route?
+15. What is the necessity of useRef hook?
+16. Can you give me an example of where and how you would use React Router?
+17. What is nested routing?
+18. What are the differences between react-router-dom and react-router-native?
+19. What are some ways that you can share data among routes in React Router?
+20. Explain strict mood in react.
+21. Why will you use dynamic route? 
+
 	
 	
 	
