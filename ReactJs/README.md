@@ -1266,8 +1266,17 @@ CRS is a technique where all the pagte resoures are rendered on the client browe
         <!-- row 18 -->
       <tr>
         <th>3</th>
-        <td> OK</td>
-        <td> OK</td>
+        <td> Condition </td>
+        <td>
+	{details.length > 200 ? (
+              <p>
+                {details.slice(0, 250) + "..."}{" "}
+                <Link to={`'/news/${_id}`}>Read More</Link>
+              </p>
+            ) : (
+              <p>{details}</p>
+           )}
+	    </td>
       </tr>
 	       <!-- row 18 -->
 	<tr>
