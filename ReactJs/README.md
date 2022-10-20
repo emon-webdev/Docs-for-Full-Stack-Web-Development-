@@ -55,7 +55,7 @@ List of React:
 - [useEffect](#useEffect)
 - [searchItems](#searchItems)
 - [conditionalRendering](#conditionalRendering)
-- [contextApi](#contextApi)
+- [useContext](#useContext)
 - [handleAddtoCart](#handleAddtoCart)
 - [handleRemoveFromCart](#handleRemoveFromCart)
 - [customHooks](#customHooks)
@@ -137,16 +137,6 @@ axios.get('https://openapi.programming-hero.com/api/phones?search=iphone')
     })
 }, [])
 console.log(phones)
-
-
-
-
-
-
-
-
-
-
 	
   
  ```
@@ -373,7 +363,7 @@ if(cart.length === 0){
 
 ```
 
-### contextApi
+### useContext
 <details>
 <summary>
   <h4>What is contextApi?</h4>
@@ -407,6 +397,42 @@ const DemoContext = createContext('diamond');
   import React, { useContext } from 'react';
   const ring = useContext(DemoContext);
   <p>{ring}</p>
+  
+  
+<!-- Example -->
+//step 1
+//AuthContext.js (component)
+import React, { createContext } from 'react';
+export const AuthContext = createContext();
+const AuthProvider = ({children}) => {
+    const user = {name: 'Test Context'};
+    const authInfo = {user};
+    return (
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
+    );
+};
+export default AuthProvider;
+
+//step 2 
+//index.js
+import AuthProvider from "./contexts/AuthProvider";
+
+  <React.StrictMode>
+  //setup context
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  </React.StrictMode>
+  
+
+ //step 3 (use context)
+ import React, { useContext } from "react";
+ import AuthProvider from "../../contexts/AuthProvider";
+ 
+ const {user} = useContext(AuthProvider);
+console.log(user.name)
 
 ```
 
