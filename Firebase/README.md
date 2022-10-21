@@ -565,9 +565,28 @@ export default Login;
 
 ************Firebase Notes************
 
-2.
-	
-	
+1. disabled checked and  Submit button
+//step 1
+ const [accepted, setAccepted] = useState(false);
+//step 2
+ const handleAccepted = (event) => {
+    setAccepted(event.target.checked);
+    // const  = ;
+  };
+//step 3
+<Form.Check
+    onClick={handleAccepted}
+    type="checkbox"
+    label={
+      <>
+	Accept <Link to="/terms">Terms and conditions</Link>
+      </>
+    }
+  />
+// step 4
+ <Button variant="primary" type="submit" disabled={!accepted}>
+  Register
+</Button>
 	
 	
 
