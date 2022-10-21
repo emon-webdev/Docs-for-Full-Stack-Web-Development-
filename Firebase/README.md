@@ -432,7 +432,10 @@ const UserContext = ({ children }) => {
     setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
-
+// verifyEmail
+  const verifyEmail = () => {
+    return sendEmailVerification(auth.currentUser)
+  };
 //set profile and name
   const updateUserProfile = (profile) => {
     return updateProfile(auth.currentUser, profile);
@@ -463,6 +466,7 @@ const UserContext = ({ children }) => {
     googleLogin,
     createUser,
     logOut,
+    verifyEmail,
     signIn,
   };
   return (
@@ -564,7 +568,7 @@ import { AuthContext } from "../contexts/AuthProvider";
 const Register = () => {
   const [error, setError] = useState("");
   const [accepted, setAccepted] = useState(false);
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, verifyEmail } = useContext(AuthContext);
 const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -581,14 +585,17 @@ const navigate = useNavigate();
         setError("");
         form.reset();
         navigate('/')
+	//update profile
         handleUpdateUserProfile(name, photoURL)
+	// verification email
+	handleEmailVerification()
       })
       .then((error) => {
         console.error(error);
         setError(error.message);
       });
   };
-
+// update profile img
   const handleUpdateUserProfile = (name, photoURL) => {
     const profile = {
       displayName:name,
@@ -598,6 +605,13 @@ const navigate = useNavigate();
     .then(() => {})
     .then(error=> console.error(error))
   };
+	
+// handle email veriyfication
+const handleEmailVerification = () => {
+  verifyEmail()
+  .then(() => {})
+  .catch(error=> console.error(error))
+};
 
   const handleAccepted = (event) => {
     setAccepted(event.target.checked);
