@@ -241,9 +241,12 @@ export default Orders;
 <br >
 Before Use:
 useNavigate er 2টা কাজ 
-1. Login / Sign Up এর পরে কোথায় যাবে।
-2. login না থাকা অবস্থাই কিছু route এ যেতে দেই না redirect করে Login Page আসে। 
-আবার login করলে same page নিয়ে যেতে হবে।	
+- Login / Sign Up এর পরে কোথায় যাবে।
+- login না থাকা অবস্থাই কিছু route এ যেতে দেই না redirect করে Login Page আসে। 
+আবার login করলে same page নিয়ে যেতে হবে।
+- only allow authenticated user to visit the route
+- 
+- Redirect user to the route they wanted to go before login
 	
 ```js	
 	
@@ -266,7 +269,7 @@ navigate("/home");
 .catch((error) => console.error(error));
 
 
-<--- Advace Example () --->
+<--- Advance Example () --->
 Before use: and loading use করতে হবে।
 1. PrivateRoute Componet set 
  return <Navigate to="/signin" state={{ from: location }} replace />
