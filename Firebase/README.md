@@ -10,6 +10,7 @@ List of React:
 - [InitialSetup](#InitialSetup)
 - [GoogleSignIn](#GoogleSignIn)
 - [EmailPasswordAuth](#EmailPasswordAuth)
+- [ResetPassword](#ResetPassword)
 - [PrivateRoute](#PrivateRoute)
 - [useNavigate](#useNavigate)
 - [AuthContext](#AuthContext)
@@ -156,6 +157,55 @@ export default App;
 ```js
 
 demo code
+
+```
+</details>
+
+
+### ResetPassword
+<details>
+<summary>
+  <h3>ResetPassword / Forget Password-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import React, { useState } from "react";
+import app from "../../Hook/firebaseConfig";
+
+const ResetPassword = (props) => {
+  const auth = getAuth(app);
+  const [email, setEmail] = useState("");
+
+  const handleResetPassword = () => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        props.onHide();
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  };
+
+  return (
+    <div>
+          <h4>Reset Your Password</h4>
+          <input
+            onBlur={(e) => setEmail(e.target.value)}
+            type="text"
+            placeholder="Email"
+            className="form-control m-3"
+          />
+          <Button onClick={handleResetPassword}>Update</Button>
+    </div>
+  );
+};
+
+export default ResetPassword;
+
 
 ```
 </details>
