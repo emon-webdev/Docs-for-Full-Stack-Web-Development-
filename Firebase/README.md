@@ -839,8 +839,16 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
       <!-- row 3 -->
       <tr>
         <th>3</th>
-        <td> </td>
-        <td> </td>
+        <td> email valid </td>
+        <td> const handleEmail = (event) => {
+    const test = /^\S+@\S+\.\S+$/.test(event.target.value);
+    if(!test){
+      setError('Please give a valid email')
+      return
+    }
+    setEmail(event.target.value);
+    setError('')
+  };</td>
       </tr>
        <!-- row 1 -->
       <tr>
