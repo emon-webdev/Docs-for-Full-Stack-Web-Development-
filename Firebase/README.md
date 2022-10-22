@@ -833,8 +833,8 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
       <!-- row 2 -->
       <tr>
         <th>2</th>
-        <td> </td>
-        <td> </td>
+        <td> email valid</td>
+        <td>/^\S+@\S+\.\S+$/ ,  const test = /^\S+@\S+\.\S+$/.test(event.target.value); </td>
       </tr>
       <!-- row 3 -->
       <tr>
