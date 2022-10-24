@@ -1194,8 +1194,35 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
 1. create folder
 2. open folder in terminal
 3. then run (npm init -y)
-4. 
+4. npm install express (node framework)
+5. npm install cors
+6. npm install nodemon (all time server live থাকে )
+7. (4, 5, 6 install same line (npm i express cors nodemon))
+8. create index.js (in your root folder যাতে server run করলে index.js দেখাতে পারে।)
+9. open package.js 
+ added ( "start": "nodemon index.js" ) in your scripts
+ //Example:
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+10. then (npm start) in your terminal
 
+
+// free talk
+১। JavaScript Backend(server site) এ use করা যাই। 
+২। node.js er সাহায্যে node একটি runtime যেটা JavaScript Backend এ run করতে সাহায্যে করে।
+৩। node js এর framework Express.js 
+৪। এই Express.js  দিয়ে একটি server তৈরি করা যাই। 
+যেইটা দিয়ে req আসবে res যাবে .
+৫। 
+
+
+Mern Stack in 4 lang
+1. Node.js
+2. mongodb
+3. Express.js
+4. React
 
 
 
