@@ -19,12 +19,13 @@ List of React:
 - [FireBaseHosting](#FireBaseHosting)
 - [Notes](#Notes)
 - [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
+- [Server](#Server)
 - [Table](#Table)
 
 ### demo
 <details>
 <summary>
-  <h3>AuthContext-(Click Me)</h3>
+  <h3>Server-(Click Me)</h3>
 </summary>
 <br >
 	
@@ -1178,6 +1179,30 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
 	
   ************End Firebase Interview Questions************
  ```
+</details>
+
+### Server
+<details>
+<summary>
+  <h3>Server-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+// Server Step by Step
+1. create folder
+2. open folder in terminal
+3. then run (npm init -y)
+4. 
+
+
+
+
+
+
+
+```
 </details>
 
 
