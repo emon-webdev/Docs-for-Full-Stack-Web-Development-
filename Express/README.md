@@ -4,6 +4,7 @@
 - Express JS is a fast, assertive, essential and moderate web framework of Node.js
 - Express JS is a layer built on the top of the Node.js that helps manage a server and routes.
 - Express JS It provides a robust set of features to develop web and mobile applications.
+- Detail Explain: Special Session on Understanding The Server -[Milestone 10] {Gias Uddin Hasan}}
 
 ### 👯 Why use Express JS?
 - i. Ultra fast I/o ii. Asynchronous and single threaded iii. MVC like structure iv. Robust API makes routing easy.
