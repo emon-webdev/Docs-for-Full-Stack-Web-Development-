@@ -1190,6 +1190,7 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
 	
 ```js
 
+/* 
 // Server Step by Step
 1. create folder
 2. open folder in terminal
@@ -1208,14 +1209,13 @@ Ans: Encryption: কোন তথ্যকে (text , image, file, credentials e
   },
 10. then (npm start) in your terminal
 
-
 // free talk
 ১। JavaScript Backend(server site) এ use করা যাই। 
 ২। node.js er সাহায্যে node একটি runtime যেটা JavaScript Backend এ run করতে সাহায্যে করে।
-৩। node js এর framework Express.js 
+৩। node js এর framework Express.js (node  এর code গুলো সহজে Express.js দিয়ে run করা হয়)
 ৪। এই Express.js  দিয়ে একটি server তৈরি করা যাই। 
 যেইটা দিয়ে req আসবে res যাবে .
-৫। 
+৫। cors একটা platform like: web, os and android এ কাজ করবে
 
 
 Mern Stack in 4 lang
@@ -1223,6 +1223,10 @@ Mern Stack in 4 lang
 2. mongodb
 3. Express.js
 4. React
+
+
+
+*/
 
 
 
