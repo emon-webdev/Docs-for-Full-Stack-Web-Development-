@@ -6,9 +6,11 @@
 - 
 ###  🤔 How to Use?
 
+- Every req in AuthBoilerplate (Full Example)
 List of React:
 - [InitialSetup](#InitialSetup)
 - [Firebasae.init.js](#FirebasaeInitJs)
+- [AuthBoilerplate](#AuthBoilerplate)
 - [GoogleSignIn](#GoogleSignIn)
 - [EmailPasswordAuth](#EmailPasswordAuth)
 - [ResetPassword](#ResetPassword)
@@ -124,6 +126,21 @@ appId=1:231829553918:web:9716fcdfcf528781d01baf
 
 ```
 </details>
+
+### AuthBoilerplate
+<details>
+<summary>
+  <h3>Auth Boilerplate-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+AuthBoilerplate code
+
+```
+</details>
+
 
 
 
