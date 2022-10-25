@@ -42,8 +42,46 @@ demo code
 <br >
 	
 ```js
+const express = require("express");
+const app = express();
+const cors = require("cors");
+app.use(cors());
 
-demo code
+const Port = process.env.Port || 5000;
+
+//productsCollection দিয়ে data call করে আনা হল।
+const productsCollection = require("./data/product.json");
+
+//data get
+app.get("/", (req, res, next) => {
+  res.send("Now Server is Running.");
+});
+
+app.get("/allProducts", (req, res) => {
+  res.send(productsCollection);
+});
+
+// get single data
+app.get("/product/:id", (req, res) => {
+  const id = req.params.id;
+  const getSingleItem = productsCollection.find((p) => p.id == id);
+  if (!getSingleItem) {
+    res.send("item not found");
+  }
+  res.send(getSingleItem);
+});
+
+app.get("/category/:categoryName", (req, res) => {
+  const name = req.params.categoryName;
+  const getCategory = productsCollection.filter(p => p.category == name);
+  console.log(getCategory)
+  res.send(getCategory)
+});
+
+app.listen(Port, () => {
+  console.log("Server is Running", Port);
+});
+
 
 ```
 </details>
