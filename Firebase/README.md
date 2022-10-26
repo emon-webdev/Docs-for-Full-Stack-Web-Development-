@@ -1145,7 +1145,11 @@ firebase init এই কমান্ড টি দিন।  নিচের স
  Set up automatic builds and deploys with GitHub?   No
  File build/index.html already exists. Overwrite?   Yes
 
-Step 3: 
+Step 3:
+ npm run build
+ firebase deploy
+ 
+Step 4: 
 ৩ minute পর আপনার লাইভ লিঙ্ক chrome browser  গিয়ে আপনার লাইভ লিঙ্ক হিট করুন । 
 console tab ওপেন রেখে reload button এ মাউস  চেপে ধরে empy cache and hard reload করেন কয়েকবার।
 সার্ভার আপডেট হতে একটু সময় লাগে তাই ৩ মিনিট কমপক্ষে অপেক্ষা করবেন।
