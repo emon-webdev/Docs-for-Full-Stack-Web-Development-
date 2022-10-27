@@ -1139,7 +1139,11 @@ Step 1:
 
 Step 2: 
 firebase init এই কমান্ড টি দিন।  নিচের স্টেপ্সগুলো ঠিকমত দিন 👀
-
+	
+Are you ready to proceed? (Y/n) Yes
+>( ) Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+Use an existing project
+select your project
  What do you want to use as your public directory?   build     
  Configure as a single-page app (rewrite all urls to /index.html)?  Yes
  Set up automatic builds and deploys with GitHub?   No
