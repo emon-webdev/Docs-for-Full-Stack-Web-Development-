@@ -117,12 +117,12 @@ export default app;
 
 //step 2 (create file in your root folder (.env.local))
 //.env.local
-apiKey=AIzaSyDf2qGcHt49oH-5_hG9euNs7yurgXaJvUU
-authDomain=authentech-b67c9.firebaseapp.com
-projectId=authentech-b67c9
-storageBucket=authentech-b67c9.appspot.com
-messagingSenderId=231829553918
-appId=1:231829553918:web:9716fcdfcf528781d01baf
+  REACT_APP_apiKey=AIzaSyCH-aBDCl94wBC2c2L7jk_jSmKUCpUFEHA
+  REACT_APP_authDomain=pro-learner-auth.firebaseapp.com
+  REACT_APP_projectId=pro-learner-auth
+  REACT_APP_storageBucket=pro-learner-auth.appspot.com
+  REACT_APP_messagingSenderId=324333176049
+  REACT_APP_appId=1:324333176049:web:89441df553dd4b84179550
 
 
 //Firebase.init.js
