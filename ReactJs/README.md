@@ -55,9 +55,11 @@ So list of popular companies that use ReactJS below.
 
 ###  🤔 How to Use?
 List of React:
+
 - [Axios](#Axios)
 - [useState](#useState)
 - [useEffect](#useEffect)
+- [dynamicTitle](#dynamicTitle)
 - [searchItems](#searchItems)
 - [conditionalRendering](#conditionalRendering)
 - [useContext](#useContext)
@@ -287,6 +289,58 @@ return (
 </>
 )
 }
+  
+ ```
+</details>
+
+
+### dynamicTitle
+<details>
+<summary>
+  <h3>dynamic Title (Click Me)</h3>
+</summary>
+<br >
+  
+ ```js
+
+// Step : 1
+//Create useTitle.js hooks file
+import { useEffect } from "react";
+
+const useTitle = title => {
+    useEffect(() => {
+        document.title = `${title} - Website Name`
+    }, [title])
+};
+export default useTitle;
+
+//Step : 2 
+// Import useTitle hooks in your components 
+useTitle("Home");
+
+<--Example --->
+
+import { useEffect } from "react";
+
+const useTitle = title => {
+    useEffect(() => {
+        document.title = `${title} - Website Name`
+    }, [title])
+};
+export default useTitle;
+
+import React from "react";
+import useTitle from "../hooks/useTitle";
+const Home = () => {
+  useTitle("Home");
+  return (
+    <div>
+      <h2>Dragon News: {allNews.length}</h2>
+    </div>
+  );
+};
+
+export default Home;
   
  ```
 </details>
