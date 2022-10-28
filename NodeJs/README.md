@@ -109,7 +109,7 @@ demo code
 	
 //Milestone: 9 React Router and States
 //Module 55.5
-7. What is a server?
+1. What is a server?
 Ans: Ususally, servers are powerful computers connected via a network to a group of less powerfull cliend devices.
 i. Stores, sends andf receives data.
 ii. Accepts and responds to requests made over a network.
@@ -121,9 +121,18 @@ ii. Your device requests web content for facebook to the web server of Facebook 
 iii. Then server gets the request from your device and sends data to your device.
 This is just an example of how web server and web client work.
 
-	
-	
-	
+// MOdule 64
+2.  When to use Node Js?
+Ans: Api Application - A great choice for constructiong an API application with both relational and non relational database.
+this make Node.js good to handle the requsts, make database operations, and expose JSON objects for clients.
+Real Time Applications:
+Good at building real time applications like:
+Messaging, Notifications delivery , Live Streaming and collaboration tools, Microservices.
+3. When Not to use Node Js
+Ans: i. CPU intensive tasks/ heavy computational applications
+ii. Backend with relational databases.
+4. Compaines using Node JS?
+Ans: i. Real-time applications ii. Online gaming apps. iii. E-commerce transaction software. 4. Video conferncing apps.
 	
 	
 	
