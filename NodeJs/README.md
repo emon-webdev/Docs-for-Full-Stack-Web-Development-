@@ -1,4 +1,4 @@
-# React Using Method And Example
+# Node Using Method And Example
 
 ### 🔭 What is NOde Js?
 - Nose.js is an open source server environment. and Runtime Environment.
@@ -122,6 +122,7 @@ iii. Then server gets the request from your device and sends data to your device
 This is just an example of how web server and web client work.
 
 // MOdule 64
+//64-5 What is Database, DBMS, MongoDB, NoSQL vs SQL
 2.  When to use Node Js?
 Ans: Api Application - A great choice for constructiong an API application with both relational and non relational database.
 this make Node.js good to handle the requsts, make database operations, and expose JSON objects for clients.
@@ -133,17 +134,90 @@ Ans: i. CPU intensive tasks/ heavy computational applications
 ii. Backend with relational databases.
 4. Compaines using Node JS?
 Ans: i. Real-time applications ii. Online gaming apps. iii. E-commerce transaction software. 4. Video conferncing apps.
+5. What is data ?
+Ans: Data can be anythink and everythink. Any information of fact can be considered as data.
+like: your name. age, email, back balance or any other information such as your house address.
+6. What is database?
+Ans: i. Database can be considered as a container filled with data which is electronically stored in a computer system.
+Types of Database: Object oriented databases, Centralized Database, Cloud Databases, NoSql Database and many more.
+7. What is databasae managment system (DBMS)?
+Ans: Database is just a container which stores data whereas Database Managment system of 
+DBMS is a software which is used to manage your database.
+Example of DBMS is MySql, PostgreSql, MOngoDB, Neo4j etc.
+8. What is SQL and NoSql?	
+Ans: -- SQL Database?
+i. SQL (Structued Query language ) is the standard language for dealing with relational Database.
+ii. SQl works table to table conected.
+Ans: -- NoSQL Database?
+i. NoSQL databases are non-tabular databases and store data differently than relational tables
+ii. It aboids joins, and is easy to scale.
+iii. The Major purpose of using a NoSql database is for distributed data stored with humongous data storage needs.
+9. When should NoSql be Used? (important)
+Ans: When deciding which databasae to use, decision0 makers typically find one or more of the following factors lead them 
+to selscting a NoSQL database.
+i. Fast paced Agile development
+ii. Storage of Stuctured and semi structured data
+iii. Huge volumes of data 
+iv. Requirments for scale out architecture.
+v. real time striming
+10. What is MongoDB?
+Ans: i. MongoDb is an open-source, cross-lplatform, distributed document database.
+ii. MongoDb stored data Json formate.
 	
 	
 	
 	
 	
 	
-  ************End React Js Interview Questions************
+	
+	
+  ************End Node Js Interview Questions************
  ```
 </details>
 
-
+### SqlVSNoSql
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th></th>
+        <th>SQL</th>
+        <th>NoSQL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- row 1 -->
+      <tr>
+        <th>1</th>
+        <td>Sql databases are primarily called RDBMS or Relational Database </td>
+        <td>NoSql databases are primarily called as Non-relational or distributed database </td>
+      </tr>
+      <!-- row 2 -->
+      <tr>
+        <th>3</th>
+        <td>Structured query language (SQL) </td>
+        <td>No declarative query language </td>
+      </tr>
+       <!-- row 1 -->
+      <tr>
+        <th>4</th>
+        <td>Sql Databaseas are table based databasaes </td>
+        <td> NoSql databases can be document based, key value pairs, graph databases</td>
+      </tr>
+	     <tr>
+        <th>4</th>
+        <td>Sql Databaseas have a predefined schema </td>
+        <td> NoSql databasaes use dynamic schema for unstructured data </td>
+      </tr>
+	     <tr>
+        <th>4</th>
+        <td> Oracel, Pstgres, MySQL, MS-SQL </td>
+        <td> MOngoDB, Redis, neo4j, Cassandra </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Table
 <div class="overflow-x-auto">
