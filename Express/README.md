@@ -16,9 +16,12 @@
 - Every req in ExpressBoilerplate (Full Example)
 List of Express JS:
 - [ExpressBoilerplate](#ExpressBoilerplate)
+- [RequestAndResponse](#RequestAndResponse)
 - [Server](#Server)
 - [ExpressJsInterviewQuestions](#ExpressJsInterviewQuestions)
 - [Table](#Table)
+
+
 
 ### demo
 <details>
@@ -82,6 +85,62 @@ app.listen(Port, () => {
   console.log("Server is Running", Port);
 });
 
+
+```
+</details>
+
+### RequestAndResponse
+<details>
+<summary>
+  <h3> Request And Response -(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+What is Request and Response?
+Request: req(Method, Resoures, Headers, [content])
+Response: res(Status Code, Headers, [content])
+
+--Request(req) object?
+The req object represents the HTTP request and has properties
+i. request query string,
+ii. parameters
+iii. body
+iv. HTTP headers, and so on
+-----------
+i. req.query
+ii. params
+console.log(req.params.name)
+iii. body: Contains key value pairs of data submitted in the request body
+app.post('/profile', function(req, res) => {
+    console.log(req.body)
+    res.json(req.body)
+})
+
+--Response (res) object?
+The res object represents the HTTP response that an Express app
+sends when it gets an HTTp request and has methods
+i. res.send()
+res.send({some: 'json'})
+res.send('<p>some html</p>')
+
+ii. res.json()
+res.json(null)
+res.json({user: 'tobi'})
+
+iii. res.status(), res.sendStatus()
+res.status(403).end()
+res.status(400).send('Bad request')
+res.status(404).sendFile('/absolute/path/to/404.png')
+
+iv. res.set(), and so on
+res.set('Content-type', 'text/plain')
+res.set({
+    'Content-type', 'text/plain',
+    'Content-length', '123',
+    Etag: '11234'
+})
 
 ```
 </details>
