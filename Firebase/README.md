@@ -17,7 +17,7 @@ List of React:
 - [PrivateRoute](#PrivateRoute)
 - [useNavigate](#useNavigate)
 - [AuthContext](#AuthContext)
-
+- [multiFormField](#multiFormField)
 - [FireBaseHosting](#FireBaseHosting)
 - [Notes](#Notes)
 - [FirebaseInterviewQuestions](#FirebaseInterviewQuestions)
@@ -33,7 +33,7 @@ List of React:
 	
 ```js
 
-FireBaseHosting code
+ code
 
 ```
 </details>
@@ -1082,7 +1082,72 @@ export default Register;
 </details>
 
 
+### multiFormField
+<details>
+<summary>
+  <h3>Using multipole Form Field in shotcut -(Click Me)</h3>
+</summary>
+<br >
+	
+```js
 
+import React, { useState } from "react";
+
+const AddUsers = () => {
+  const [user, setUser] = useState({});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(user);
+  };
+
+  const handleInputBlur = (event) => {
+    const field = event.target.name;
+    const value = event.target.value;
+    const newUser = { ...user };
+    newUser[field] = value;
+    setUser(newUser);
+  };
+
+  return (
+    <div>
+      <h2>Add New User</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          onBlur={handleInputBlur}
+          type="text"
+          name="address"
+          required
+          placeholder="Address"
+        />{" "}
+        <br />
+        <input
+          onBlur={handleInputBlur}
+          type="text"
+          name="name"
+          required
+          placeholder="Name"
+        />{" "}
+        <br />
+        <input
+          onBlur={handleInputBlur}
+          type="email"
+          name="email"
+          required
+          placeholder="Email"
+        />{" "}
+        <br />
+        <button type="submit">Add User</button>
+      </form>
+    </div>
+  );
+};
+
+export default AddUsers;
+
+
+```
+</details>
 
 
 
