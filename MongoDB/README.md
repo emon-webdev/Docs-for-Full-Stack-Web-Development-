@@ -66,15 +66,25 @@ demo code
 ### Notes
 <details>
 <summary>
-  <h3>Notes for Node js  (Click Me)</h3>
+  <h3>Notes for MongoDb  (Click Me)</h3>
 </summary>
 <br >
   - Notes must be know every single part for interview 
 
 ```js
 
-************Node js  Notes************
-
+************Mongo DB  Notes************
+//Module 65-8
+ 1.What are MongoDb operators?
+MongoDb offers the following query operator types:
+i. Comparison
+ii. Logical
+iii. Element
+iv. Evalution
+v. Geospatial
+vi. Array
+vii. Bitwise
+viii. Comments
 	
 	
 	
@@ -96,20 +106,28 @@ demo code
 ************Mongo DB Interview Questions************
 	
 //Milestone: 11 Backend and Database integrate
+//Node.js Interview Questions
 //Module 65.9
-1.What are MongoDb operators?
-MongoDb offers the following query operator types:
-i. Comparison
-ii. Logical
-iii. Element
-iv. Evalution
-v. Geospatial
-vi. Array
-vii. Bitwise
-viii. Comments
+1. What is Node.js and how it works?
+2. What are the key features of Node.js?
+3. What in npm? What is the main functionality of npm?
+4. What is the difference between JavaScript and Node.js?
+5. What is event-driven programming in Node.js?
+6. How single threaded handles concurrency when multiple I/O operations happing in Node.js?
+7. What is package.json?
+8. What is Event loop in Node.js and how does it work?
+9. What do you understand by callback hell?
 
-	
-	
+//MongoDb Interview Questions	
+1. What is a Document in MongoDb?
+2. What is Collection in MongoDb?
+3. What are some fetures of MongoDb?
+4. When to use MongoDb?
+5. What are some of the advantages of MongoDB?
+6. What type of DBMS is MongoDB?
+7. What is the difference between MongoDB and MYSql?
+8. Explain the Structure of ObjectID in MongoDB?
+9. What is CRUD in MongoDB?
 	
 	
 	
