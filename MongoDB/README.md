@@ -84,19 +84,29 @@ demo code
 ```
 </details>
   
-### ExpressJsInterviewQuestions
+### MongoDBInterviewQuestions
 <details>
 <summary>
-  <h3>Express JS Interview Questions (Click Me)</h3>
+  <h3>Mongo DB Interview Questions (Click Me)</h3>
 </summary>
 <br >
  must be know every single part for interview https://roadmap.sh/react
 	
  ```js
-************Express JS Interview Questions************
+************Mongo DB Interview Questions************
 	
-//Milestone: 9 React Router and States
-//Module 55.5
+//Milestone: 11 Backend and Database integrate
+//Module 65.9
+1.What are MongoDb operators?
+MongoDb offers the following query operator types:
+i. Comparison
+ii. Logical
+iii. Element
+iv. Evalution
+v. Geospatial
+vi. Array
+vii. Bitwise
+viii. Comments
 
 	
 	
@@ -107,11 +117,74 @@ demo code
 	
 	
 	
-  ************End Express JS Interview Questions************
+  ************Mongo DB Interview Questions************
  ```
 </details>
 
-
+### Comparison Operators
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th></th>
+        <th>Operator</th>
+        <th>Description</th>
+	<th>Operator</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- row 1 -->
+      <tr>
+        <th>1</th>
+        <td>$eq </td>
+        <td>Matches values that are equal to the given value </td>
+	<td> $gt </td>
+        <td> Matches if values are greater than the given value </td>
+      </tr>
+      <!-- row 2 -->
+      <tr>
+        <th>4</th>
+        <td>$lt </td>
+        <td>Matches if values are less than the given value </td>
+	<td>$gte </td>
+        <td> Matches if values are greater or equal to the given value</td>
+      </tr>
+       <!-- row 1 -->
+      <tr>
+        <th>4</th>
+        <td>$lte </td>
+        <td>Matches if values are less or equal to the given value.</td>
+	<td> $in</td>
+        <td>Matches any of the values in an array </td>
+      </tr> <!-- row 1 -->
+      <tr>
+      <tr>
+        <th>4</th>
+        <td> $ne</td>
+        <td>Matches values that are not equal to the given value. </td>
+	<td>$nin </td>
+        <td> Matches none of the values specified in an arrray </td>
+      </tr> <!-- row 1 -->
+      <tr>
+        <th>4</th>
+        <td>$and </td>
+        <td> </td>
+	  <td>$not </td>
+        <td> </td>
+      </tr>
+      </tr> <!-- row 1 -->
+      <tr>
+        <th>4</th>
+        <td>$nor </td>
+        <td> </td>
+	<td>$or </td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Table
 <div class="overflow-x-auto">
