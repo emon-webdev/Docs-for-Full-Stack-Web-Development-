@@ -29,6 +29,38 @@ demo code
 ```
 </details>
 
+
+### initialSetUp
+<details>
+<summary>
+  <h3> initialSetUp -(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+/* 
+১। mongodb atlas data host korte dai pore data niya kaj korte pari
+2.mongodb connect korar jonno (URI) thakbe 
+=>const uri = ;
+3. mongodb oi URI er jonno ekta Client dei jaite oi URI (update, post, get, delete) korte pari and URI pass korte hobe
+=> const client = new MongoClient(uri);
+4. Sei client ke Connect kora and Database er kaj async kaj
+async function run() {
+  await client.connect();
+}
+5. app.use(express.json())
+6. 
+
+
+
+
+
+*/
+
+```
+</details>
+
 ### MongoDBBoilerplate
 <details>
 <summary>
