@@ -47,7 +47,7 @@ code
 ### CrudOparetion
 <details>
 <summary>
-  <h3> Crud Oetion (Click Me)</h3>
+  <h3> Crud Oparetion (Click Me)</h3>
 </summary>
 <br >
 	
