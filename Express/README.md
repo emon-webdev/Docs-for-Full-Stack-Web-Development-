@@ -92,10 +92,12 @@ Mern Stack in 4 lang
 const express = require("express");
 //step 2 (express ta app এর ভিতর রাখতে হবে)
 const app = express();
-//step 3 (express টা require করতে হবে)
+//step 3 (cors টা require করতে হবে)
 const cors = require("cors");
 app.use(cors());
-
+//step 4:  middleware (post করার সময় autometic json এ convert করে দেই)
+app.use(express.json())
+// step 5: (port লাগবে কোন জায়গা server চলবে সেই জন্য)
 const Port = process.env.Port || 5000;
 
 //productsCollection দিয়ে data call করে আনা হল।
