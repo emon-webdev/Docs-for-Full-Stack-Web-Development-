@@ -56,6 +56,59 @@ async function run() {
 5. app.use(express.json())
 6. 
 
+0. npm install mongodb
+1. create New Project (copy user and password)
+2. Database > Connect > connect your application copy (include full drive) paste index.js 
+//
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://GeniusCar:<password>@cluster0.nftlnia.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+3. Remove this and create async function
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+}); 
+4. create async function (follow mongodb crud find many)
+async function run(){
+    try{
+        //4.1 create collection 
+const serviceCollection = client.db("geniusCar").collection(services);
+    }
+    finally{
+
+    }
+}
+run().catch(error => console.error(error))
+5. Database > collections > create database same name 
+client.db("geniusCar").collection(services);
+database name (geniusCar)
+collection(services)
+6. Backend data load করতে api lagbe
+app.get('/services', async(req, res) => {
+
+    })
+7. query কারে কারে find করতে চাই ( )
+ const query = { runtime: { $lt: 15 } };
+
+৮। সব গুলাকে find করতে চাইলে empty object দিতে হবে।
+
+const query = { };
+৯। data sort করতে options use করে। 
+  const options = {
+      // sort returned documents in ascending order by title (A->Z)
+      sort: { title: 1 },
+      // Include only the `title` and `imdb` fields in each returned document
+      projection: { _id: 0, title: 1, imdb: 1 },
+    };
+10. অথবা find use করতে cursor নিবো।
+    const query = { };
+    const cursor = serviceCollection.find(query);
 
 
 
@@ -74,17 +127,50 @@ async function run() {
 	
 ```js
 
-0. npm install mongodb
-1. create New Project (copy user and password)
-2. Database > Connect > connect your application copy (include full drive) paste index.js 
-//
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://GeniusCar:<password>@cluster0.nftlnia.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
+const express = require("express");
+const cors = require("cors");
+const { MongoClient, ServerApiVersion } = require("mongodb");
+require("dotenv").config();
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+//middleware
+app.use(cors());
+app.use(express.json());
+
+
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.nftlnia.mongodb.net/?retryWrites=true&w=majority`;
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
+
+async function run() {
+  try {
+    const serviceCollection = client.db("geniusCar").collection(services);
+    //Backend data load করতে api lagbe
+    app.get("/services", async (req, res) => {
+      //সব গুলাকে find করতে চাইলে empty object দিতে হবে।
+      const query = {};
+      //data sort করতে options use করে। অথবা find use করতে cursor নিবো।
+      const cursor = serviceCollection.find(query);
+      // async/ promise call হচ্ছে তাই await use করতে হবে
+      //toArray দিয়ে cursor টাকে array তে convert করতে হবে  যাতে client site use  করতে হবে
+      const services = await cursor.toArray();
+      res.send(services);
+    });
+  } finally {
+  }
+}
+run().catch((error) => console.error(error));
+
+app.get("/", (req, res) => {
+  res.send("Hello Genius Car Server");
+});
+app.listen(PORT, () => {
+  console.log("genius car server is running", PORT);
 });
 
 ```
