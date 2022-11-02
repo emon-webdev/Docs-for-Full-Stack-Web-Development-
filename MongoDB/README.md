@@ -86,7 +86,7 @@ const serviceCollection = client.db("geniusCar").collection(services);
 }
 run().catch(error => console.error(error))
 5. Database > collections > create database same name 
-client.db("geniusCar").collection(services);
+client.db("geniusCar").collection("services");
 database name (geniusCar)
 collection(services)
 6. Backend data load করতে api lagbe
