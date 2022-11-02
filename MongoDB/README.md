@@ -9,10 +9,14 @@
 
 - Every req in MongoDBBoilerplate (Full Example)
 List of Express JS:
+- [initialSetUp](#initialSetUp)
+- [MongoDBBoilerplate](#MongoDBBoilerplate)
 - [CrudOparetion](#CrudOparetion)
+- [DotEnv](#DotEnv)
+- [Notes](#Notes)
 - [MongoDBInterviewQuestions](#MongoDBInterviewQuestions)
 - [Table](#Table)
-CrudOparetion
+
 
 
 ### demo
@@ -64,13 +68,24 @@ async function run() {
 ### MongoDBBoilerplate
 <details>
 <summary>
-  <h3> Express Boilerplate-(Click Me)</h3>
+  <h3> MongoDB Boilerplate-(Click Me)</h3>
 </summary>
 <br >
 	
 ```js
 
-code
+0. npm install mongodb
+1. create New Project (copy user and password)
+2. Database > Connect > connect your application copy (include full drive) paste index.js 
+//
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://GeniusCar:<password>@cluster0.nftlnia.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 ```
 </details>
@@ -91,7 +106,31 @@ demo code
 </details>
 
 
+### DotEnv
+<details>
+<summary>
+  <h3> DotEnv -(Click Me)</h3>
+</summary>
+<br >
+	
+```js
 
+/* 
+১। npm install dotenv --save
+2 create .env file in your root folder
+DB_USER=Genius
+DB_PASSWORD=ylqSoHGMEeM8
+3. inde.js file (change username and password)
+require('dotenv').config()
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.nftlnia.mongodb.net/?retryWrites=true&w=majority`;
+
+
+
+
+*/
+
+```
+</details>
 
 
 
