@@ -54,8 +54,9 @@ demo code
 3. then run (npm init -y)
 4. npm install express (node framework)
 5. npm install cors
+5.1 npm install dotenv --save
 6. npm install nodemon (all time server live থাকে )
-7. (4, 5, 6 install same line (npm i express cors nodemon))
+7. (4, 5, 6 install same line (npm i express cors dotenv nodemon))
 8. create index.js (in your root folder যাতে server run করলে index.js দেখাতে পারে।)
 9. open package.js 
  added ( "start": "nodemon index.js" ) in your scripts
