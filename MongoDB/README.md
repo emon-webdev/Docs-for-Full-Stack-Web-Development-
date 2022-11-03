@@ -10,6 +10,7 @@
 - Every req in MongoDBBoilerplate (Full Example)
 List of Express JS:
 - [initialSetUp](#initialSetUp)
+- [ExpressBoilerplate](#ExpressBoilerplate)
 - [MongoDBBoilerplate](#MongoDBBoilerplate)
 - [CrudOparetion](#CrudOparetion)
 - [DotEnv](#DotEnv)
@@ -117,6 +118,50 @@ const query = { };
 
 ```
 </details>
+	
+### ExpressBoilerplate
+<details>
+<summary>
+  <h3> ExpressBoilerplate-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+//Must be install
+"scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+"dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0",
+    "nodemon": "^2.0.20"
+  }
+	
+//index.js
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
+const app = express();
+const port = process.env.PORT || 5000;
+//middleware
+app.use(cors());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Ema John server is running");
+});
+
+app.listen(port, () => {
+  console.log(`Ema John Server is Running: ${port}`);
+});
+
+
+```
+</details>
+	
 
 ### MongoDBBoilerplate
 <details>
