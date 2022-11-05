@@ -7,8 +7,9 @@
 ### 🤔 How to Use?
 - Every req in Boilerplate (Full Example)
 List of Express JS:
+- [initialSetUp](#initialSetUp)
 - [Boilerplate](#Boilerplate)
-- [DotEnvInterviewQuestions](#DotEnvInterviewQuestions)
+- [JsonWebTokenInterviewQuestions](#JsonWebTokenInterviewQuestions)
 - [Table](#Table)
 CrudOparetion
 
@@ -38,13 +39,20 @@ demo code
 ```js
 
 /* 
-১। npm install dotenv --save
-2 create .env file in your root folder
-DB_USER=Genius
-DB_PASSWORD=ylqSoHGMEeM8
-3. inde.js file (change username and password)
-require('dotenv').config()
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.nftlnia.mongodb.net/?retryWrites=true&w=majority`;
+1। npm install jsonwebtoken
+2.const jwt = require('jsonwebtoken');
+3. in your terminal
+
+> require('crypto').randomBytes(64)
+	
+<Buffer ed 24 a7 0f 85 f1 a9 99 96 bf c0 fd 55 11 70 ce 2e 55 17 e5 eb 13 87 4b 87 e2 90 2d 27 ae f8 18 48 53 13 7c c0 53 61 14 23 9a c7 a9 61 21 a4 96 8a 33 ... 14 more bytes>
+	
+> require('crypto').randomBytes(64).toString()
+'I�%�\x11�U��k��\x04����ϯ���`�T\b\f7\x19g���o�\x1Ft)tՎސ.\x06,\x1C��\n\x16\x04?�\x18"��\\���%h'
+	
+> require('crypto').randomBytes(64).toString('hex')
+'ceb36bf116d2ef75dbd1df43a5e03b1c6fa29105201ba3e98c756534ad394904c724c4d9193cbfc51bf8f2a49dc4187bf63b49dea76e22aa585ce4e749eed619'
+>
 
 
 
