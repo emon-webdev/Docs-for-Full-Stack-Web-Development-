@@ -54,10 +54,46 @@ demo code
 'ceb36bf116d2ef75dbd1df43a5e03b1c6fa29105201ba3e98c756534ad394904c724c4d9193cbfc51bf8f2a49dc4187bf63b49dea76e22aa585ce4e749eed619'
 >
 
+3.1 .env
+ACCESS_TOKEN_SECRET=4766da99c10f0f4b8ba9c75f8ebe20fdd64c0a25115d91cd8f3d761029774b9e08d2bc7ff6c6cf16778aeca710abb1738ff3e71098040b85aa4e00200ab3e577
+	
+4. client site (login.js )
+login(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(result.user.email);
+        const currentUser = {
+          email: user.email,
+        };
+
+        console.log(currentUser);
+
+        // get jwt token
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+
+        // form.reset();
+        // navigate(from, {replace:true})
+      })
+      .catch((error) => console.log(error));
 
 
+// server (index.js)
+app.post('/jwt', async(req, res) => {
+const user = req.body;
+const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: "1h"});
+res.send(token)
 
-*/
+})
 
 ```
 </details>
