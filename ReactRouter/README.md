@@ -253,8 +253,25 @@ const Cart = ({ cart, handleRemoveItem }) => {
 <br >
 	
 ```js
+//Example 1
 import { NavLink } from 'react-router-dom';
 <NavLink className={(isActive) => isActive ? 'active' : undefined} to='/home' className='p-3 mr-3 hover:text-blue-700'>Home</NavLink>
+
+
+//Example 2
+let activeClass = {
+    color: "#FF3811",
+    background: "none",
+ };
+  
+<li>
+<NavLink
+  to="/home"
+  style={({ isActive }) => (isActive ? activeClass : undefined)}
+>
+  Home
+</NavLink>
+</li>
 
 ```
 </details>
