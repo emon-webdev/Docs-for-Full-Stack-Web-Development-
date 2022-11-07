@@ -476,7 +476,46 @@ const query = { };
 	
 ```js
 
-demo code
+// POST
+
+//Step 1 : (send data client to server)
+  const handleAddServant = (event) => {
+    event.preventDefault();
+    console.log(servants);
+    
+    //send data client to server
+    fetch("http://localhost:5000/servents", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(servants),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+
+    });
+  };
+  
+  //Step 2 : (receive data in server)
+  async function run() {
+  try {
+    const servantCollection = client
+      .db("servant-database")
+      .collection("servants");
+
+//receive data in server
+    app.post('/servants', (req, res) => {
+      const servant = req.body;
+      console.log(servant)
+    })
+
+  } finally {
+  }
+}
+run().catch(console.dir);
+  
 
 ```
 </details>
