@@ -81,9 +81,33 @@ app.listen(Port, () => {
   console.log(`Servant Network Server running on port ${Port}`);
 });
 
+//then go to mongodb and (create user and password)
+// 
+// check mongodb connected
+const uri = `mongodb+srv://servantNetwork:jbTAlWrnJfp5NfFZ@cluster0.m1iwwru.mongodb.net/?retryWrites=true&w=majority`;
+console.log(uri);
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
 
+async function run() {
+  try {
+    const servantCollection = client
+      .db("servant-database")
+      .collection("servants");
 
-
+    const servants = {
+      name: "text servant",
+      email: "servant@gamil.com",
+    };
+    const result = await servantCollection.insertOne(servants);
+    console.log(result);
+  } finally {
+  }
+}
+run().catch(console.dir);
 
 ```
 </details>
