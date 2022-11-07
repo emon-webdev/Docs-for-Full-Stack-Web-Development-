@@ -44,7 +44,7 @@ demo code
 	
 ```js
 
-/* 
+
 ১। mongodb atlas data host korte dai pore data niya kaj korte pari
 2.mongodb connect korar jonno (URI) thakbe 
 =>const uri = ;
@@ -114,7 +114,6 @@ const query = { };
 
 
 
-*/
 
 ```
 </details>
