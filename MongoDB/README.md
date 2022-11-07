@@ -475,7 +475,7 @@ const query = { };
 <br >
 	
 ```js
-
+//Number 1 of CRUD POST method
 // POST (Crud er => C )
 
 //Step 1 : (send data client to server)
@@ -518,11 +518,48 @@ async function run() {
   }
 }
 run().catch(console.dir);
-  
-	
-// POST (Crud er => R )
-	
 
+//Number 2 of CRUD GET/READ method
+//Get api (Crud => R(get/read) )
+
+async function run() {
+  try {
+    const servantCollection = client
+      .db("servant-database")
+      .collection("servants");
+
+    //Get api (Crud => R(get/read) )
+//you can access browser (http://localhost:5000/servants)
+    app.get("/servants", async (req, res) => {
+      const query = {};
+      const cursor = servantCollection.find(query);
+      const servants = await cursor.toArray();
+      res.send(servants);
+    });
+
+  } finally {
+  }
+}
+run().catch(console.dir);
+	
+//Number 3 of CRUD PUT/PATCH method
+//Update (PUT/PATCH) api (Crud => u(get/read) )
+
+async function run() {
+  try {
+    const servantCollection = client
+      .db("servant-database")
+      .collection("servants");
+
+    //Get api (Crud => R(get/read) )
+
+
+  } finally {
+  }
+}
+run().catch(console.dir);
+	
+	
 ```
 </details>
 
