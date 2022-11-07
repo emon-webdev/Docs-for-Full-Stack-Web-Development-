@@ -559,6 +559,80 @@ async function run() {
 }
 run().catch(console.dir);
 	
+//Number 4 of CRUD DELETE method
+//DELETE  api (Crud => D(DELETE) )
+
+async function run() {
+  try {
+    const servantCollection = client
+      .db("servant-database")
+      .collection("servants");
+
+//Delete api (CRUD => D )
+    app.delete("/servants/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await servantCollection.deleteOne(query);
+      console.log(result);
+      res.send(result);
+    });
+
+  } finally {
+  }
+}
+run().catch(console.dir);
+
+	
+//delete component
+const Blog = () => {
+  const servants = useLoaderData();
+  const [displayServants, setDisplayServants] = useState(servants);
+
+  const handleDelete = (servant) => {
+    const agree = window.confirm(
+      `Are you sure you want to delete: ${servant.name}`
+    );
+    if (agree) {
+      console.log(agree);
+      fetch(`http://localhost:5000/servants/${servant._id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            alert("user deleted successfully");
+            const remainingServant = displayServants.filter(
+              (srvnt) => srvnt._id !== servant._id
+            );
+            setDisplayServants(remainingServant);
+          }
+        });
+    }
+  };
+	
+  return (
+    <div className="text-center">
+      <h2>Blog</h2>
+      <h1>servant: {displayServants.length}</h1>
+      <div>
+        {displayServants.map((servant) => (
+          <div className="p-4 mb-3 border" key={servant._id}>
+            <p>{servant.name}</p>
+            <p>{servant.email}</p>
+            <button
+              className="btn btn-tiny"
+              onClick={() => handleDelete(servant)}
+            >
+              X
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
 	
 ```
 </details>
