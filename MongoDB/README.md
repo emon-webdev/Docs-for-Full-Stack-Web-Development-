@@ -543,21 +543,123 @@ async function run() {
 run().catch(console.dir);
 	
 //Number 3 of CRUD PUT/PATCH method
-//Update (PUT/PATCH) api (Crud => u(get/read) )
-
+//Update (PUT/PATCH) api (Crud => u(PUT/PATCH) )
+	
 async function run() {
   try {
     const servantCollection = client
       .db("servant-database")
       .collection("servants");
-
-    //Get api (Crud => R(get/read) )
-
-
-  } finally {
-  }
+	
+//Update (PUT/PATCH) api (Crud => u(PUT/PATCH) )
+    app.put("/servants/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const servant = req.body;
+      const option = { upsert: true };
+      const updatedServant = {
+        $set: {
+          name: servant.name,
+          address: servant.address,
+          email: servant.email,
+        },
+      };
+      const result = await servantCollection.updateOne(query, updatedServant, option);
+      res.send(result);
+    });
+	
 }
 run().catch(console.dir);
+
+app.listen(Port, () => {
+  console.log(`Servant Network Server running on port ${Port}`);
+});
+	
+//Update Component
+import React, { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+
+const Update = () => {
+  const storedServant = useLoaderData();
+
+  const [servant, setServant] = useState(storedServant);
+
+  const handleUpdateServant = (event) => {
+    event.preventDefault();
+    console.log(servant);
+    fetch(`http://localhost:5000/servants/${storedServant._id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(servant),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          alert("user updated");
+          console.log(data);
+          event.target.reset()
+        }
+      });
+  };
+
+  const handleInputChange = (event) => {
+    const field = event.target.name;
+    const value = event.target.value;
+    const newUser = { ...servant };
+    newUser[field] = value;
+    setServant(newUser);
+  };
+
+  return (
+    <div className="text-center">
+      <h2>Update Servant: {storedServant.name} </h2>
+      <h2>Update Servant: {storedServant.email} </h2>
+      <div className="">
+        <form onSubmit={handleUpdateServant} className="mx-auto mb-14 max-w-md">
+          <input
+            type="text"
+            name="name"
+            defaultValue={storedServant.name}
+            required
+            onBlur={handleInputChange}
+            placeholder="Type Name"
+            className="input input-bordered input-secondary w-full max-w-xs"
+          />
+          <br />
+          <input
+            type="text"
+            name="address"
+            required
+            onBlur={handleInputChange}
+            defaultValue={storedServant.address}
+            placeholder="Type address"
+            className="input input-bordered input-secondary w-full max-w-xs"
+          />
+          <br />
+          <input
+            type="email"
+            name="email"
+            required
+            defaultValue={storedServant.email}
+            onBlur={handleInputChange}
+            placeholder="Type Email"
+            className="input input-bordered input-secondary w-full max-w-xs"
+          />
+          <br />
+          <button className="btn btn-outline btn-success" type="submit">
+            Update Servant
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Update;
+
+
 	
 //Number 4 of CRUD DELETE method
 //DELETE  api (Crud => D(DELETE) )
