@@ -61,7 +61,25 @@ demo code
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 6. then (npm start) in your terminal
+	
+// index.js
+const express = require("express");
+const cors = require("cors");
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const app = express();
+const Port = process.env.PORT || 5000;
 
+app.use(cors());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Servant Network Server is Running");
+});
+
+
+app.listen(Port, () => {
+  console.log(`Servant Network Server running on port ${Port}`);
+});
 
 
 
