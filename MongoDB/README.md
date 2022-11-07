@@ -476,7 +476,7 @@ const query = { };
 	
 ```js
 
-// POST
+// POST (Crud er => C )
 
 //Step 1 : (send data client to server)
  const handleAddServant = (event) => {
@@ -519,6 +519,9 @@ async function run() {
 }
 run().catch(console.dir);
   
+	
+// POST (Crud er => R )
+	
 
 ```
 </details>
