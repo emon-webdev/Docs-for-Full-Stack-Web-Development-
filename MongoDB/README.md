@@ -475,6 +475,18 @@ const query = { };
 <br >
 	
 ```js
+
+MongoDB  CRUD operation নিয়ে simple talk ? 
+
+C ---- Create বা insert  Data => 
+Server থেকে  নতুন  Data কে   .insertOne() , .insertMany() দিয়ে  MongoDB র Collection এ  সেই নতুন Data পাঠিয়ে দেয়া ।
+R ----- Read  Data  =>   
+MongoDB র   Collection  থেকে কোনো  Data  কে  ব্যাবহার করার জন্য  .find()  দিয়ে     Data  কে  Server কিংবা  Client Side  এ ফিরিয়ে আনা । 
+U ----- Update Data =>
+MongoDB র   Collection  এ থাকা  কোনো Data কে পরিবর্তন করার জন্য .updateOne()  ,  .updateMany() , replaceOne()   ব্যাবহার করে  Server Side থেকে MongoDB  তে  Data  পাঠানো । 
+D ---- Delete Data =>
+MongoDB Collection এ থাকা কোনো Data কে  Delete করার জন্য .deleteOne()  ,  .deleteMany()   দিয়ে  Server  থেকে  MongoDB  তে কমান্ড  পাঠানো ।
+
 //Number 1 of CRUD POST method
 // POST (Crud er => C )
 
