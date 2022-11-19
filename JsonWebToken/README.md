@@ -100,7 +100,19 @@ res.send(token)
 
 
 
+### Boilerplate
+<details>
+<summary>
+  <h3> Boilerplate-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
 
+demo code
+
+```
+</details>
 
 
 
