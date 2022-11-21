@@ -14,6 +14,7 @@ List of Express JS:
 - [MongoDBBoilerplate](#MongoDBBoilerplate)
 - [CrudOparetion](#CrudOparetion)
 - [DotEnv](#DotEnv)
+- [imageStore](#imageStore)
 - [Notes](#Notes)
 - [MongoDBInterviewQuestions](#MongoDBInterviewQuestions)
 - [Table](#Table)
@@ -774,6 +775,24 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@clu
 
 
 */
+
+```
+</details>
+
+
+### imageStore
+<details>
+<summary>
+  <h3> image Store-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+//Three places to setore images
+1. Thirt party Image hosting server
+2. File system of your server
+3. mongodb (databasae)
 
 ```
 </details>
