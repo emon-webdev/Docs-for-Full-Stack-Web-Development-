@@ -55,6 +55,43 @@
 - [TypeScript Using Method And Example](/TypeScript)
 
   ## Documentations End
+  
+  
+  
+  ###Professional Setup React Project
+    1. // Create react app
+    ```js
+    npx create-react-app project-name
+    ```
+    2. // Create react app
+    ```js
+    npm install react-router-dom
+    //
+    const router = createBrowserRouter([
+      {
+        path: "/",
+        element: <div>Hello world!</div>,
+      },
+    ]);
+    //
+     <RouterProvider router={router} />
+    ```
+    3. // Create react app
+    ```js
+    npm install react-hot-toast
+    yarn add react-hot-toast
+    //
+    <Toaster
+      position="top-center"
+      reverseOrder={false}
+    />
+    //
+    toast.success('Successfully toasted!')
+    ```
+    
+    
+    
+    
 
 
 ## 🌐 Socials: Connect with Emon Hossain!
