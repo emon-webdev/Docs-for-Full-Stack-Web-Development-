@@ -58,7 +58,7 @@
   
   
   
-  ###Professional Setup React Project
+  ### Professional Setup React Project (shotcut)
     1. // Create react app
     ```js
     npx create-react-app project-name
