@@ -88,6 +88,16 @@
     //
     toast.success('Successfully toasted!')
     ```
+    4. // Date Picker
+    ```js
+    npm install react-datepicker --save
+    yarn add react-datepicker
+    ```
+     4. // Date Picker
+    ```js
+    npm install react-datepicker --save
+    yarn add react-datepicker
+    ```
     
     
     
