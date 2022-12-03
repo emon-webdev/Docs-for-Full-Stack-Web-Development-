@@ -11,6 +11,7 @@ List of React:
 - [InitialSetup](#InitialSetup)
 - [Firebasae.init.js](#FirebasaeInitJs)
 - [AuthProvider](#AuthProvider) (Focus)
+- [Form](#Form)
 - [GoogleSignIn](#GoogleSignIn)
 - [EmailPasswordAuth](#EmailPasswordAuth)
 - [ResetPassword](#ResetPassword)
@@ -33,7 +34,7 @@ List of React:
 	
 ```js
 
- AuthProvider
+ Form
 
 ```
 </details>
@@ -250,6 +251,25 @@ const AuthProvider = ({ children }) => {
 
 export default AuthProvider;
 
+
+```
+</details>
+
+
+### demo
+<details>
+<summary>
+  <h3>Server-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+
+ //img input
+ <input type="file"  id="image"  name="image" accept="image/*" required />
+ //catch img input
+ const image = form.image.files[0];
+ 
 
 ```
 </details>
