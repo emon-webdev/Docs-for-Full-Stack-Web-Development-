@@ -20,6 +20,7 @@ iv. 2013 - The year of the Big Launch
 - React Fundamentals (ReactJS)
 - https://fahimahammed-cse.medium.com/react-fundamentals-reactjs-d4f0bd042bf8
 ### React কোর কনসেপ্ট:
+https://fahimahammed-cse.medium.com/react-fundamentals-reactjs-d4f0bd042bf8
 - কিভাবে create react app দিয়ে নতুন React app তৈরি করবে 
 - কিভাবে কম্পোনেন্ট তৈরি করবে, এবং কম্পোনেন্ট ইউজ করবে
 - props ইউজ করে কিভাবে কম্পোনেন্ট এ ডাটা সেন্ড করবে 
