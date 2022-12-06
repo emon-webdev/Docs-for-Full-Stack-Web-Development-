@@ -56,10 +56,18 @@
 
   ## Documentations End
   
-  
-  
-  ### Professional Setup React Project (shotcut)
-    1. // Create react app
+
+    
+ ### ProfessionalSetup
+<details>
+<summary>
+  <h3> Professional Setup React Project (shotcut)</h3>
+</summary>
+<br >
+	
+```js
+
+  1. // Create react app
     ```js
     npx create-react-app project-name
     ```
@@ -97,9 +105,10 @@
     ```js
     npm install react-datepicker --save
     yarn add react-datepicker
-    ```
     
-    
+
+```
+</details>
     
     
 
