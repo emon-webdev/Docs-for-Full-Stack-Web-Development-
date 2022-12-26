@@ -43,10 +43,6 @@
 - [DotEnv Using Method And Example](/DotEnv)
   ### Docs of Express
 - [Express Using Method And Example](/Express)
-  ### Docs of Json Web Token
-- [JsonWebToken Using Method And Example](/JsonWebToken)
-  ### Docs of Heroku
-- [Heroku Using Method And Example](/Heroku)
   ### Docs of ReactNative
 - [ReactNative Using Method And Example](/ReactNative)
   ### Docs of Redux
