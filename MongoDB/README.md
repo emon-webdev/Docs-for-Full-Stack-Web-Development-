@@ -12,6 +12,7 @@ List of Express JS:
 - [initialSetUp](#initialSetUp)
 - [Boilerplate](#Boilerplate)
 - [MongoDBBoilerplate](#MongoDBBoilerplate)
+- [Oparetion](#Oparetion)
 - [CrudOparetion](#CrudOparetion)
 - [DotEnv](#DotEnv)
 - [imageStore](#imageStore)
@@ -30,7 +31,7 @@ List of Express JS:
 	
 ```js
 
-demo code
+demo code Oparetion
 
 ```
 </details>
@@ -220,7 +221,8 @@ async function run() {
       res.send(service);
     });
 
-    //orders api call
+    //orders api call 
+//check email in mondgodb
     app.get("/orders", async (req, res) => {
       console.log(req.query.email);
       let query = {};
