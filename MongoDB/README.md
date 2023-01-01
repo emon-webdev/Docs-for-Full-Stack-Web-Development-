@@ -90,11 +90,91 @@ const { user } = useContext(AuthContext);
 
 <---Database Code--->
 
+<--- Delete  Method () --->
+<---Client Code--->
+
+<---Database Code--->
+========================================
+	
+<---   Method () --->
+<---Client Code--->
+	
+ const handleDelete = (id) => {
+    const proceed = window.confirm(
+      "Are you sure you want to cancel this order"
+    );
+    if (proceed) {
+      fetch(`http://localhost:5000/orders/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    }
+  };
+	
+//
+ <button onClick={() => handleDelete(_id)} className="btn btn-circle">
+
+<---Database Code--->
+
+========================================
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+	
+========================================	
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+	
+========================================
+	
 <---   Method () --->
 <---Client Code--->
 
 <---Database Code--->
 
+========================================
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+========================================
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+
+========================================
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+	
+========================================	
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+	
+========================================
+	
+<---   Method () --->
+<---Client Code--->
+
+<---Database Code--->
+
+========================================
 
 ```
 </details>
