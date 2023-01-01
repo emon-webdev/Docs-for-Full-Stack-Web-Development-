@@ -78,9 +78,15 @@ const { user } = useContext(AuthContext);
 	
 ========================================	
 
-========   Method () =======
-	
+========   Method ( MongoDB ObjectId  বাদে অন্য id ধরে data load ) =======
 <---Client Code--->
+ const { serviceName, phone, price, service, _id, customer, status } = order;
+  const [orderService, setOrderService] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/services/${service}`)
+      .then((res) => res.json())
+      .then((data) => setOrderService(data));
+  }, [service]);
 
 <---Database Code--->
 
