@@ -123,10 +123,17 @@ const { user } = useContext(AuthContext);
  <button onClick={() => handleDelete(_id)} className="btn btn-circle">
 
 <---Database Code--->
+ //delete method
+    app.delete("/orders/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await orderCollection.deleteOne(query);
+      res.send(result);
+    });
 
 ========================================
 	
-<---   Method () --->
+<---  Update Method () --->
 <---Client Code--->
 
 <---Database Code--->
