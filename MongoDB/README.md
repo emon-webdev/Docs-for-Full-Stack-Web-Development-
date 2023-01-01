@@ -135,8 +135,52 @@ const { user } = useContext(AuthContext);
 	
 <---  Update Method () --->
 <---Client Code--->
+ <button
+  onClick={() => handleStatusUpdate(_id)}
+  className="btn btn-ghost btn-xs"
+>
+  {status ? status : "pending"}
+</button>
+//
+
+  const handleStatusUpdate = (id) => {
+    fetch(`http://localhost:5000/orders/${id}`, {
+      method: "PATCH",
+      Headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ status: "Approved" }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCOunt > 0) {
+          const remaining = orders.filter((odr) => odr._id !== id);
+          const approving = orders.find((odr) => odr._id === id);
+          approving.status = "Approved";
+          const newOrders = [approving, ...remaining];
+          setOrders(newOrders);
+        }
+      });
+  };
+	
+
 
 <---Database Code--->
+  app.patch("/orders/:id", async (req, res) => {
+      const id = req.params.id;
+      const status = req.body.status;
+      const query = { _id: ObjectId(id) };
+      const updatedDoc = {
+        $set: {
+          status: status,
+        },
+      };
+
+      const result = await orderCollection.updateOne(query, updatedDoc);
+      res.send(result);
+    });
+	
 	
 ========================================	
 	
