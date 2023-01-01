@@ -90,10 +90,7 @@ const { user } = useContext(AuthContext);
 
 <---Database Code--->
 
-<--- Delete  Method () --->
-<---Client Code--->
 
-<---Database Code--->
 ========================================
 	
 <---   Method () --->
@@ -133,7 +130,7 @@ const { user } = useContext(AuthContext);
 
 ========================================
 	
-<---  Update Method () --->
+<---  Update Method ( add admin, pending/ approved, req/submited work in this way ) --->
 <---Client Code--->
  <button
   onClick={() => handleStatusUpdate(_id)}
@@ -146,7 +143,7 @@ const { user } = useContext(AuthContext);
   const handleStatusUpdate = (id) => {
     fetch(`http://localhost:5000/orders/${id}`, {
       method: "PATCH",
-      Headers: {
+      headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify({ status: "Approved" }),
@@ -154,7 +151,8 @@ const { user } = useContext(AuthContext);
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.modifiedCOunt > 0) {
+        if (data.modifiedCount > 0) {
+          console.log(data);
           const remaining = orders.filter((odr) => odr._id !== id);
           const approving = orders.find((odr) => odr._id === id);
           approving.status = "Approved";
@@ -167,16 +165,16 @@ const { user } = useContext(AuthContext);
 
 
 <---Database Code--->
-  app.patch("/orders/:id", async (req, res) => {
+app.patch("/orders/:id", async (req, res) => {
       const id = req.params.id;
       const status = req.body.status;
+      console.log(id, status);
       const query = { _id: ObjectId(id) };
       const updatedDoc = {
         $set: {
           status: status,
         },
       };
-
       const result = await orderCollection.updateOne(query, updatedDoc);
       res.send(result);
     });
