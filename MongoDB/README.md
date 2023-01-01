@@ -47,12 +47,39 @@ Demo Content
 
 All Opareation Client > Database > Mongodb
 ========================================
-<---   Method  () --->
+========  Get Method  (Email waise data fetch in MongoDb) =================
 <---Client Code--->
-
+const { user } = useContext(AuthContext);
+  const [orders, setOrders] = useState([]);
+    fetch(`http://localhost:5000/orders?email=${user?.email}`)
+      .then((res) => {
+        // if (res.status === 401 || res.status === 403) {
+        //   return logout();
+        // }
+        return res.json();
+      })
+      .then((data) => {
+        setOrders(data);
+      });
+  }, [user?.email]);
+	
 <---Database Code--->
+//orders api
+    app.get("/orders", async (req, res) => {
+      let query = {};
+      if (req.query.email) {
+        query = {
+          email: req.query.email,
+        };
+      }
+      const result = await orderCollection.find(query).toArray();
+      res.send(result);
+    });
+	
+========================================	
 
-<---   Method () --->
+========   Method () =======
+	
 <---Client Code--->
 
 <---Database Code--->
