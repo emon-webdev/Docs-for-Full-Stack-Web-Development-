@@ -180,7 +180,7 @@ app.patch("/orders/:id", async (req, res) => {
 	
 ========================================	
 	
-<---  Get Method (double query করে data load) --->
+<---  Get Method (double query করে data load MOdule : 68) --->
 
 <---Client Code--->
   const [products, setProducts] = useState([]);
