@@ -93,7 +93,7 @@ const { user } = useContext(AuthContext);
 
 ========================================
 	
-<---   Method () --->
+<--- Delete  Method (_id waise) --->
 <---Client Code--->
 	
  const handleDelete = (id) => {
@@ -162,8 +162,6 @@ const { user } = useContext(AuthContext);
       });
   };
 	
-
-
 <---Database Code--->
 app.patch("/orders/:id", async (req, res) => {
       const id = req.params.id;
@@ -182,10 +180,37 @@ app.patch("/orders/:id", async (req, res) => {
 	
 ========================================	
 	
-<---   Method () --->
-<---Client Code--->
+<---  Get Method (double query করে data load) --->
 
+<---Client Code--->
+  const [products, setProducts] = useState([]);
+  const [size, setSize] = useState(10);
+
+  useEffect(() => {
+    const url = `http://localhost:5000/products?page=${page}&size=${size}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data.products);
+        setCount(data.count);
+      });
+  }, [page, size]);
+  
 <---Database Code--->
+app.get("/products", async (req, res) => {
+      const page = parseInt(req.query.page);
+      const size = parseInt(req.query.size);
+      console.log(page, size);
+      const query = {};
+      const cursor = productCollection.find(query);
+      const products = await cursor
+        .skip(page * size)
+        .limit(size)
+        .toArray();
+      //pagination er jonno count send kora client site
+      const count = await productCollection.estimatedDocumentCount();
+      res.send({ products, count });
+    });
 	
 ========================================
 	
