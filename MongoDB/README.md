@@ -214,10 +214,46 @@ app.get("/products", async (req, res) => {
 	
 ========================================
 	
-<---   Method () --->
+<---  post  Method ( map body to db id) --->
 <---Client Code--->
+  //get data from localStorage
+  useEffect(() => {
+    const storedCart = getStoredCart();
+    const savedCart = [];
+    const ids = Object.keys(storedCart);
+    console.log(storedCart, ids);
+
+    fetch("http://localhost:5000/productsByIds", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(ids),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        for (const id in storedCart) {
+          const addedProduct = data.find((product) => product._id === id);
+          if (addedProduct) {
+            const quantity = storedCart[id];
+            addedProduct.quantity = quantity;
+            savedCart.push(addedProduct);
+          }
+        }
+        setCart(savedCart);
+      });
+  }, [products]);
 
 <---Database Code--->
+app.post("/productsByIds", async (req, res) => {
+      const ids = req.body;
+      const objectIds = ids.map(id => ObjectId(id));
+      const query = {_id: {$in: objectIds}};
+      console.log(ids, query) ;
+      const cursor = productCollection.find(query);
+      const products = await cursor.toArray();
+      res.send(products);
+    });
 
 ========================================
 	
@@ -252,6 +288,7 @@ app.get("/products", async (req, res) => {
 <---Client Code--->
 
 <---Database Code--->
+	
 
 ========================================
 
