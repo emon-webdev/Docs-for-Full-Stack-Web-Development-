@@ -1017,8 +1017,8 @@ viii. Comments
       <!-- row 1 -->
       <tr>
         <th>1</th>
-        <td> </td>
-        <td> </td>
+        <td>Limit Data </td>
+        <td> const products = await cursor.limit(10).toArray(); </td>
       </tr>
       <!-- row 2 -->
       <tr>
