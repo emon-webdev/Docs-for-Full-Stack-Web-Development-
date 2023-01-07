@@ -284,10 +284,34 @@ app.post("/productsByIds", async (req, res) => {
 	
 ========================================
 	
-<---   Method () --->
+<---  Get  Method (sort by price low to high ) --->
 <---Client Code--->
+  const [services, setServices] = useState([]);
+  const [isAsc, setIsAsc] = useState(true);
+  useEffect(() => {
+    fetch(`http://localhost:5000/services?order=${isAsc ? "asc" : "desc"}`)
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, [isAsc]);
+  
+	<button
+	onClick={() => setIsAsc(!isAsc)}
+	>
+	{isAsc ? "desc" : "ase"}
+	</button>
 
 <---Database Code--->
+ //all service fetch sort by price low to high , 
+    app.get("/services", async (req, res) => {
+      const query = {};
+      const order = (req.query.order === "asc" ? 1 : -1);
+      console.log(order)
+      const result = await serviceCollection
+        .find(query)
+        .sort({ price: order })
+        .toArray();
+      res.send(result);
+    });
 	
 
 ========================================
