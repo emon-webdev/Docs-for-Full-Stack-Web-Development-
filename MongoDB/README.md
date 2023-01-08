@@ -336,6 +336,74 @@ app.post("/productsByIds", async (req, res) => {
 	
 
 ========================================
+	
+<---  Get Method (search filed to find produt ) --->
+<---Client Code--->
+  const searchRef = useRef();
+  const [isAsc, setIsAsc] = useState(true);
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    fetch(
+      `http://localhost:5000/services?search=${search}&order=${
+        isAsc ? "asc" : "desc"
+      }`
+    )
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, [isAsc, search]);
+
+  const handleSearch = () => {
+    setSearch(searchRef.current.value);
+  };
+  console.log(search);
+  // search 
+   <div className="search-from flex items-center justify-center gap-4 mx-auto pb-4">
+          <input
+            ref={searchRef}
+            type="text"
+            placeholder="Search Service"
+            className="input input-bordered input-primary w-full max-w-xs"
+          />
+          <button onClick={handleSearch} className="btn btn-primary">
+            Search
+          </button>
+        </div>
+	
+	// ase / dese
+	
+   <button
+          onClick={() => setIsAsc(!isAsc)}
+          className="border border-[#FF3811] btn-sm ml-7 rounded-[5px] text-[#FF3811] font-semibold hover:bg-[#FF3811] hover:text-white hover:duration-1650"
+        >
+          {isAsc ? "desc" : "ase"}
+        </button>
+	
+
+<---Database Code--->
+  //services api
+    //all service fetch sort by price low to high ,
+    app.get("/services", async (req, res) => {
+      const search = req.query.search;
+      console.log(search);
+      let query = {};
+      if (search.length) {
+        query = {
+          $text: {
+            $search: search,
+          },
+        };
+      }
+      // const query = { price: { $gt: 10, $lt: 380 } };
+      const order = req.query.order === "asc" ? 1 : -1;
+      const result = await serviceCollection
+        .find(query)
+        .sort({ price: order })
+        .toArray();
+      res.send(result);
+    });
+	
+========================================	
+
 
 ```
 </details>
