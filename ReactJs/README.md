@@ -347,6 +347,14 @@ const queryClient = new QueryClient();
   }
 
 	
+{appointmentOptions.map((option) => (
+  <AppointmentOption
+    key={option._id}
+    option={option}
+    setTreatment={setTreatment}
+  />
+))}
+	
   
  ```
 </details>
