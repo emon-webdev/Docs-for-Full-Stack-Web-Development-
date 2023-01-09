@@ -44,6 +44,14 @@ Demo Content
 <br >
 	
 ```js
+	
+//api naming convention
+1. app.get('bookings')
+2. app.get('bookings/:id')
+3. app.post('/bookings')
+4. app.patch('/bookings/:id')
+4. app.delete('/bookings/:id')
+*/
 
 All Opareation Client > Database > Mongodb
 ========================================
