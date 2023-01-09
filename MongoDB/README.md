@@ -277,10 +277,36 @@ app.post("/productsByIds", async (req, res) => {
 	
 ========================================	
 	
-<---   Method () --->
+<--- post  Method ( MongoDB-তে duplicate data ইনসার্ট প্রিভেন্ট করতে কে কোন মেথড ইউজ করেন?) --->
 <---Client Code--->
 
 <---Database Code--->
+
+// MongoDB-তে duplicate data ইনসার্ট প্রিভেন্ট করতে কে কোন মেথড ইউজ করেন?
+// Data insert korar aage data ache kina sheta condition diye check kore erpor insert kori. For example amar ekta api share korlam
+app.post("/users", async (req, res) => {
+  const { username, email, institute, address, photo } = req.body;
+  const user = await usersCollection.findOne({
+    $or: [{ email }, { username }],
+  });
+  if (user) {
+    res.status(400).send({
+      message: "Username or email already exists",
+    });
+  } else {
+    const newUser = {
+      username,
+      email,
+      institute,
+      address,
+      photo,
+    };
+    await usersCollection.insertOne(newUser);
+    res.status(200).send({
+      message: "User created successfully",
+    });
+  }
+});
 	
 ========================================
 	
