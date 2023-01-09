@@ -60,6 +60,7 @@ List of React:
 - [Axios](#Axios)
 - [useState](#useState)
 - [useEffect](#useEffect)
+- [ReactQueryTanStackQuery](#ReactQueryTanStackQuery)
 - [dynamicTitle](#dynamicTitle)
 - [searchItems](#searchItems)
 - [conditionalRendering](#conditionalRendering)
@@ -290,6 +291,62 @@ return (
 </>
 )
 }
+  
+ ```
+</details>
+
+
+### ReactQueryTanStackQuery
+<details>
+<summary>
+  <h3>React Query or TanStack Query  (Click Me)</h3>
+</summary>
+<br >
+  
+ ```js
+
+docs: https://tanstack.com/query/v4/docs/react/quick-start
+
+//step 1: 
+$ npm i @tanstack/react-query
+
+//step 2: 
+
+import {
+  QueryClient,
+  QueryClientProvider
+} from "@tanstack/react-query";
+const queryClient = new QueryClient();
+//
+<React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </QueryClientProvider>
+  </React.StrictMode>
+  
+  
+ const {
+    data: appointmentOptions = [],
+    refetch,
+    isLoading,
+  } = useQuery({
+    queryKey: ["appointmentOptions", date],
+    queryFn: async () => {
+      const res = await fetch(
+        `http://localhost:5000/v2/appointmentOptions?date=${date}`
+      );
+      const data = await res.json();
+      return data;
+    },
+  });
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+	
   
  ```
 </details>
