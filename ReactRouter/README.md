@@ -49,12 +49,17 @@ to display it needs to display while you are visiting to that route
 <Link to='/about'>About</Link>
 
 
-// another setup react router
+// Example 2: Another setup react router======================
+
 1. Install react router: npm i react-router-dom
 2. crate a router use createBrowserRouter
 3. Add RouterProvider and pass router props
 4. Create some route inside the router
 5. Create Main layout with some common part and one changing part based on the router
+// Main.js / in Layout
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../Pages/Shared/Header";
 const Main = () => {
   return (
     <div>
@@ -63,32 +68,62 @@ const Main = () => {
     </div>
   );
 };
+export default Main;
+
+// router.js in / Routes folder
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ]
+   },
+   
+   {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "",
+        element: <Welcome />,
+      },
+     ]
+    }
+     
+]);
+
+export default router;
+
 6. set main layout at the root of the router
 7. set children routes
 8. set links on the header components
-function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      errorElement: <ErrorPage />,
-      children:[
-	//index দিলে default index true এর পেজ ui show kore.
-	{ index: true, element: <Home /> },
-        { path: "/home", element: <Home /> },
-        { path: "/about", element: <About /> },
-      ]
-    },
-    {path:'*', element: <div>404 ! page Not Found</div>}
-  ]);
 
+// App.js
+
+import "react-datepicker/dist/react-datepicker.css";
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import router from "./Routes/routes";
+
+function App() {
   return (
-    <div className="App">
+    <>
+    {/*Session 3 => 52 : 00*/}
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 }
-
+export default App;
 ```
 </details>
 
