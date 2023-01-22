@@ -265,10 +265,65 @@ app.post("/productsByIds", async (req, res) => {
 
 ========================================
 	
-<---   Method () --->
+<--- get  Method ( module 74.5 & 74.6 doctor portal) --->
 <---Client Code--->
+ const [treatment, setTreatment] = useState(null);
+
+  const date = format(selectedDate, "PP");
+  const {
+    data: appointmentOptions = [],
+    refetch,
+    isLoading,
+  } = useQuery({
+    queryKey: ["appointmentOptions", date],
+    queryFn: async () => {
+      const res = await fetch(
+        `http://localhost:5000/v2/appointmentOptions?date=${date}`
+        // `http://localhost:5000/v2/appointmentOptions?date=${date}`
+      );
+      const data = await res.json();
+      return data;
+    },
+  });
+	
+//
+   <div className="max-w-[1400px] mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {appointmentOptions.map((option) => (
+          <AppointmentOption
+            key={option._id}
+            option={option}
+            setTreatment={setTreatment}
+          />
+        ))}
+    </div>
 
 <---Database Code--->
+    //use aggregate to query multiple collection and then merge data
+    app.get("/appointmentOptions", async (req, res) => {
+      const date = req.query.date;
+      const query = {};
+      const options = await appointMentOptionCollection.find(query).toArray();
+      console.log(options);
+      //get the booking of the provided date
+      const bookingQuery = { appointmentDate: date };
+      const alreadyBooked = await bookingsCollection
+        .find(bookingQuery)
+        .toArray();
+      //code carefully :D
+      options.forEach((option) => {
+        const optionBooked = alreadyBooked.filter(
+          (book) => book.treatment === option.name
+        );
+        const bookedSlots = optionBooked.map((book) => book.slot);
+        const remainingSlots = option.slots.filter(
+          (slot) => !bookedSlots.includes(slot)
+        );
+        option.slots = remainingSlots;
+        console.log(option.name, remainingSlots.length);
+      });
+
+      res.send(options);
+    });
 ========================================
 	
 <---   Method () --->
