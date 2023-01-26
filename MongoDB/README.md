@@ -59,6 +59,7 @@ All Opareation Client > Database > Mongodb
 <---Client Code--->
 const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
+   useEffect(() => {
     fetch(`http://localhost:5000/orders?email=${user?.email}`)
       .then((res) => {
         // if (res.status === 401 || res.status === 403) {
