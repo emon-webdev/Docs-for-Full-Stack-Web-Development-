@@ -65,6 +65,7 @@ List of React:
 - [searchItems](#searchItems)
 - [conditionalRendering](#conditionalRendering)
 - [useContext](#useContext)
+- [useReducer](#useReducer)
 - [handleAddtoCart](#handleAddtoCart)
 - [handleRemoveFromCart](#handleRemoveFromCart)
 - [customHooks](#customHooks)
@@ -80,12 +81,12 @@ List of React:
 ### demo
 <details>
 <summary>
-  <h3>Demo (Click Me)</h3>
+  <h3>demo (Click Me)</h3>
 </summary>
 <br >
   
  ```js
-Demo
+demo
 	
   
  ```
@@ -560,6 +561,23 @@ import AuthProvider from "./contexts/AuthProvider";
 console.log(user.name)
 
 ```
+
+
+
+### useReducer
+<details>
+<summary>
+  <h3>useReducer (Click Me)</h3>
+</summary>
+<br >
+  
+ ```js
+useReducer
+	
+  
+ ```
+</details>
+
 
 ### handleAddtoCart
 <details>
