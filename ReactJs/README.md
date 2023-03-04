@@ -574,6 +574,247 @@ console.log(user.name)
  ```js
 useReducer
 	
+	
+import {
+  Box,
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup
+} from "@mui/material";
+  
+  import { default as React, useReducer } from "react";
+import { toast } from "react-hot-toast";
+  
+  const AccountFrom = () => {
+    const initialState = {
+      firstName: "",
+      lastName: "",
+      birth: "",
+      gender: "",
+      phone: "",
+      email: "",
+      term: false,
+    };
+    const reducer = (state, action) => {
+      console.log(action);
+  
+      switch (action.type) {
+        case "INPUT":
+          return {
+            ...state,
+            [action.payload.name]: action.payload.value,
+          };
+        case "TOGGLE":
+          return {
+            ...state,
+            term: !state.term,
+          };
+        default:
+          return state;
+      }
+    };
+  
+    const [state, dispatch] = useReducer(reducer, initialState);
+  
+    /* submit from */
+    const accountFromSubmit = (event) => {
+      const Account = {
+        ...state,
+      };
+  
+      fetch(`https://capital-trust-bank-server.vercel.app/bankAccounts`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(Account),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.acknowledged) {
+            toast.success("Please wait for manager approval");
+            state();
+          }
+        })
+        .then((error) => console.error(error));
+    };
+  
+    return (
+      <div>
+        <div className="account-open-from py-20 bg-[#F3F3FE]">
+          <div className="container">
+            <Box>
+              <h2>
+                Account Opening Form
+              </h2>
+              <h2>
+                Personal Information
+              </h2>
+              <Box
+                onSubmit={accountFromSubmit}
+                component="form"
+                className="mb-10  sm:align-content-center sm:justify-items-center"
+              >
+                <Box>
+                  <FormControl>
+                    <label>First Name</label>
+                    <input
+                      name="firstName"
+                      onBlur={(e) =>
+                        dispatch({
+                          type: "INPUT",
+                          payload: { name: e.target.name, value: e.target.value },
+                        })
+                      }
+                      placeholder="First Name"
+                    ></input>
+                  </FormControl>
+                  <FormControl fullWidth>
+                    <label className="text-base text-[#57647E]">Last Name</label>
+                    <input
+                      name="lastName"
+                      onBlur={(e) =>
+                        dispatch({
+                          type: "INPUT",
+                          payload: { name: e.target.name, value: e.target.value },
+                        })
+                      }
+                      placeholder="Last Name"
+                    ></input>
+                  </FormControl>
+                </Box>
+                <Box
+                  sx={{
+                    display: { md: "flex" },
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <FormControl
+                    sx={{
+                      marginRight: { md: "15px" },
+                    }}
+                    fullWidth
+                  >
+                    <label className="text-base text-[#57647E]">
+                      Date of Birth
+                    </label>
+                    <input
+                      name="birth"
+                      onBlur={(e) =>
+                        dispatch({
+                          type: "INPUT",
+                          payload: { name: e.target.name, value: e.target.value },
+                        })
+                      }
+                      placeholder="Date of Birth"
+                    ></input>
+                  </FormControl>
+                  <FormControl fullWidth>
+                    <label className="text-base text-[#57647E]">Gender</label>
+                    <FormControl>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="gender"
+                        onChange={(e) =>
+                          dispatch({
+                            type: "INPUT",
+                            payload: {
+                              name: e.target.name,
+                              value: e.target.value,
+                            },
+                          })
+                        }
+                      >
+                        <Box sx={{ display: "flex" }}>
+                          <FormControlLabel
+                            value="male"
+                            control={<Radio />}
+                            label="Male"
+                          />
+                          <FormControlLabel
+                            value="female"
+                            control={<Radio />}
+                            label="Female"
+                          />
+  
+                          <FormControlLabel
+                            value="other"
+                            control={<Radio />}
+                            label="Other"
+                          />
+                        </Box>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormControl>
+                </Box>
+                <Box
+                  sx={{
+                    display: { md: "flex" },
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <FormControl
+                    sx={{
+                      marginRight: { md: "15px" },
+                    }}
+                    fullWidth
+                  >
+                    <label className="text-base text-[#57647E]">
+                      Phone Number
+                    </label>
+                    <input
+                      name="phone"
+                      onBlur={(e) =>
+                        dispatch({
+                          type: "INPUT",
+                          payload: { name: e.target.name, value: e.target.value },
+                        })
+                      }
+                      placeholder="Phone Number"
+                    ></input>
+                  </FormControl>
+                  <FormControl fullWidth>
+                    <label className="text-base text-[#57647E]">
+                      Email Address
+                    </label>
+                    <input
+                      name="email"
+                      onBlur={(e) =>
+                        dispatch({
+                          type: "INPUT",
+                          payload: { name: e.target.name, value: e.target.value },
+                        })
+                      }
+                      placeholder="Email Address"
+                    ></input>
+                  </FormControl>
+                </Box>
+                {/*  Mailing Address */}
+                <Box sx={{ marginTop: "20px" }}>
+                  <button
+                    style={{ width: "49%" }}
+                    className="primary-btn mt-2 "
+                    type="submit"
+                    disabled={!state.term}
+                  >
+                    Submit
+                  </button>
+                </Box>
+              </Box>
+            </Box>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  
+  export default AccountFrom;
+  
+	
+	
   
  ```
 </details>
