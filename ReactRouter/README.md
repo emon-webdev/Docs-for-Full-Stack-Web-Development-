@@ -130,6 +130,7 @@ export default App;
 
 List of React Router:
 - [useRouteError](#useRouteError)
+- [useLocation](#useLocation)
 - [conditionRendering](#conditionRendering)
 - [ActiveNavLink](#ActiveNavLink)
 - [loader](#loader)
@@ -213,6 +214,33 @@ const ErrorPage = () => {
 
 ```
 </details>
+
+
+### useLocation
+<details>
+<summary>
+  <h3> useLocation-(Click Me)</h3>
+</summary>
+<br >
+	
+```js
+import { useLocation } from "react-router-dom";
+ const { pathname } = useLocation();
+ 
+ {pathname.includes("cart") && (
+  <button>
+    Add to cart
+  </button>
+)}
+{!pathname.includes("cart") && (
+  <button>
+    Remove
+  </button>
+)}
+
+```
+</details>
+
 
 ### conditionRendering
 <details>
