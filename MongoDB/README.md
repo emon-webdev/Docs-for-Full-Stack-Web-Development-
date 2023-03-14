@@ -1322,8 +1322,12 @@ viii. Comments
       <!-- row 2 -->
       <tr>
         <th>3</th>
-        <td> </td>
-        <td> </td>
+        <td>Map sort </td>
+        <td> {cart
+        ?.sort((a, b) => a._id - b._id)
+        .map((product) => (
+          <ProductCard product={product} />
+        ))} </td>
       </tr>
        <!-- row 1 -->
       <tr>
