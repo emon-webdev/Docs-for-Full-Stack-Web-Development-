@@ -130,9 +130,42 @@ const { user } = useContext(AuthContext);
       .then((res) => res.json())
       .then((data) => setOrderService(data));
   }, [service]);
+  
+  =================
+   {
+        path: "/category/:name",
+        element: <CategoryProducts />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/category/${params.name}`),
+      },
+      
+      
+    <Link
+      to={`/category/${category?.name}`}
+      key={category._id}
+      className="category"
+    >
+      <div className="text-center">
+	<h4 className="text-[#010c3a] capitalize text-xl font-semibold mb-3 ">
+	  {category?.name}
+	</h4>
+	<div className="icon m-auto">
+	  <img src={category?.picture} alt={category?.name} />
+	</div>
+      </div>
+    </Link>
+      
+      
+      const category = useLoaderData();
 
 <---Database Code--->
 
+    app.get("/category/:name", async (req, res) => {
+      const name = req.params.name;
+      const query = { name };
+      const categoryName = await categoriesCollection.findOne(query);
+      res.send(categoryName);
+    });
 
 ========================================
 	
