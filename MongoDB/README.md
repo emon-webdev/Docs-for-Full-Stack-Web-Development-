@@ -394,10 +394,34 @@ app.post("/productsByIds", async (req, res) => {
     });
 ========================================
 	
-<---   Method () --->
+<---   Method ( name diya finde kore onno collection theke data fetch kore same name er all data show  ) --->
 <---Client Code--->
+{
+path: "/category/:name",
+element: <CategoryProducts />,
+loader: ({ params }) => {
+  return fetch(`http://localhost:5000/category/${params.name}`);
+},
+},
+
+const products = useLoaderData();
 
 <---Database Code--->
+const productsCollection = client.db("car_showroom").collection("products");
+ const categoriesCollection = client.db("car_showroom").collection("categories");
+  // get all categories
+    app.get("/categories", async (req, res) => {
+      const query = {};
+      const result = await categoriesCollection.find(query).toArray();
+      res.send(result);
+    });
+    // get single  category item
+    app.get("/category/:name", async (req, res) => {
+      const name = req.params.name;
+      const query = { category: name };
+      const categoryName = await productsCollection.find(query).toArray();
+      res.send(categoryName);
+    });
 
 ========================================
 	
