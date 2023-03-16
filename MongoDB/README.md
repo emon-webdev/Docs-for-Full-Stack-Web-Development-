@@ -429,6 +429,24 @@ const productsCollection = client.db("car_showroom").collection("products");
 <---Client Code--->
 
 <---Database Code--->
+
+    //temporary to update price field on all products
+    app.put("/products", async (req, res) => {
+      const filter = {};
+      const options = { upsert: true };
+      const updatedDoc = {
+        $set: {
+          sellerPrice: 90,
+        },
+      };
+      const result = await productsCollection.updateMany(
+        filter,
+        updatedDoc,
+        options
+      );
+      res.send(result);
+    });
+
 	
 ========================================	
 	
