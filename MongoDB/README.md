@@ -57,6 +57,18 @@ All Opareation Client > Database > Mongodb
 ========================================
 ========  Get Method  (Email waise data fetch in MongoDb) =================
 <---Client Code--->
+1.
+https://car-showroom-server.vercel.app/products?email=${user?.email}	
+database . 
+   app.get("/bookings", async (req, res) => {
+      const email = req.query.email;
+      console.log(email)
+      const query = { buyerEmail: email };
+      const products = await bookingsCollection.find(query).toArray();
+      res.send(products);
+    });
+	
+2.	
 const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
    useEffect(() => {
