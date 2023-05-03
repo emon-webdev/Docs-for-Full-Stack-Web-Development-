@@ -1,0 +1,6 @@
+{
+  "name": "Docs-of-JS-Libraries-Frameworks/WpThemeDevelopment/",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/auth/index.d.ts"
+}
