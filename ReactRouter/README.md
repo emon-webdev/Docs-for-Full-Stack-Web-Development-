@@ -12,6 +12,24 @@
 <br >
 	
 ```js
+Layouts:..............
+const Layouts = () => {
+  const location = useLocation();
+  const noHeaderFooter =
+    location.pathname.includes("login") || location.pathname.includes("signup");
+  return (
+    <div>
+      <Header/>
+      {noHeaderFooter || <Navbar />}
+      <Outlet />
+      {noHeaderFooter || <Footer />}
+    </div>
+  );
+};
+
+export default Layouts;
+
+
 1. Install react router: npm i react-router-dom
 2. crate a router use createBrowserRouter
 import { createBrowserRouter } from 'react-router-dom';
