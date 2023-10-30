@@ -187,48 +187,117 @@ export const {
 
 using apiSlice in component ----------------------
 
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { useAddProductCommentMutation, useGetProductReviewQuery, useGetSingleProductsQuery } from '../../redux/api/apiSlice';
+
+   let image, price, recipe, name, _id, category
+    const { id } = useParams()
+    const { data: item, isLoading: loading } = useGetSingleProductsQuery(id)
+    const {
+        data: productReview,
+        isLoading: reviewLoading,
+        refetch: reviewRefetch
+    } = useGetProductReviewQuery(id, {
+        refetchOnMountOrArgChange: true,
+        pollingInterval: 30000
+    })
+    // const item = useLoaderData()
+    // const { image, price, recipe, category, name, _id } = item;
+
+    if (!loading) {
+        ({ image, price, recipe, category, name, _id } = item);
+    }
+    const [addProductComment, { isLoading, isError, isSuccess }] = useAddProductCommentMutation()
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
+    const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const [, refetch] = useCart()
+    const currentDate = new Date();
+    const formattedDate = format(currentDate, 'MMMM d, yyyy');
 
 
-export const api = createApi({
-    reducerPath: 'api',
-    baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_APP_API_URL}` }),
-    tagTypes: ["reviews"],
-    endpoints: (builder) => ({
-        getProducts: builder.query({
-            query: () => `/products`,
-        }),
-        getSingleProducts: builder.query({
-            query: (id) => `/products/${id}`,
-        }),
-        getReviews: builder.query({
-            query: () => `/review`,
-        }),
-        addProductComment: builder.mutation({
-            query(data) {
-                return {
-                    url: `/product-review`,
-                    method: 'POST',
-                    body: data,
+    const handleComment = (data) => {
+        if (user && user?.email) {
+            const review = {
+                productId: item?._id,
+                date: formattedDate,
+                userName: user?.displayName,
+                userEmail: user?.email,
+                userPhoto: user?.photoURL,
+                comment: data.comment
+            }
+            addProductComment(review)
+            if (!isSuccess) {
+                refetch()
+                reset()
+                reviewRefetch()
+                Swal.fire({
+                    title: 'Comment Done',
+                })
+            }
+        } else {
+            Swal.fire({
+                title: 'Please login for the comment',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login Now'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login', { state: { from: location } })
                 }
-            },
-            invalidatesTags: ["reviews"]
-        }),
-        getProductReview: builder.query({
-            query: (id) => `/product-review/${id}`,
-            providesTags: ["reviews"]
-        }),
-    }),
-})
+            })
+        }
+    }
 
-export const {
-    useGetProductsQuery,
-    useGetSingleProductsQuery,
-    useGetReviewsQuery,
-    useGetProductReviewQuery,
-    useAddProductCommentMutation,
-} = api;
- 
+
+    const handleAddToCart = item => {
+        if (user && user?.email) {
+            const cartItem = {
+                menuItemId: item?._id,
+                name,
+                image,
+                price,
+                email: user?.email
+            }
+            fetch(`${import.meta.env.VITE_APP_API_URL}/carts`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(cartItem)
+            }).then(res => res.json()).then(data => {
+                if (data.insertedId) {
+                    refetch() // refetch cart to update the cart number
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Food added on the cart'
+                    })
+                }
+            })
+        } else {
+            Swal.fire({
+                title: 'Please login to order the food?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login Now'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login', { state: { from: location } })
+                }
+            })
+        }
+
+    }
 
 
 
