@@ -326,21 +326,30 @@ import { useAddProductCommentMutation, useGetProductReviewQuery, useGetSinglePro
 
 
 
+Split  api end pont from apiSlice.js ----------------------
+
+create productApi.js------
+
+import { api } from "../../api/apiSlice";
+
+const productApi = api.injectEndpoints({
+    endpoints: (builder) => ({
+        getProducts: builder.query({
+            query: () => `/products`,
+        }),
+        getSingleProducts: builder.query({
+            query: (id) => `/products/${id}`,
+        }),
+    }),
+})
+
+export const {
+    useGetProductsQuery,
+    useGetSingleProductsQuery,
+} = productApi;
 
 
-Retrieve and monitor the authentication state from Firebase.
 
-The `useAuthState` hook takes the following parameters:
-
-- `auth`: `auth.Auth` instance for the app you would like to monitor
-- `options`: (optional) `Object with the following parameters:
-  - `onUserChanged`: (optional) function to be called with `auth.User` each time the user changes. This allows you to do things like load custom claims.
-
-Returns:
-
-- `user`: The `auth.User` if logged in, or `null` if not
-- `loading`: A `boolean` to indicate whether the the authentication state is still being loaded
-- `error`: Any `AuthError` returned by Firebase when trying to load the user, or `undefined` if there is no error
 
 ```
 
