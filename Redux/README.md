@@ -6,7 +6,7 @@
 - 
 ###  🤔 How to Use?
 
-- [useAuthState](#useauthstate)
+- [setupRedux](#setupRedux)
 - [useCreateUserWithEmailAndPassword](#usecreateuserwithemailandpassword)
 - [useSignInWithEmailAndPassword](#usesigninwithemailandpassword)
 - [useSignInWithApple](#usesigninwithapple)
@@ -22,9 +22,9 @@
 - [useSendPasswordResetEmail](#usesendpasswordresetemail)
 - [useSendEmailVerification](#usesendemailverification)
 
-### useAuthState
+### setupRedux
 
-```js
+``` js
 const [user, loading, error] = useAuthState(auth, options);
 ```
 
