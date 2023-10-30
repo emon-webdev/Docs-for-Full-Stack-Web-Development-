@@ -25,7 +25,215 @@
 ### setupRedux
 
 ``` js
-const [user, loading, error] = useAuthState(auth, options);
+
+#step one
+install redux ...
+
+#step two
+create folder "redux" in src
+
+#step three
+create "store.js" in  redux folder
+import { configureStore } from '@reduxjs/toolkit'
+import { api } from './api/apiSlice'
+import cartSlice from './features/cart/cartSlice'
+
+export const store = configureStore({
+    reducer: {
+        cart: cartSlice,
+        [api.reducerPath]: api.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(api.middleware),
+    devTools: true
+})
+
+
+interrogate  store with provider
+
+main.jsx -----------
+import { store } from './redux/store.js';
+import { Provider } from 'react-redux';
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <AuthProvider>
+        <ChakraProvider>
+          <HelmetProvider>
+            <QueryClientProvider client={queryClient}>
+              <RouterProvider router={router} />
+            </QueryClientProvider>
+          </HelmetProvider>
+        </ChakraProvider>
+      </AuthProvider>
+    </Provider>
+  </React.StrictMode>
+);
+
+
+#step four
+create a "features" folder in redux folder
+#step six
+create "cart, order, product, user, etc" folder in the features folder 
+
+#step seaven
+create a "cartSlice" folder in cart folder
+create a "apiSlice" folder in api folder
+
+
+
+cartSlice.js.................
+
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+    products: [],
+    totalPrice: 0,
+}
+
+export const cartSlice = createSlice({
+    name: 'cart',
+    initialState,
+    reducers: {
+        addToCart: (state, action) => {
+            const existing = state.products.find(
+                (product) => product._id === action.payload._id
+            );
+            console.log(existing?.quantity)
+            if (existing) {
+                existing.quantity = existing.quantity + 1;
+            } else {
+                state.products.push({ ...action.payload, quantity: 1 });
+            }
+            state.totalPrice += action.payload.price;
+        },
+        removeOneProduct: (state, action) => {
+            const existing = state.products.find(
+                product => product._id === action.payload._id
+            )
+            console.log('remove one product')
+            if (existing && existing.quantity > 1) {
+                existing.quantity = existing.quantity - 1
+            } else {
+                console.log('Delete product from cart minus btn')
+                state.products = state.products.filter(
+                    (product) => product._id !== action.payload._id
+                )
+            }
+            state.totalPrice -= action.payload.price;
+        },
+        removeFromCart: (state, action) => {
+            state.products = state.products.filter(
+                (product) => product._id !== action.payload._id
+            );
+            state.totalPrice -= action.payload.price * action.payload.quantity;
+        },
+    },
+})
+
+export const {
+    addToCart,
+    removeFromCart,
+    removeOneProduct
+} = cartSlice.actions
+
+export default cartSlice.reducer
+
+apiSlice.js ----------------------
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+
+export const api = createApi({
+    reducerPath: 'api',
+    baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_APP_API_URL}` }),
+    tagTypes: ["reviews"],
+    endpoints: (builder) => ({
+        getProducts: builder.query({
+            query: () => `/products`,
+        }),
+        getSingleProducts: builder.query({
+            query: (id) => `/products/${id}`,
+        }),
+        getReviews: builder.query({
+            query: () => `/review`,
+        }),
+        addProductComment: builder.mutation({
+            query(data) {
+                return {
+                    url: `/product-review`,
+                    method: 'POST',
+                    body: data,
+                }
+            },
+            invalidatesTags: ["reviews"]
+        }),
+        getProductReview: builder.query({
+            query: (id) => `/product-review/${id}`,
+            providesTags: ["reviews"]
+        }),
+    }),
+})
+
+export const {
+    useGetProductsQuery,
+    useGetSingleProductsQuery,
+    useGetReviewsQuery,
+    useGetProductReviewQuery,
+    useAddProductCommentMutation,
+} = api;
+
+
+
+using apiSlice in component ----------------------
+
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+
+export const api = createApi({
+    reducerPath: 'api',
+    baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_APP_API_URL}` }),
+    tagTypes: ["reviews"],
+    endpoints: (builder) => ({
+        getProducts: builder.query({
+            query: () => `/products`,
+        }),
+        getSingleProducts: builder.query({
+            query: (id) => `/products/${id}`,
+        }),
+        getReviews: builder.query({
+            query: () => `/review`,
+        }),
+        addProductComment: builder.mutation({
+            query(data) {
+                return {
+                    url: `/product-review`,
+                    method: 'POST',
+                    body: data,
+                }
+            },
+            invalidatesTags: ["reviews"]
+        }),
+        getProductReview: builder.query({
+            query: (id) => `/product-review/${id}`,
+            providesTags: ["reviews"]
+        }),
+    }),
+})
+
+export const {
+    useGetProductsQuery,
+    useGetSingleProductsQuery,
+    useGetReviewsQuery,
+    useGetProductReviewQuery,
+    useAddProductCommentMutation,
+} = api;
+ 
+
+
+
+
+
 
 
 Retrieve and monitor the authentication state from Firebase.
@@ -43,10 +251,6 @@ Returns:
 - `error`: Any `AuthError` returned by Firebase when trying to load the user, or `undefined` if there is no error
 
 ```
-
-
-
-#### If you are registering or signing in the user for the first time consider using [useCreateUserWithEmailAndPassword](#usecreateuserwithemailandpassword), [useSignInWithEmailAndPassword](#usesigninwithemailandpassword)
 
 #### Full Example
 
