@@ -140,6 +140,29 @@ export const {
 
 export default cartSlice.reducer
 
+
+use cartSlice.js ------------------
+
+   const { products, totalPrice } = useSelector((state) => state.cart)
+    const dispatch = useDispatch()
+
+
+<ButtonGroup size='sm' isAttached variant='outline'>
+    <IconButton
+        onClick={() => dispatch(removeOneProduct(item))}
+        aria-label='Add to friends'
+        icon={<MinusIcon />}
+    />
+    <h1 className='px-3 text-2xl'>
+        {item.quantity}
+    </h1>
+    <IconButton
+        onClick={() => dispatch(addToCart(item))}
+        aria-label='Add to friends'
+        icon={<AddIcon />}
+    />
+</ButtonGroup>
+
 apiSlice.js ----------------------
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
