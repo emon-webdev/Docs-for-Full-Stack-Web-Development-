@@ -1,7 +1,15 @@
 # Redux Using Method And Example
 
 ### 🔭 What is Redux?
+- step 1 = Setup Store.
+- step 2 = Connect redux store with react in main.tsx / app.tsx (provider)
+- step 3 = Setup the custome hook (only relatable for ts usage)
+- step 4 = Create Slice (Name, initalState, reducer).
+- step 5 = Connect you slice with the redux store.
 - 
+- For Consuming data
+- useAppSelector => store
+  
 ### 👯 Why use Redux?
 - 
 ###  🤔 How to Use?
