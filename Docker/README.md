@@ -6,7 +6,7 @@
 - 
 ###  🤔 How to Use?
 
-- [useAuthState](#useauthstate)
+- [dockerSetUp](#dockerSetUp)
 - [useCreateUserWithEmailAndPassword](#usecreateuserwithemailandpassword)
 - [useSignInWithEmailAndPassword](#usesigninwithemailandpassword)
 - [useSignInWithApple](#usesigninwithapple)
@@ -22,70 +22,69 @@
 - [useSendPasswordResetEmail](#usesendpasswordresetemail)
 - [useSendEmailVerification](#usesendemailverification)
 
-### useAuthState
+### dockerSetUp
 
 ```js
 const [user, loading, error] = useAuthState(auth, options);
 ```
 
-Retrieve and monitor the authentication state from Firebase.
 
-The `useAuthState` hook takes the following parameters:
+docker ps
+docker run -d -p 5000:5000 soulmate-server:latest
+docker stop bb737533270b
 
-- `auth`: `auth.Auth` instance for the app you would like to monitor
-- `options`: (optional) `Object with the following parameters:
-  - `onUserChanged`: (optional) function to be called with `auth.User` each time the user changes. This allows you to do things like load custom claims.
+Dockerfile:
 
-Returns:
+FROM node:18-alpine 
+# https://hub.docker.com/_/node
+WORKDIR /src
+COPY package*.json ./
+# COPY .env.template ./.env
+RUN npm install
+COPY . .
+# RUN \
+#     npm install && \
+#     npm cache clean --force && \
+#     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc/*
 
-- `user`: The `auth.User` if logged in, or `null` if not
-- `loading`: A `boolean` to indicate whether the the authentication state is still being loaded
-- `error`: Any `AuthError` returned by Firebase when trying to load the user, or `undefined` if there is no error
+EXPOSE 5000
 
-#### If you are registering or signing in the user for the first time consider using [useCreateUserWithEmailAndPassword](#usecreateuserwithemailandpassword), [useSignInWithEmailAndPassword](#usesigninwithemailandpassword)
+CMD ["npm", "run", "dev"]
 
-#### Full Example
 
-```js
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { useAuthState } from 'react-firebase-hooks/auth';
 
-const auth = getAuth(firebaseApp);
-
-const login = () => {
-  signInWithEmailAndPassword(auth, 'test@test.com', 'password');
-};
-const logout = () => {
-  signOut(auth);
-};
-
-const CurrentUser = () => {
-  const [user, loading, error] = useAuthState(auth);
-
-  if (loading) {
-    return (
-      <div>
-        <p>Initialising User...</p>
-      </div>
-    );
+package.json:
+{
+  "name": "soulmate-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
   }
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error}</p>
-      </div>
-    );
-  }
-  if (user) {
-    return (
-      <div>
-        <p>Current User: {user.email}</p>
-        <button onClick={logout}>Log out</button>
-      </div>
-    );
-  }
-  return <button onClick={login}>Log in</button>;
-};
+}
+
+
+
+
+
+
+
 ```
 
 ### useCreateUserWithEmailAndPassword
