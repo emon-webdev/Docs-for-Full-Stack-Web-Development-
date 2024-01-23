@@ -42,10 +42,10 @@ COPY package*.json ./
 # COPY .env.template ./.env
 RUN npm install
 COPY . .
-# RUN \
-#     npm install && \
-#     npm cache clean --force && \
-#     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc/*
+RUN \
+npm install && \
+npm cache clean --force && \
+rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc/*
 
 EXPOSE 5000
 
